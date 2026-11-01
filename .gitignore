@@ -2,3 +2,9 @@
 __pycache__/
 *.pyc
 .vercel
+assets/videos/*.mp4
+projects/**/*.webp
+work-section/*.webp
+hero/*.webp
+manifesto/*.webp
+outro-about/*.webp
