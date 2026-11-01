@@ -6,22 +6,22 @@
     <title>Reach out — Darshan Naidu</title>
     
     <!-- SEO & Metadata -->
-    <meta name="description" content="Darshan Naidu — Video editor, social media manager, and visual designer turning raw footage into films, reels, and culture-defining visuals." />
-    <meta name="keywords" content="Darshan Naidu, video editor, social media manager, visual designer, reel editor, motion graphics, creative director, content creator, portfolio" />
+    <meta name="description" content="Reach out to Darshan Naidu for selected video editing projects, short-form creative direction, and visual brand systems." />
+    <meta name="keywords" content="Darshan Naidu contact, video editor inquiry, creative director, visual designer, reels editor" />
     <meta name="author" content="Darshan Naidu" />
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://darshannaidu.vercel.app/" />
-    <meta property="og:title" content="Darshan Naidu — Video Editor, Social Media Manager & Visual Designer" />
-    <meta property="og:description" content="We turn raw ideas into films, reels, and visuals people actually care about. Made to be watched. Not just scrolled past." />
+    <meta property="og:url" content="https://darshannaidu.vercel.app/contact" />
+    <meta property="og:title" content="Reach out — Darshan Naidu" />
+    <meta property="og:description" content="Available worldwide for video editing projects, short-form direction, and visual brand systems." />
     <meta property="og:image" content="https://darshannaidu.vercel.app/work-section/slider_img_1.webp" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://darshannaidu.vercel.app/" />
-    <meta property="twitter:title" content="Darshan Naidu — Video Editor, Social Media Manager & Visual Designer" />
-    <meta property="twitter:description" content="We turn raw ideas into films, reels, and visuals people actually care about. Made to be watched. Not just scrolled past." />
+    <meta property="twitter:url" content="https://darshannaidu.vercel.app/contact" />
+    <meta property="twitter:title" content="Reach out — Darshan Naidu" />
+    <meta property="twitter:description" content="Available worldwide for video editing projects, short-form direction, and visual brand systems." />
     <meta property="twitter:image" content="https://darshannaidu.vercel.app/work-section/slider_img_1.webp" />
 
     <!-- Favicon & Touch Icons -->
@@ -33,437 +33,531 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" crossorigin href="/assets/index-ZSMau8ex.css">
+
     <style>
+      :root {
+        --bg: #0f0f0f;
+        --text: #f5f5f5;
+        --muted: #888888;
+        --border: rgba(255, 255, 255, 0.12);
+      }
+
+      html, body {
+        background-color: var(--bg) !important;
+        color: var(--text) !important;
+        margin: 0;
+        padding: 0;
+        font-family: 'FKGrotesk', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+        overflow-x: hidden;
+      }
+
+      nav {
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        z-index: 1000000;
+        color: #fff;
+        mix-blend-mode: exclusion;
+        box-sizing: border-box;
+      }
+
+      .menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: #0f0f0f;
+        padding: 1rem;
+        z-index: 1000001;
+        clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+        pointer-events: none;
+        transition: clip-path 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        box-sizing: border-box;
+      }
+
+      .menu.is-open {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+        pointer-events: auto;
+      }
+
+      /* Editorial Contact Layout (Matching About Page Aesthetics) */
+      .editorial-contact-wrapper {
+        min-height: 100vh;
+        padding: clamp(7rem, 15vh, 10rem) 1rem 4rem;
+        max-width: 1300px;
+        margin: 0 auto;
+        box-sizing: border-box;
+      }
+
+      .contact-top-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        border-bottom: 1px solid var(--border);
+        padding-bottom: 2rem;
+        margin-bottom: 3.5rem;
+      }
+
+      .contact-heading {
+        font-size: clamp(2.8rem, 6.5vw, 5.5rem);
+        font-weight: 500;
+        line-height: 1.05;
+        letter-spacing: -0.025em;
+        margin: 0;
+        color: #fff;
+        text-transform: uppercase;
+      }
+
+      .contact-heading em {
+        font-family: 'Instrument Serif', Georgia, serif;
+        font-style: italic;
+        font-weight: 400;
+        text-transform: none;
+        color: rgba(255, 255, 255, 0.85);
+      }
+
+      .contact-badge {
+        font-size: clamp(1.2rem, 2vw, 1.8rem);
+        color: var(--muted);
+        font-weight: 400;
+        line-height: 1;
+      }
+
+      /* Hero Visual matching About hero */
+      .contact-banner-wrap {
+        width: 100%;
+        height: clamp(280px, 46vh, 540px);
+        overflow: hidden;
+        margin-bottom: 4.5rem;
+        border-radius: 2px;
+        position: relative;
+      }
+
+      .contact-banner-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 35%;
+        filter: contrast(105%);
+      }
+
+      /* About-style content grid */
+      .contact-content-grid {
+        display: grid;
+        grid-template-columns: 0.9fr 1.1fr;
+        gap: 4rem;
+        margin-bottom: 5rem;
+      }
+
+      @media (max-width: 850px) {
+        .contact-content-grid {
+          grid-template-columns: 1fr;
+          gap: 3rem;
+        }
+      }
+
+      .contact-col-left {
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+      }
+
+      .contact-statement-text {
+        font-size: clamp(1.25rem, 2.2vw, 1.85rem);
+        line-height: 1.35;
+        color: #e5e5e5;
+        font-weight: 400;
+        margin: 0;
+        letter-spacing: -0.01em;
+      }
+
+      .contact-availability-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.8rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #10b981;
+      }
+
+      .contact-availability-tag::before {
+        content: '';
+        width: 7px;
+        height: 7px;
+        background-color: #10b981;
+        border-radius: 50%;
+        box-shadow: 0 0 8px #10b981;
+      }
+
+      .contact-col-right {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+      }
+
+      .contact-meta-block {
+        border-top: 1px solid var(--border);
+        padding-top: 1.5rem;
+      }
+
+      .contact-meta-label {
+        font-size: 12px;
+        color: var(--muted);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-bottom: 0.75rem;
+      }
+
+      .contact-meta-value-huge {
+        font-size: clamp(1.25rem, 2.2vw, 1.75rem);
+        color: #fff;
+        text-decoration: none;
+        font-weight: 500;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        transition: color 0.2s ease;
+        word-break: break-all;
+      }
+
+      .contact-meta-value-huge:hover {
+        color: #999;
+      }
+
+      .contact-links-stack {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+
+      .contact-link-item {
+        font-size: clamp(1rem, 1.5vw, 1.2rem);
+        color: #fff;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        transition: opacity 0.2s ease;
+      }
+
+      .contact-link-item:hover {
+        opacity: 0.6;
+      }
+
+      .contact-plain-detail {
+        font-size: 1.05rem;
+        line-height: 1.5;
+        color: #fff;
+      }
+
+      /* Working Together / Process Section (Matches Core Values on About Page) */
+      .contact-process-section {
+        border-top: 1px solid var(--border);
+        padding-top: 4rem;
+        margin-top: 3rem;
+        margin-bottom: 6rem;
+      }
+
+      .process-section-title {
+        font-size: 12px;
+        color: var(--muted);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-bottom: 2.5rem;
+      }
+
+      .process-cards-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+      }
+
+      @media (max-width: 900px) {
+        .process-cards-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 2rem;
+        }
+      }
+
+      @media (max-width: 550px) {
+        .process-cards-grid {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+        }
+      }
+
+      .process-step-item {
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+      }
+
+      .process-step-num {
+        font-size: 0.8rem;
+        color: var(--muted);
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+
+      .process-step-heading {
+        font-size: 1.35rem;
+        font-weight: 500;
+        color: #fff;
+        margin: 0;
+      }
+
+      .process-step-desc {
+        font-size: 0.95rem;
+        color: rgba(255, 255, 255, 0.65);
+        line-height: 1.5;
+        margin: 0;
+      }
+
+      /* Direct CTA matching site */
+      .contact-big-cta-section {
+        border-top: 1px solid var(--border);
+        padding: 4rem 0 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .cta-micro-label {
+        font-size: 12px;
+        color: var(--muted);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+
+      .cta-giant-heading {
+        font-size: clamp(2.2rem, 5.5vw, 4.5rem);
+        margin: 0;
+        font-weight: 500;
+        text-transform: uppercase;
+        line-height: 1.05;
+        letter-spacing: -0.02em;
+      }
+
+      .cta-giant-heading a {
+        color: inherit;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: baseline;
+        gap: 0.5rem;
+        transition: color 0.2s, transform 0.3s ease;
+      }
+
+      .cta-giant-heading a:hover {
+        color: #999;
+        transform: translateX(10px);
+      }
+
       .footer-name, .footer-socials, .footer-copyright, .footer-label {
         font-family: 'FKGrotesk', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif !important;
       }
     </style>
-    <script type="module" crossorigin src="/assets/index-CnbWzhzO.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-ZSMau8ex.css">
   </head>
   <body>
-    <!-- Anti-flash script for direct route reloads -->
-    <script>
-      if (history.scrollRestoration) history.scrollRestoration = "manual";
-      window.scrollTo(0, 0);
-      (function () {
-        var path = (window.location.pathname || "/").replace(/\/$/, "") || "/";
-        var h = window.location.hash;
-        var segs = path.split("/").filter(Boolean);
-        var last = segs[segs.length - 1] || "";
-        var isContact = path.indexOf("/contact") !== -1 || last === "contact" || h === "#contact";
-        var isAbout = isContact || path.indexOf("/about") !== -1 || last === "about" || h === "#about";
-        var isWorks =
-          path.indexOf("/works") !== -1 ||
-          path.indexOf("/work-selection") !== -1 ||
-          last === "works" ||
-          last === "work-selection" ||
-          h === "#work-selection";
-        var isHome = path === "/" || path === "/index" || path === "/test" || path === "/test/" || path === "/test/index" || path === "/test/home";
-        var reserved = { about: 1, works: 1, "work-selection": 1, test: 1, index: 1, home: 1, hub: 1 };
-        var isProject = false;
-        if (!isAbout && !isWorks && !isHome) {
-          if (h && h.length > 1 && h !== "#about" && h !== "#work-selection") isProject = true;
-          else if (last && !reserved[last]) isProject = true;
-        }
-        if (h && h.length > 1) {
-          if (h === "#work-selection") isWorks = true;
-          if (h === "#about") isAbout = true;
-        }
-        if (!h || h.length <= 1) {
-          if (!isAbout && !isWorks && !isProject) {
-            document.documentElement.style.backgroundColor = "#0f0f0f";
-          }
-        }
-        if (isAbout) {
-          document.write(
-            '<style id="anti-flash-css">#slider-page { display: none !important; } #about-section { display: block !important; opacity: 1; } #about-preloader { display: flex !important; } .preloader-counter-about, .preloader-progress-bar-about, .preloader-progress-about { visibility: visible !important; opacity: 1 !important; } nav { opacity: 0 !important; visibility: hidden !important; pointer-events: none !important; } .about-content-wrapper { opacity: 0 !important; visibility: hidden !important; }</style>'
-          );
-        } else if (isWorks) {
-          document.documentElement.style.backgroundColor = "#0f0f0f";
-          document.write(
-            '<style id="anti-flash-css">html, body { background-color: #0f0f0f !important; } #slider-page { display: none !important; } #about-section { display: none !important; } #project-page { display: none !important; } #work-selection-page { display: block !important; opacity: 1; } #work-selection-preloader { display: flex !important; } .preloader-counter-work-selection, .preloader-progress-bar-work-selection, .preloader-progress-work-selection { visibility: visible !important; opacity: 1 !important; } nav { opacity: 0 !important; visibility: hidden !important; pointer-events: none !important; } #slider-title-ws, #slider-indices-ws, #slider-number-ws, #slider-indices-wrapper-ws { opacity: 0 !important; visibility: hidden !important; }</style>'
-          );
-        } else if (isProject) {
-          document.documentElement.style.backgroundColor = "#0f0f0f";
-          document.write(
-            '<style id="anti-flash-css">body { background-color: #0f0f0f !important; } #slider-page { display: none !important; } #project-page { display: block !important; opacity: 1; } #project-preloader { display: flex !important; } .preloader-counter-projects, .preloader-progress-bar-projects, .preloader-progress-projects { visibility: visible !important; opacity: 1 !important; } nav { opacity: 0 !important; visibility: hidden !important; pointer-events: none !important; } #hero-title, #project-number, #project-info-section, #project-images, #project-footer { opacity: 0 !important; visibility: hidden !important; }</style>'
-          );
-        }
-      })();
-    </script>
-    
     <!-- Nav bar -->
     <nav>
-      <span class="nav-logo"><a href="/" data-nav="home">Darshan Naidu</a></span>
+      <span class="nav-logo"><a href="/" style="color: inherit; text-decoration: none;">Darshan Naidu</a></span>
       <div class="nav-links">
-        <a href="/works" data-nav="works">Works,</a>
-        <a href="/about" data-nav="about">About,</a>
-        <a href="/contact" data-nav="contact">Reach out</a>
+        <a href="/works" style="color: inherit; text-decoration: none;">Works,</a>
+        <a href="/about" style="color: inherit; text-decoration: none;">About,</a>
+        <a href="/contact" style="color: inherit; text-decoration: underline; text-underline-offset: 4px;">Reach out</a>
       </div>
-      <p class="menu-open">Menu</p>
+      <p class="menu-open" style="cursor: pointer; margin: 0;">Menu</p>
     </nav>
 
     <!-- Menu overlay -->
-    <div class="menu">
+    <div class="menu" id="menu-overlay">
       <div class="menu-nav">
-        <span class="nav-logo"><a href="/" data-nav="home">Darshan Naidu</a></span>
-        <div class="menu-close"><p>Close</p></div>
+        <span class="nav-logo"><a href="/" style="color: inherit; text-decoration: none;">Darshan Naidu</a></span>
+        <div class="menu-close" style="cursor: pointer;"><p style="margin: 0;">Close</p></div>
       </div>
       <div class="menu-links">
         <div class="menu-link">
-          <a href="/works" data-nav="works">Works</a>
+          <a href="/works" style="color: inherit; text-decoration: none; font-size: clamp(2rem, 6vw, 4rem);">Works</a>
         </div>
         <div class="menu-link">
-          <a href="/about" data-nav="about">About</a>
+          <a href="/about" style="color: inherit; text-decoration: none; font-size: clamp(2rem, 6vw, 4rem);">About</a>
         </div>
         <div class="menu-link">
-          <a href="/contact" data-nav="contact">Reach out</a>
+          <a href="/contact" style="color: inherit; text-decoration: none; font-size: clamp(2rem, 6vw, 4rem);">Reach out</a>
         </div>
       </div>
       <div class="menu-footer">
         <div class="socials">
-          <p>Socials</p>
-          <div class="socials-list">
-            <a href="https://www.instagram.com/fxdarshan/" target="_blank" rel="noopener noreferrer">Instagram</a>
-            <a href="https://www.linkedin.com/in/darshannaidu" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer">X (Twitter)</a>
+          <p style="color: #888; font-size: 0.85rem; margin-bottom: 0.5rem;">Socials</p>
+          <div class="socials-list" style="display: flex; gap: 1.5rem;">
+            <a href="https://www.instagram.com/fxdarshan/" target="_blank" rel="noopener noreferrer" style="color: #fff; text-decoration: none;">Instagram</a>
+            <a href="https://www.linkedin.com/in/darshannaidu/" target="_blank" rel="noopener noreferrer" style="color: #fff; text-decoration: none;">LinkedIn</a>
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" style="color: #fff; text-decoration: none;">X (Twitter)</a>
           </div>
         </div>
       </div>
     </div>
 
-    <div id="smooth-wrapper">
-    <div id="slider-page">
-      <!-- Scroll Down -->
-      <p class="scroll-down" id="scroll-down">Scroll Down</p>
+    <!-- Main Editorial Content Container -->
+    <main class="editorial-contact-wrapper">
+      
+      <!-- Top Title Row matching About/Project style -->
+      <section class="contact-top-row">
+        <h1 class="contact-heading">Reach out,<br /><em>Direct &amp; Inquiries.</em></h1>
+        <div class="contact-badge">(03 / Contact)</div>
+      </section>
 
-      <!-- Hero Preloader -->
-      <div class="preloader-counter">
-        <h1>0</h1>
-      </div>
+      <!-- Full-bleed Banner Image -->
+      <section class="contact-banner-wrap">
+        <img src="/outro-about/about-hero_img.webp" alt="Darshan Naidu Studio" class="contact-banner-img" />
+      </section>
 
-      <!-- Hero Section -->
-      <section class="hero">
-        <div class="hero-bg">
-          <img src="/hero/hero.webp" alt="" />
+      <!-- Two-Column Content Grid -->
+      <section class="contact-content-grid">
+        <!-- Left: Statement & Availability -->
+        <div class="contact-col-left">
+          <p class="contact-statement-text">
+            I collaborate with ambitious creators, founders, and modern brands worldwide. From high-retention video edits and YouTube direction to cultural brand systems and posters—let's make something people actually care about.
+          </p>
+          <div class="contact-availability-tag">
+            Available for selected Q1 / Q2 projects
+          </div>
         </div>
-        <div class="hero-overlay"></div>
-        <div class="card-reveal-bg"></div>
-        <div class="card">
-          <div class="card-top-left">
-            <p class="label">Video Editor · Social Media · Visual Designer</p>
-            <h1 class="make-it-last">
-              <span class="make-it">Stop The</span><br>
-              <span class="last">Scroll</span>
+
+        <!-- Right: Direct Channels & Studio Metadata -->
+        <div class="contact-col-right">
+          <!-- Direct Email Block -->
+          <div class="contact-meta-block">
+            <div class="contact-meta-label">(Inquiries)</div>
+            <a href="mailto:darshan@darshannaidu.com" class="contact-meta-value-huge">
+              <span>darshan@darshannaidu.com</span>
+              <span>↗</span>
+            </a>
+          </div>
+
+          <!-- Direct Channels Block -->
+          <div class="contact-meta-block">
+            <div class="contact-meta-label">(Direct Channels)</div>
+            <div class="contact-links-stack">
+              <a href="https://www.instagram.com/fxdarshan/" target="_blank" rel="noopener noreferrer" class="contact-link-item">
+                <span>Instagram: @fxdarshan</span>
+                <span>↗</span>
+              </a>
+              <a href="https://www.linkedin.com/in/darshannaidu/" target="_blank" rel="noopener noreferrer" class="contact-link-item">
+                <span>LinkedIn: in/darshannaidu</span>
+                <span>↗</span>
+              </a>
+              <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="contact-link-item">
+                <span>X / Twitter</span>
+                <span>↗</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Studio Base Block -->
+          <div class="contact-meta-block">
+            <div class="contact-meta-label">(Studio Base)</div>
+            <div class="contact-plain-detail">
+              Bengaluru, India<br />
+              <span style="color: var(--muted); font-size: 0.9rem;">IST · UTC +5:30 (Working across international timezones)</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Working Together / Process Section (Matches About Principles) -->
+      <section class="contact-process-section">
+        <div class="process-section-title">(Working Process)</div>
+        <div class="process-cards-grid">
+          <div class="process-step-item">
+            <span class="process-step-num">Step 01</span>
+            <h3 class="process-step-heading">Brief &amp; Vision</h3>
+            <p class="process-step-desc">Share your raw footage, timeline, and goals over email.</p>
+          </div>
+          <div class="process-step-item">
+            <span class="process-step-num">Step 02</span>
+            <h3 class="process-step-heading">Direction</h3>
+            <p class="process-step-desc">We align on the creative hooks, visual narrative, and tone.</p>
+          </div>
+          <div class="process-step-item">
+            <span class="process-step-num">Step 03</span>
+            <h3 class="process-step-heading">Execution</h3>
+            <p class="process-step-desc">Surgical cutting, custom sound design, and cinematic color.</p>
+          </div>
+          <div class="process-step-item">
+            <span class="process-step-num">Step 04</span>
+            <h3 class="process-step-heading">Delivery</h3>
+            <p class="process-step-desc">High-retention assets ready to publish, convert, and scale.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Direct Big CTA -->
+      <section class="contact-big-cta-section">
+        <span class="cta-micro-label">Ready to start?</span>
+        <h1 class="cta-giant-heading">
+          <a href="mailto:darshan@darshannaidu.com?subject=Project%20Inquiry%20%E2%80%94%20Darshan%20Naidu">
+            <span>Start a Conversation</span>
+            <span>↗</span>
+          </a>
+        </h1>
+      </section>
+
+      <!-- Unified Footer matching site -->
+      <section class="footer-section" id="footer-section" style="margin-top: 6rem;">
+        <div class="footer-img-wrapper" id="footer-img-wrapper">
+          <img src="/outro-about/about3.webp" alt="Footer Image" />
+        </div>
+        <div class="footer-content" id="footer-content">
+          <div class="footer-text footer-left" id="footer-left">
+            <span class="footer-label">Got a brand or vision in mind?</span>
+            <h1 class="footer-name" id="footer-name"><a href="mailto:darshan@darshannaidu.com" class="footer-name-link" style="color: inherit; text-decoration: none;">Let's Talk</a></h1>
+          </div>
+          <div class="footer-card-spacer" id="footer-card-spacer"></div>
+          <div class="footer-text footer-right" id="footer-right">
+            <span class="footer-label">Socials</span>
+            <h1 class="footer-socials" id="footer-socials">
+              <a href="https://www.instagram.com/fxdarshan/" target="_blank" rel="noopener noreferrer" class="social-link footer-social-link" style="color: inherit; text-decoration: none; margin-right: 0.5ch;">Ig</a>
+              <a href="https://www.linkedin.com/in/darshannaidu/" target="_blank" rel="noopener noreferrer" class="social-link footer-social-link" style="color: inherit; text-decoration: none; margin-right: 0.5ch;">In</a>
+              <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="social-link footer-social-link" style="color: inherit; text-decoration: none;">X</a>
             </h1>
           </div>
-          <div class="card-bottom-right">
-            <p class="label">Portfolio</p>
-            <h1>‘26</h1>
-          </div>
         </div>
-        <div class="progress-bar">
-          <div class="progress"></div>
-        </div>
+        <div class="footer-copyright" id="footer-copyright">&copy;2026 Darshan Naidu. All rights reserved.</div>
       </section>
 
-      <!-- Manifesto Section -->
-      <div class="next-section manifesto" id="manifesto-section">
-        <div class="manifesto__previews">
-          <div class="manifesto__preview manifesto__preview--1" data-preview="1">
-            <img src="/manifesto/img-1.webp" alt="" />
-          </div>
-          <div class="manifesto__preview manifesto__preview--2" data-preview="2">
-            <img src="/manifesto/img-2.webp" alt="" />
-          </div>
-          <div class="manifesto__preview manifesto__preview--3" data-preview="3">
-            <img src="/manifesto/img-3.webp" alt="" />
-          </div>
-        </div>
-        <section class="manifesto__slide manifesto__slide--1" data-slide="1">
-          <div class="manifesto__copy">
-            <p class="manifesto__text manifesto__text--left">Everyone has a camera.<br />Very few have a voice.</p>
-          </div>
-        </section>
-        <div class="manifesto__spacer" data-spacer="1"></div>
-        <section class="manifesto__slide manifesto__slide--2" data-slide="2">
-          <div class="manifesto__copy">
-            <p class="manifesto__text manifesto__text--center">We make things that stick.</p>
-          </div>
-        </section>
-        <div class="manifesto__spacer" data-spacer="2"></div>
-        <section class="manifesto__slide manifesto__slide--3" data-slide="3">
-          <div class="manifesto__copy">
-            <p class="manifesto__text manifesto__text--left">We turn raw ideas into films, <br />reels, and visuals that <br />people actually care about.</p>
-          </div>
-        </section>
-        <div class="manifesto__spacer" data-spacer="3"></div>
-        <section class="manifesto__slide manifesto__slide--4 manifesto__slide--last" data-slide="4">
-          <div class="manifesto__copy">
-            <p class="manifesto__text manifesto__text--center">Made to be watched. Not just scrolled past.</p>
-          </div>
-        </section>
-      </div>
+    </main>
 
-      <!-- Slider Section -->
-      <section class="slider" id="slider-section">
-        <div class="slider-images" id="slider-images">
-          <img src="/work-section/slider_img_1.webp" alt="Slide 1" />
-        </div>
+    <script>
+      // Menu overlay toggle
+      const menuOpen = document.querySelector('.menu-open');
+      const menuClose = document.querySelector('.menu-close');
+      const menu = document.getElementById('menu-overlay');
 
-        <div class="slider-title" id="slider-title">
-          <h1>
-            Rhythm &amp; Motion
-          </h1>
-        </div>
-
-        <div class="slider-indicator" id="slider-indicator">
-          <div class="slider-indices-wrapper" id="slider-indices-wrapper">
-            <div class="slider-progress-bar" id="slider-progress-bar-container">
-              <div class="slider-progress" id="slider-progress-bar"></div>
-            </div>
-            <div class="slider-indices" id="slider-indices"></div>
-          </div>
-
-          <div class="slider-number" id="slider-number">
-            <span class="current-number" id="current-number">01</span>
-          </div>
-        </div>
-      </section>
-
-      <section class="outro-unified" id="outro-section" data-nav-theme="light">
-        <!-- Outro Progress Bar -->
-        <div class="outro-progress-bar" id="outro-progress-bar-container">
-          <div class="outro-progress" id="outro-progress-bar"></div>
-        </div>
-
-        <!-- Part 1: Transition Text -->
-        <div class="outro-transition-wrapper" id="outro-transition-wrapper">
-          <h1 class="outro-transition-text" id="outro-transition-text">Behind the timeline.</h1>
-        </div>
-      </section>
-    </div>
-
-    <div class="outro-content-wrapper" id="outro-content-wrapper" style="opacity: 0; pointer-events: none;">
-      <h1 class="outro-text" id="outro-carve">Crafted with</h1>
-      <div class="outro-img-container" id="outro-img-block">
-        <img src="/outro-about/about-hero_img.webp" alt="Creative" />
-      </div>
-      <h2 class="outro-text into" id="outro-into">Pure</h2>
-      <h1 class="outro-text" id="outro-memory">Taste</h1>
-    </div>
-
-    <div id="about-section" style="display: none;" data-nav-theme="light">
-      <!-- Collapse Text Wrapper -->
-      <div class="about-collapse-text-wrapper" id="about-collapse-text-wrapper">
-        <div class="about-collapse-text"><p>Reach</p></div>
-        <div class="about-collapse-text"><p>Out.</p></div>
-      </div>
-
-      <!-- About Preloader -->
-      <div id="about-preloader" style="display: none;">
-        <div class="preloader-counter-about">
-          <h1>0</h1>
-        </div>
-        <div class="preloader-progress-bar-about">
-          <div class="preloader-progress-about"></div>
-        </div>
-      </div>
-
-      <div class="about-img-container" id="about-hero-img-block" style="opacity: 0;">
-        <img src="/outro-about/about-hero_img.webp" alt="About Hero" />
-      </div>
-
-      <div id="about-text-container" style="position: absolute; top: 0; left: 0; width: 100%; height: 100vh; display: flex; align-items: center; justify-content: center; z-index: 10; pointer-events: none;">
-      </div>
-
-      <div class="about-content-wrapper">
-        <div class="about-additional-content">
-          <div class="about-col left">
-          </div>
-          
-          <div class="about-col right">
-            <div class="about-info-block who-am-i">
-              <p class="about-description">
-                <span class="about-label-who-am-i">Direct Inquiries.</span>
-                Available worldwide for selected video editing projects, short-form creative direction, and visual brand identity. Whether you have a project ready to cut, a channel ready to scale, or a brand that needs a distinct visual edge—let's make something unforgettable.
-              </p>
-            </div>
-
-            <div class="about-info-block design-bridge">
-              <p class="about-description">
-                <span class="about-label-about">Start a conversation.</span>
-                Email is the best place to share footage links, project scopes, and timelines:<br />
-                <a href="mailto:darshan@darshannaidu.com" style="color: inherit; text-decoration: underline; text-underline-offset: 4px; font-weight: 600;">darshan@darshannaidu.com ↗</a>
-              </p>
-            </div>
-
-            <div class="about-info-block studio-details" style="margin-top: 2rem;">
-              <p class="about-description">
-                <span class="about-label-about">Direct Channels.</span>
-                Instagram: <a href="https://www.instagram.com/fxdarshan/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">@fxdarshan ↗</a><br />
-                LinkedIn: <a href="https://www.linkedin.com/in/darshannaidu/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">in/darshannaidu ↗</a><br />
-                Base: Bengaluru, India (IST · UTC +5:30)
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Spotlight Section -->
-    <section class="spotlight" id="spotlight-section" style="display: none;">
-      <div class="spotlight-titles-container">
-        <div class="spotlight-titles" id="spotlight-titles"></div>
-      </div>
-      <div class="spotlight-images" id="spotlight-images"></div>
-    </section>
-
-    <!-- Core Values Section -->
-    <section class="core-values" id="core-values-section" style="display: none;">
-      <div class="core-values-pinned">
-        <div class="core-values-label">Working Together:</div>
-        <span class="core-title-main" id="core-title-main">Process.</span>
-      </div>
-      <div class="core-values-list-container">
-        <p class="core-values-list" id="core-values-list">
-          <span class="core-value-item" data-main="Brief.">Share your goals, timeline, and reference links.</span>
-          <span class="core-value-item" data-main="Direction.">We align on the creative vision, tone, and pacing.</span>
-          <span class="core-value-item" data-main="Cut.">Surgical editing, sound design, and color grading.</span>
-          <span class="core-value-item" data-main="Delivery.">High-retention assets ready to publish and scale.</span>
-        </p>
-      </div>
-    </section>
-
-    <!-- Footer Section -->
-    <section class="footer-section" id="footer-section">
-      <div class="footer-img-wrapper" id="footer-img-wrapper">
-        <img src="/outro-about/about3.webp" alt="Footer Image" />
-      </div>
-      <div class="footer-content" id="footer-content">
-        <div class="footer-text footer-left" id="footer-left">
-          <span class="footer-label">Got a brand or vision in mind?</span>
-          <h1 class="footer-name" id="footer-name"><a href="mailto:darshan@darshannaidu.com" class="footer-name-link" style="color: inherit; text-decoration: none;">Let's Talk</a></h1>
-        </div>
-        <div class="footer-card-spacer" id="footer-card-spacer"></div>
-        <div class="footer-text footer-right" id="footer-right">
-          <span class="footer-label">Socials</span>
-          <h1 class="footer-socials" id="footer-socials">
-            <a href="https://www.instagram.com/fxdarshan/" target="_blank" rel="noopener noreferrer" class="social-link footer-social-link" style="color: inherit; text-decoration: none; margin-right: 0.5ch;">Ig</a>
-            <a href="https://www.linkedin.com/in/darshannaidu/" target="_blank" rel="noopener noreferrer" class="social-link footer-social-link" style="color: inherit; text-decoration: none; margin-right: 0.5ch;">In</a>
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="social-link footer-social-link" style="color: inherit; text-decoration: none;">X</a>
-          </h1>
-        </div>
-      </div>
-      <div class="footer-copyright" id="footer-copyright">&copy;2026 Darshan Naidu. All rights reserved.</div>
-    </section>
-
-    <div id="work-selection-page" style="display: none;">
-      <!-- Work Selection Preloader -->
-      <div id="work-selection-preloader" style="display: none;">
-        <div class="preloader-counter-work-selection">
-          <h1>0</h1>
-        </div>
-        <div class="preloader-progress-bar-work-selection">
-          <div class="preloader-progress-work-selection"></div>
-        </div>
-      </div>
-      <section class="slider slider--work-selection" id="work-selection-slider">
-        <div class="slider-images" id="slider-images-ws">
-          <img src="/work-section/slider_img_1.webp" alt="Slide 1" />
-        </div>
-        <div class="slider-title" id="slider-title-ws">
-          <h1>Rhythm &amp; Motion</h1>
-        </div>
-        <div class="slider-indicator" id="slider-indicator-ws">
-          <div class="slider-indices-wrapper" id="slider-indices-wrapper-ws">
-            <div class="slider-progress-bar" id="slider-progress-bar-container-ws">
-              <div class="slider-progress" id="slider-progress-bar-ws"></div>
-            </div>
-            <div class="slider-indices" id="slider-indices-ws"></div>
-          </div>
-          <div class="slider-number" id="slider-number-ws">
-            <span class="current-number" id="current-number-ws">01</span>
-          </div>
-        </div>
-      </section>
-    </div>
-
-    <div id="project-page" style="display: none;">
-      <!-- Project Preloader -->
-      <div id="project-preloader" style="display: none;">
-        <div class="preloader-counter-projects">
-          <h1>0</h1>
-        </div>
-        <div class="preloader-progress-bar-projects">
-          <div class="preloader-progress-projects"></div>
-        </div>
-      </div>
-
-      <!-- Main Title Section -->
-      <section class="project-title-section" id="project-title-section">
-        <h1 class="project-main-title" id="hero-title">Rhythm &amp; Motion,<br>Instagram Reels</h1>
-        <div class="project-number-wrapper" id="project-number-wrapper">
-          <div class="project-number" id="project-number"><span class="no-prefix">No.</span>1</div>
-        </div>
-      </section>
-
-      <!-- Hero Image -->
-      <section class="project-hero-image" id="project-hero-image-container">
-        <div class="hero-image-inner" id="project-hero-image">
-        </div>
-      </section>
-
-      <!-- Project Info Section -->
-      <section class="project-info-section" id="project-info-section">
-        <div class="project-description-wrapper" id="project-description-wrapper">
-          <p id="project-description">High-energy video editing, relentless pacing, and kinetic storytelling designed for the infinite scroll. From punchy 9:16 vertical hooks to widescreen cinematic films, I turn raw footage into unforgettable visual experiences.</p>
-        </div>
-        <div class="project-metadata" id="project-metadata">
-          <div class="project-metadata-wide">
-            <div class="metadata-item brand">
-              <span class="metadata-label">(Category)</span>
-              <span class="metadata-value" id="project-brand">Instagram Reels</span>
-            </div>
-            <div class="metadata-item role">
-              <span class="metadata-label">(Role)</span>
-              <span class="metadata-value" id="project-role">Video Editing · Motion · Direction</span>
-            </div>
-          </div>
-          <div class="project-metadata-right">
-            <div class="metadata-item location">
-              <span class="metadata-label">(Location)</span>
-              <span class="metadata-value" id="project-location">India</span>
-            </div>
-            <div class="metadata-item year">
-              <span class="metadata-label">(Year)</span>
-              <span class="metadata-value" id="project-year">24-26</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Project Images Grid -->
-      <section class="project-images-grid" id="project-images">
-      </section>
-
-      <!-- Footer / Next Project Section -->
-      <footer class="project-footer" id="project-footer">
-        <div class="footer-header-wrapper" id="project-footer-header">
-          <h1 class="next-project-main-title" id="next-project-title">Visual Archive,<br>Poster Collection</h1>
-          <div class="next-project-number-wrapper" id="next-project-number-wrapper">
-            <div class="next-project-number" id="next-project-number"><span class="next-prefix">Next.</span>2</div>
-          </div>
-        </div>
-        
-        <div class="next-project-progress" id="next-project-progress-container">
-          <div class="next-project-progress-bar" id="next-progress-bar"></div>
-        </div>
-      </footer>
-    </div>
-
-    </div><!-- #smooth-wrapper -->
-
+      if (menuOpen && menu && menuClose) {
+        menuOpen.addEventListener('click', () => {
+          menu.classList.add('is-open');
+          document.body.style.overflow = 'hidden';
+        });
+        menuClose.addEventListener('click', () => {
+          menu.classList.remove('is-open');
+          document.body.style.overflow = '';
+        });
+      }
+    </script>
   </body>
 </html>
