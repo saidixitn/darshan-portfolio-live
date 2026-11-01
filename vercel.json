@@ -1,0 +1,33 @@
+{
+  "version": 2,
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" },
+        { "key": "Access-Control-Allow-Origin", "value": "*" }
+      ]
+    },
+    {
+      "source": "/(.*)\\.(webp|mp4|png|jpg|jpeg|svg|ttf|woff2)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" },
+        { "key": "Access-Control-Allow-Origin", "value": "*" }
+      ]
+    }
+  ],
+  "rewrites": [
+    { "source": "/works", "destination": "/works.html" },
+    { "source": "/work-selection", "destination": "/works.html" },
+    { "source": "/about", "destination": "/about.html" },
+    { "source": "/instagram-reels", "destination": "/instagram-reels.html" },
+    { "source": "/reels", "destination": "/instagram-reels.html" },
+    { "source": "/poster-archive", "destination": "/poster-archive.html" },
+    { "source": "/posters", "destination": "/poster-archive.html" },
+    { "source": "/travel-posters", "destination": "/poster-archive.html" },
+    { "source": "/triadlight", "destination": "/instagram-reels.html" },
+    { "source": "/itmatters", "destination": "/poster-archive.html" }
+  ]
+}
