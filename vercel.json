@@ -19,6 +19,7 @@
     }
   ],
   "rewrites": [
+    { "source": "/assets/videos/(.*)", "destination": "https://pub-516aaebe3c6046399fecdd80706924bb.r2.dev/assets/videos/$1" },
     { "source": "/works", "destination": "/works.html" },
     { "source": "/work-selection", "destination": "/works.html" },
     { "source": "/about", "destination": "/about.html" },

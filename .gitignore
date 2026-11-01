@@ -8,3 +8,4 @@ work-section/*.webp
 hero/*.webp
 manifesto/*.webp
 outro-about/*.webp
+.env*
