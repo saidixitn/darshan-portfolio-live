@@ -1,9 +1,4 @@
 /assets/videos/* https://pub-516aaebe3c6046399fecdd80706924bb.r2.dev/assets/videos/:splat 200
-/work-section/* https://pub-516aaebe3c6046399fecdd80706924bb.r2.dev/work-section/:splat 200
-/hero/* https://pub-516aaebe3c6046399fecdd80706924bb.r2.dev/hero/:splat 200
-/manifesto/* https://pub-516aaebe3c6046399fecdd80706924bb.r2.dev/manifesto/:splat 200
-/outro-about/* https://pub-516aaebe3c6046399fecdd80706924bb.r2.dev/outro-about/:splat 200
-/projects/* https://pub-516aaebe3c6046399fecdd80706924bb.r2.dev/projects/:splat 200
 /works /works.html 200
 /work-selection /works.html 200
 /about /about.html 200
@@ -14,6 +9,5 @@
 /travel-posters /poster-archive.html 200
 /triadlight /instagram-reels.html 200
 /itmatters /poster-archive.html 200
-
 /contact /contact.html 200
 /reach-out /contact.html 200
