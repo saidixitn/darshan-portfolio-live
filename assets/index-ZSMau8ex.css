@@ -262,3 +262,29 @@
   box-shadow: 0 20px 40px rgba(255, 255, 255, 0.15);
 }
 
+
+/* Desktop & Mobile Hero Image Fit Fix */
+.hero-bg img {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  object-fit: cover !important;
+  object-position: center 20% !important;
+  will-change: transform !important;
+}
+
+@media (min-width: 851px) {
+  .hero-bg img {
+    object-position: center 22% !important;
+    transform: translate(-50%, -50%) scale(1.05) !important;
+    transform-origin: center 25% !important;
+  }
+}
+
+@media (max-width: 850px) {
+  .hero-bg img {
+    object-position: center 25% !important;
+    transform: translate(-50%, -50%) scale(1.15) !important;
+    transform-origin: center center !important;
+  }
+}

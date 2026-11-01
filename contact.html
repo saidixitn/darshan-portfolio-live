@@ -93,16 +93,16 @@
         pointer-events: auto;
       }
 
-      /* Editorial Contact Layout (Matching About Page Aesthetics) */
-      .editorial-contact-wrapper {
+      /* Native Layout matching About and Home pages */
+      .contact-page-container {
         min-height: 100vh;
-        padding: clamp(7rem, 15vh, 10rem) 1rem 4rem;
+        padding: clamp(7.5rem, 16vh, 10.5rem) 1rem 4rem;
         max-width: 1300px;
         margin: 0 auto;
         box-sizing: border-box;
       }
 
-      .contact-top-row {
+      .contact-header-section {
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
@@ -111,7 +111,7 @@
         margin-bottom: 3.5rem;
       }
 
-      .contact-heading {
+      .contact-title-main {
         font-size: clamp(2.8rem, 6.5vw, 5.5rem);
         font-weight: 500;
         line-height: 1.05;
@@ -121,7 +121,7 @@
         text-transform: uppercase;
       }
 
-      .contact-heading em {
+      .contact-title-main em {
         font-family: 'Instrument Serif', Georgia, serif;
         font-style: italic;
         font-weight: 400;
@@ -129,7 +129,7 @@
         color: rgba(255, 255, 255, 0.85);
       }
 
-      .contact-badge {
+      .contact-index-num {
         font-size: clamp(1.2rem, 2vw, 1.8rem);
         color: var(--muted);
         font-weight: 400;
@@ -137,7 +137,7 @@
       }
 
       /* Hero Visual matching About hero */
-      .contact-banner-wrap {
+      .contact-hero-banner {
         width: 100%;
         height: clamp(280px, 46vh, 540px);
         overflow: hidden;
@@ -146,7 +146,7 @@
         position: relative;
       }
 
-      .contact-banner-img {
+      .contact-hero-banner img {
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -154,8 +154,8 @@
         filter: contrast(105%);
       }
 
-      /* About-style content grid */
-      .contact-content-grid {
+      /* Two-column layout matching About page who-am-i */
+      .contact-body-grid {
         display: grid;
         grid-template-columns: 0.9fr 1.1fr;
         gap: 4rem;
@@ -163,19 +163,19 @@
       }
 
       @media (max-width: 850px) {
-        .contact-content-grid {
+        .contact-body-grid {
           grid-template-columns: 1fr;
           gap: 3rem;
         }
       }
 
-      .contact-col-left {
+      .contact-left-col {
         display: flex;
         flex-direction: column;
         gap: 2.5rem;
       }
 
-      .contact-statement-text {
+      .contact-statement-p {
         font-size: clamp(1.25rem, 2.2vw, 1.85rem);
         line-height: 1.35;
         color: #e5e5e5;
@@ -184,7 +184,7 @@
         letter-spacing: -0.01em;
       }
 
-      .contact-availability-tag {
+      .contact-status-badge {
         display: inline-flex;
         align-items: center;
         gap: 0.5rem;
@@ -194,7 +194,7 @@
         color: #10b981;
       }
 
-      .contact-availability-tag::before {
+      .contact-status-badge::before {
         content: '';
         width: 7px;
         height: 7px;
@@ -203,18 +203,18 @@
         box-shadow: 0 0 8px #10b981;
       }
 
-      .contact-col-right {
+      .contact-right-col {
         display: flex;
         flex-direction: column;
         gap: 3rem;
       }
 
-      .contact-meta-block {
+      .contact-meta-item {
         border-top: 1px solid var(--border);
         padding-top: 1.5rem;
       }
 
-      .contact-meta-label {
+      .contact-meta-lbl {
         font-size: 12px;
         color: var(--muted);
         text-transform: uppercase;
@@ -222,7 +222,7 @@
         margin-bottom: 0.75rem;
       }
 
-      .contact-meta-value-huge {
+      .contact-email-link {
         font-size: clamp(1.25rem, 2.2vw, 1.75rem);
         color: #fff;
         text-decoration: none;
@@ -234,17 +234,17 @@
         word-break: break-all;
       }
 
-      .contact-meta-value-huge:hover {
+      .contact-email-link:hover {
         color: #999;
       }
 
-      .contact-links-stack {
+      .contact-social-stack {
         display: flex;
         flex-direction: column;
         gap: 0.75rem;
       }
 
-      .contact-link-item {
+      .contact-social-item {
         font-size: clamp(1rem, 1.5vw, 1.2rem);
         color: #fff;
         text-decoration: none;
@@ -254,25 +254,25 @@
         transition: opacity 0.2s ease;
       }
 
-      .contact-link-item:hover {
+      .contact-social-item:hover {
         opacity: 0.6;
       }
 
-      .contact-plain-detail {
+      .contact-location-info {
         font-size: 1.05rem;
         line-height: 1.5;
         color: #fff;
       }
 
-      /* Working Together / Process Section (Matches Core Values on About Page) */
-      .contact-process-section {
+      /* Working Process Section (Matches Core Values on About Page) */
+      .contact-process-wrap {
         border-top: 1px solid var(--border);
         padding-top: 4rem;
         margin-top: 3rem;
         margin-bottom: 6rem;
       }
 
-      .process-section-title {
+      .contact-process-title {
         font-size: 12px;
         color: var(--muted);
         text-transform: uppercase;
@@ -280,55 +280,55 @@
         margin-bottom: 2.5rem;
       }
 
-      .process-cards-grid {
+      .contact-process-grid {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 2rem;
       }
 
       @media (max-width: 900px) {
-        .process-cards-grid {
+        .contact-process-grid {
           grid-template-columns: repeat(2, 1fr);
           gap: 2rem;
         }
       }
 
       @media (max-width: 550px) {
-        .process-cards-grid {
+        .contact-process-grid {
           grid-template-columns: 1fr;
           gap: 2rem;
         }
       }
 
-      .process-step-item {
+      .process-card {
         display: flex;
         flex-direction: column;
         gap: 0.6rem;
       }
 
-      .process-step-num {
+      .process-card-step {
         font-size: 0.8rem;
         color: var(--muted);
         letter-spacing: 0.05em;
         text-transform: uppercase;
       }
 
-      .process-step-heading {
+      .process-card-title {
         font-size: 1.35rem;
         font-weight: 500;
         color: #fff;
         margin: 0;
       }
 
-      .process-step-desc {
+      .process-card-desc {
         font-size: 0.95rem;
         color: rgba(255, 255, 255, 0.65);
         line-height: 1.5;
         margin: 0;
       }
 
-      /* Direct CTA matching site */
-      .contact-big-cta-section {
+      /* Direct Big CTA matching home and about */
+      .contact-cta-section {
         border-top: 1px solid var(--border);
         padding: 4rem 0 2rem;
         display: flex;
@@ -336,14 +336,14 @@
         gap: 1rem;
       }
 
-      .cta-micro-label {
+      .contact-cta-lbl {
         font-size: 12px;
         color: var(--muted);
         text-transform: uppercase;
         letter-spacing: 0.08em;
       }
 
-      .cta-giant-heading {
+      .contact-cta-heading {
         font-size: clamp(2.2rem, 5.5vw, 4.5rem);
         margin: 0;
         font-weight: 500;
@@ -352,7 +352,7 @@
         letter-spacing: -0.02em;
       }
 
-      .cta-giant-heading a {
+      .contact-cta-heading a {
         color: inherit;
         text-decoration: none;
         display: inline-flex;
@@ -361,7 +361,7 @@
         transition: color 0.2s, transform 0.3s ease;
       }
 
-      .cta-giant-heading a:hover {
+      .contact-cta-heading a:hover {
         color: #999;
         transform: translateX(10px);
       }
@@ -413,55 +413,55 @@
     </div>
 
     <!-- Main Editorial Content Container -->
-    <main class="editorial-contact-wrapper">
+    <main class="contact-page-container">
       
       <!-- Top Title Row matching About/Project style -->
-      <section class="contact-top-row">
-        <h1 class="contact-heading">Reach out,<br /><em>Direct &amp; Inquiries.</em></h1>
-        <div class="contact-badge">(03 / Contact)</div>
+      <section class="contact-header-section">
+        <h1 class="contact-title-main">Reach out,<br /><em>Direct &amp; Inquiries.</em></h1>
+        <div class="contact-index-num">(03 / Contact)</div>
       </section>
 
-      <!-- Full-bleed Banner Image -->
-      <section class="contact-banner-wrap">
-        <img src="/outro-about/about-hero_img.webp" alt="Darshan Naidu Studio" class="contact-banner-img" />
+      <!-- Full-bleed Banner Image matching About hero -->
+      <section class="contact-hero-banner">
+        <img src="/outro-about/about-hero_img.webp" alt="Darshan Naidu Studio" />
       </section>
 
       <!-- Two-Column Content Grid -->
-      <section class="contact-content-grid">
+      <section class="contact-body-grid">
         <!-- Left: Statement & Availability -->
-        <div class="contact-col-left">
-          <p class="contact-statement-text">
+        <div class="contact-left-col">
+          <p class="contact-statement-p">
             I collaborate with ambitious creators, founders, and modern brands worldwide. From high-retention video edits and YouTube direction to cultural brand systems and posters—let's make something people actually care about.
           </p>
-          <div class="contact-availability-tag">
+          <div class="contact-status-badge">
             Available for selected Q1 / Q2 projects
           </div>
         </div>
 
         <!-- Right: Direct Channels & Studio Metadata -->
-        <div class="contact-col-right">
+        <div class="contact-right-col">
           <!-- Direct Email Block -->
-          <div class="contact-meta-block">
-            <div class="contact-meta-label">(Inquiries)</div>
-            <a href="mailto:darshan@darshannaidu.com" class="contact-meta-value-huge">
+          <div class="contact-meta-item">
+            <div class="contact-meta-lbl">(Inquiries)</div>
+            <a href="mailto:darshan@darshannaidu.com" class="contact-email-link">
               <span>darshan@darshannaidu.com</span>
               <span>↗</span>
             </a>
           </div>
 
           <!-- Direct Channels Block -->
-          <div class="contact-meta-block">
-            <div class="contact-meta-label">(Direct Channels)</div>
-            <div class="contact-links-stack">
-              <a href="https://www.instagram.com/fxdarshan/" target="_blank" rel="noopener noreferrer" class="contact-link-item">
+          <div class="contact-meta-item">
+            <div class="contact-meta-lbl">(Direct Channels)</div>
+            <div class="contact-social-stack">
+              <a href="https://www.instagram.com/fxdarshan/" target="_blank" rel="noopener noreferrer" class="contact-social-item">
                 <span>Instagram: @fxdarshan</span>
                 <span>↗</span>
               </a>
-              <a href="https://www.linkedin.com/in/darshannaidu/" target="_blank" rel="noopener noreferrer" class="contact-link-item">
+              <a href="https://www.linkedin.com/in/darshannaidu/" target="_blank" rel="noopener noreferrer" class="contact-social-item">
                 <span>LinkedIn: in/darshannaidu</span>
                 <span>↗</span>
               </a>
-              <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="contact-link-item">
+              <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="contact-social-item">
                 <span>X / Twitter</span>
                 <span>↗</span>
               </a>
@@ -469,9 +469,9 @@
           </div>
 
           <!-- Studio Base Block -->
-          <div class="contact-meta-block">
-            <div class="contact-meta-label">(Studio Base)</div>
-            <div class="contact-plain-detail">
+          <div class="contact-meta-item">
+            <div class="contact-meta-lbl">(Studio Base)</div>
+            <div class="contact-location-info">
               Bengaluru, India<br />
               <span style="color: var(--muted); font-size: 0.9rem;">IST · UTC +5:30 (Working across international timezones)</span>
             </div>
@@ -480,36 +480,36 @@
       </section>
 
       <!-- Working Together / Process Section (Matches About Principles) -->
-      <section class="contact-process-section">
-        <div class="process-section-title">(Working Process)</div>
-        <div class="process-cards-grid">
-          <div class="process-step-item">
-            <span class="process-step-num">Step 01</span>
-            <h3 class="process-step-heading">Brief &amp; Vision</h3>
-            <p class="process-step-desc">Share your raw footage, timeline, and goals over email.</p>
+      <section class="contact-process-wrap">
+        <div class="contact-process-title">(Working Process)</div>
+        <div class="contact-process-grid">
+          <div class="process-card">
+            <span class="process-card-step">Step 01</span>
+            <h3 class="process-card-title">Brief &amp; Vision</h3>
+            <p class="process-card-desc">Share your raw footage, timeline, and goals over email.</p>
           </div>
-          <div class="process-step-item">
-            <span class="process-step-num">Step 02</span>
-            <h3 class="process-step-heading">Direction</h3>
-            <p class="process-step-desc">We align on the creative hooks, visual narrative, and tone.</p>
+          <div class="process-card">
+            <span class="process-card-step">Step 02</span>
+            <h3 class="process-card-title">Direction</h3>
+            <p class="process-card-desc">We align on the creative hooks, visual narrative, and tone.</p>
           </div>
-          <div class="process-step-item">
-            <span class="process-step-num">Step 03</span>
-            <h3 class="process-step-heading">Execution</h3>
-            <p class="process-step-desc">Surgical cutting, custom sound design, and cinematic color.</p>
+          <div class="process-card">
+            <span class="process-card-step">Step 03</span>
+            <h3 class="process-card-title">Execution</h3>
+            <p class="process-card-desc">Surgical cutting, custom sound design, and cinematic color.</p>
           </div>
-          <div class="process-step-item">
-            <span class="process-step-num">Step 04</span>
-            <h3 class="process-step-heading">Delivery</h3>
-            <p class="process-step-desc">High-retention assets ready to publish, convert, and scale.</p>
+          <div class="process-card">
+            <span class="process-card-step">Step 04</span>
+            <h3 class="process-card-title">Delivery</h3>
+            <p class="process-card-desc">High-retention assets ready to publish, convert, and scale.</p>
           </div>
         </div>
       </section>
 
       <!-- Direct Big CTA -->
-      <section class="contact-big-cta-section">
-        <span class="cta-micro-label">Ready to start?</span>
-        <h1 class="cta-giant-heading">
+      <section class="contact-cta-section">
+        <span class="contact-cta-lbl">Ready to start?</span>
+        <h1 class="contact-cta-heading">
           <a href="mailto:darshan@darshannaidu.com?subject=Project%20Inquiry%20%E2%80%94%20Darshan%20Naidu">
             <span>Start a Conversation</span>
             <span>↗</span>
