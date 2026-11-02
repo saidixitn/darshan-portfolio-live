@@ -5,3 +5,4 @@ __pycache__/
 assets/videos/*.mp4
 .env*
 .wrangler/
+scratch/
