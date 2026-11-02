@@ -3,25 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <title>Darshan Naidu — Video Editor, Social Media Manager &amp; Visual Designer</title>
+    <title>Darshan Naidu — Selected Visuals</title>
     
     <!-- SEO & Metadata -->
-    <meta name="description" content="Darshan Naidu — Video editor, social media manager, and visual designer turning raw footage into films, reels, and culture-defining visuals." />
-    <meta name="keywords" content="Darshan Naidu, video editor, social media manager, visual designer, reel editor, motion graphics, creative director, content creator, portfolio" />
+    <meta name="description" content="Darshan Naidu is a video editor, visual architect, and creative director crafting high-velocity digital media, culture-defining reels, and timeless visual systems." />
+    <meta name="keywords" content="Darshan Naidu, video editor, creative director, visual architect, short form editor, reel editor, motion graphics, sound design, color grading, visual designer, brutalist design, portfolio" />
     <meta name="author" content="Darshan Naidu" />
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://darshannaidu.vercel.app/" />
-    <meta property="og:title" content="Darshan Naidu — Video Editor, Social Media Manager & Visual Designer" />
-    <meta property="og:description" content="We turn raw ideas into films, reels, and visuals people actually care about. Made to be watched. Not just scrolled past." />
+    <meta property="og:title" content="Darshan Naidu — Video Editor, Visual Director &amp; Culture Architect" />
+    <meta property="og:description" content="High-velocity kinetic editing, syncopated rhythm, and raw storytelling built to outlive the infinite feed." />
     <meta property="og:image" content="https://darshannaidu.vercel.app/work-section/slider_img_1.webp" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://darshannaidu.vercel.app/" />
-    <meta property="twitter:title" content="Darshan Naidu — Video Editor, Social Media Manager & Visual Designer" />
-    <meta property="twitter:description" content="We turn raw ideas into films, reels, and visuals people actually care about. Made to be watched. Not just scrolled past." />
+    <meta property="twitter:title" content="Darshan Naidu — Video Editor, Visual Director &amp; Culture Architect" />
+    <meta property="twitter:description" content="High-velocity kinetic editing, syncopated rhythm, and raw storytelling built to outlive the infinite feed." />
     <meta property="twitter:image" content="https://darshannaidu.vercel.app/work-section/slider_img_1.webp" />
 
     <!-- Favicon & Touch Icons -->
@@ -36,6 +36,40 @@
     <style>
       .footer-name, .footer-socials, .footer-copyright, .footer-label {
         font-family: 'FKGrotesk', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif !important;
+      }
+      .preloader-raw-number {
+        position: absolute !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+        width: 1px !important;
+        height: 1px !important;
+        overflow: hidden !important;
+        clip: rect(0, 0, 0, 0) !important;
+        white-space: nowrap !important;
+      }
+      .preloader-kinetic-container {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100vw !important;
+        max-width: 100vw !important;
+        height: clamp(140px, 20vw, 240px) !important;
+        pointer-events: none !important;
+      }
+      .preloader-kinetic-inner {
+        width: 100% !important;
+        max-width: 900px !important;
+        height: 100% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+      }
+      .preloader-kinetic-iframe {
+        width: 100% !important;
+        height: 100% !important;
+        border: 0 !important;
+        background: transparent !important;
+        pointer-events: none !important;
       }
     </style>
     <script type="module" crossorigin src="/assets/index-CnbWzhzO.js"></script>
@@ -98,7 +132,7 @@
       <div class="nav-links">
         <a href="/works" data-nav="works">Works,</a>
         <a href="/about" data-nav="about">About,</a>
-        <a href="/contact" data-nav="contact">Reach out</a>
+        <a href="mailto:darshan@darshannaidu.com">Reach out</a>
       </div>
       <p class="menu-open">Menu</p>
     </nav>
@@ -117,7 +151,7 @@
           <a href="/about" data-nav="about">About</a>
         </div>
         <div class="menu-link">
-          <a href="/contact" data-nav="contact">Reach out</a>
+          <a href="mailto:darshan@darshannaidu.com">Reach out</a>
         </div>
       </div>
       <div class="menu-footer">
@@ -137,9 +171,12 @@
       <!-- Scroll Down -->
       <p class="scroll-down" id="scroll-down">Scroll Down</p>
 
-      <!-- Hero Preloader -->
-      <div class="preloader-counter">
-        <h1>0</h1>
+      <!-- Hero Preloader with Kinetic Wordmark Animation -->
+      <div class="preloader-counter preloader-kinetic-container">
+        <h1 class="preloader-raw-number" aria-hidden="true">0</h1>
+        <div class="preloader-kinetic-inner">
+          <iframe src="/darshan/?theme=dark" class="preloader-kinetic-iframe" title="Darshan Naidu" scrolling="no"></iframe>
+        </div>
       </div>
 
       <!-- Hero Section -->
@@ -151,10 +188,10 @@
         <div class="card-reveal-bg"></div>
         <div class="card">
           <div class="card-top-left">
-            <p class="label">Video Editor · Social Media · Visual Designer</p>
+            <p class="label">Film · Rhythm · Visual Architecture</p>
             <h1 class="make-it-last">
-              <span class="make-it">Stop The</span><br>
-              <span class="last">Scroll</span>
+              <span class="make-it">Cut Deep.</span><br>
+              <span class="last">Leave Marks.</span>
             </h1>
           </div>
           <div class="card-bottom-right">
@@ -182,25 +219,25 @@
         </div>
         <section class="manifesto__slide manifesto__slide--1" data-slide="1">
           <div class="manifesto__copy">
-            <p class="manifesto__text manifesto__text--left">Everyone has a camera.<br />Very few have a voice.</p>
+            <p class="manifesto__text manifesto__text--left">Attention is the rarest currency on earth.<br />Most feeds beg for it. We command it.</p>
           </div>
         </section>
         <div class="manifesto__spacer" data-spacer="1"></div>
         <section class="manifesto__slide manifesto__slide--2" data-slide="2">
           <div class="manifesto__copy">
-            <p class="manifesto__text manifesto__text--center">We make things that stick.</p>
+            <p class="manifesto__text manifesto__text--center">Rhythm is emotion quantified at 24 fps.</p>
           </div>
         </section>
         <div class="manifesto__spacer" data-spacer="2"></div>
         <section class="manifesto__slide manifesto__slide--3" data-slide="3">
           <div class="manifesto__copy">
-            <p class="manifesto__text manifesto__text--left">We turn raw ideas into films, <br />reels, and visuals that <br />people actually care about.</p>
+            <p class="manifesto__text manifesto__text--left">Raw footage forged into magnetic stories,<br />kinetic cuts, and visuals that outlive the algorithm.</p>
           </div>
         </section>
         <div class="manifesto__spacer" data-spacer="3"></div>
         <section class="manifesto__slide manifesto__slide--4 manifesto__slide--last" data-slide="4">
           <div class="manifesto__copy">
-            <p class="manifesto__text manifesto__text--center">Made to be watched. Not just scrolled past.</p>
+            <p class="manifesto__text manifesto__text--center">Never made to pass the time.<br />Engineered to stop the world.</p>
           </div>
         </section>
       </div>
@@ -239,31 +276,34 @@
 
         <!-- Part 1: Transition Text -->
         <div class="outro-transition-wrapper" id="outro-transition-wrapper">
-          <h1 class="outro-transition-text" id="outro-transition-text">Behind the timeline.</h1>
+          <h1 class="outro-transition-text" id="outro-transition-text">The mind behind the timeline.</h1>
         </div>
       </section>
     </div>
 
     <div class="outro-content-wrapper" id="outro-content-wrapper" style="opacity: 0; pointer-events: none;">
-      <h1 class="outro-text" id="outro-carve">Crafted with</h1>
+      <h1 class="outro-text" id="outro-carve">Obsessed with</h1>
       <div class="outro-img-container" id="outro-img-block">
         <img src="/outro-about/about-hero_img.webp" alt="Creative" />
       </div>
-      <h2 class="outro-text into" id="outro-into">Pure</h2>
+      <h2 class="outro-text into" id="outro-into">Absolute</h2>
       <h1 class="outro-text" id="outro-memory">Taste</h1>
     </div>
 
     <div id="about-section" style="display: none;" data-nav-theme="light">
       <!-- Collapse Text Wrapper -->
       <div class="about-collapse-text-wrapper" id="about-collapse-text-wrapper">
-        <div class="about-collapse-text"><p>Crafted with</p></div>
+        <div class="about-collapse-text"><p>Obsessed with</p></div>
         <div class="about-collapse-text"><p>Taste.</p></div>
       </div>
 
       <!-- About Preloader -->
       <div id="about-preloader" style="display: none;">
-        <div class="preloader-counter-about">
-          <h1>0</h1>
+        <div class="preloader-counter-about preloader-kinetic-container">
+          <h1 class="preloader-raw-number" aria-hidden="true">0</h1>
+          <div class="preloader-kinetic-inner">
+            <iframe src="/darshan/?theme=light" class="preloader-kinetic-iframe" title="Darshan Naidu" scrolling="no"></iframe>
+          </div>
         </div>
         <div class="preloader-progress-bar-about">
           <div class="preloader-progress-about"></div>
@@ -285,15 +325,15 @@
           <div class="about-col right">
             <div class="about-info-block who-am-i">
               <p class="about-description">
-                <span class="about-label-who-am-i">Who am I.</span>
-                Hey, I'm Darshan. I'm a video editor, social media manager, and visual designer based in India. I help creators, founders, and modern brands turn raw footage into high-taste video content and visual identity. From punchy short-form reels that get millions of eyes, to cinematic long-form cuts and bold poster designs—I care about making things that look timeless and feel alive.
+                <span class="about-label-who-am-i">The Identity.</span>
+                I’m Darshan Naidu—a video editor, visual architect, and creative director shaping modern digital culture from India. I collaborate with culture-defining creators, disruptive founders, and visionary brands to transform raw footage into electric visual narratives. From relentless 9:16 cuts that seize millions of feeds to cinematic widescreen documentaries and brutalist poster systems, I design work that lingers long after the screen goes dark.
               </p>
             </div>
 
             <div class="about-info-block design-bridge">
               <p class="about-description">
-                <span class="about-label-about">Why it matters.</span>
-                The internet doesn't need more noise. It needs taste. Good editing isn't just chopping clips to trendy audio—it's giving a creator their authentic voice, making an audience stop and feel something, and building an aesthetic people want to be part of.
+                <span class="about-label-about">The Standard.</span>
+                The feed doesn’t need more content—it starves for taste. True editing is invisible alchemy: syncopated sound design, psychological pacing, and ruthless curation that turns passive scrollers into obsessed audiences. Anyone can trim a clip to trending audio; I build the visual atmosphere that defines a creator's legacy.
               </p>
             </div>
           </div>
@@ -317,10 +357,10 @@
       </div>
       <div class="core-values-list-container">
         <p class="core-values-list" id="core-values-list">
-          <span class="core-value-item" data-main="Taste.">Good taste cannot be faked. It shows in every cut, font, and sound.</span>
-          <span class="core-value-item" data-main="Hook.">If the opening doesn't grab them, nothing else matters.</span>
-          <span class="core-value-item" data-main="Story.">Style without story is empty. Every cut has to mean something.</span>
-          <span class="core-value-item" data-main="Longevity.">Make work that looks just as good next year as it does today.</span>
+          <span class="core-value-item" data-main="Taste.">Taste is the only moat that cannot be automated. It lives in every micro-cut, sound cue, and typeface choice.</span>
+          <span class="core-value-item" data-main="Rhythm.">Pacing is psychology. If the first two seconds don’t seize the pulse, the rest of the video does not exist.</span>
+          <span class="core-value-item" data-main="Soul.">Motion without meaning is just digital noise. Every frame must either provoke emotion or be ruthlessly deleted.</span>
+          <span class="core-value-item" data-main="Legacy.">Build for the permanent archive, never the fleeting trend. True craft remains magnetic long after algorithms change.</span>
         </p>
       </div>
     </section>
@@ -332,12 +372,12 @@
       </div>
       <div class="footer-content" id="footer-content">
         <div class="footer-text footer-left" id="footer-left">
-          <span class="footer-label">Got a brand or vision in mind?</span>
-          <h1 class="footer-name" id="footer-name"><a href="mailto:darshan@darshannaidu.com" class="footer-name-link" style="color: inherit; text-decoration: none;">Let's Talk</a></h1>
+          <span class="footer-label">Have a vision ready to break out?</span>
+          <h1 class="footer-name" id="footer-name"><a href="mailto:darshan@darshannaidu.com" class="footer-name-link" style="color: inherit; text-decoration: none;">Let's Build It</a></h1>
         </div>
         <div class="footer-card-spacer" id="footer-card-spacer"></div>
         <div class="footer-text footer-right" id="footer-right">
-          <span class="footer-label">Socials</span>
+          <span class="footer-label">Signal</span>
           <h1 class="footer-socials" id="footer-socials">
             <a href="https://www.instagram.com/fxdarshan/" target="_blank" rel="noopener noreferrer" class="social-link footer-social-link" style="color: inherit; text-decoration: none; margin-right: 0.5ch;">Ig</a>
             <a href="https://www.linkedin.com/in/darshannaidu/" target="_blank" rel="noopener noreferrer" class="social-link footer-social-link" style="color: inherit; text-decoration: none; margin-right: 0.5ch;">In</a>
@@ -351,8 +391,11 @@
     <div id="work-selection-page" style="display: none;">
       <!-- Work Selection Preloader -->
       <div id="work-selection-preloader" style="display: none;">
-        <div class="preloader-counter-work-selection">
-          <h1>0</h1>
+        <div class="preloader-counter-work-selection preloader-kinetic-container">
+          <h1 class="preloader-raw-number" aria-hidden="true">0</h1>
+          <div class="preloader-kinetic-inner">
+            <iframe src="/darshan/?theme=dark" class="preloader-kinetic-iframe" title="Darshan Naidu" scrolling="no"></iframe>
+          </div>
         </div>
         <div class="preloader-progress-bar-work-selection">
           <div class="preloader-progress-work-selection"></div>
@@ -382,8 +425,11 @@
     <div id="project-page" style="display: none;">
       <!-- Project Preloader -->
       <div id="project-preloader" style="display: none;">
-        <div class="preloader-counter-projects">
-          <h1>0</h1>
+        <div class="preloader-counter-projects preloader-kinetic-container">
+          <h1 class="preloader-raw-number" aria-hidden="true">0</h1>
+          <div class="preloader-kinetic-inner">
+            <iframe src="/darshan/?theme=dark" class="preloader-kinetic-iframe" title="Darshan Naidu" scrolling="no"></iframe>
+          </div>
         </div>
         <div class="preloader-progress-bar-projects">
           <div class="preloader-progress-projects"></div>
@@ -392,7 +438,7 @@
 
       <!-- Main Title Section -->
       <section class="project-title-section" id="project-title-section">
-        <h1 class="project-main-title" id="hero-title">Rhythm &amp; Motion,<br>Instagram Reels</h1>
+        <h1 class="project-main-title" id="hero-title">Rhythm &amp; Motion,<br>Selected Reels</h1>
         <div class="project-number-wrapper" id="project-number-wrapper">
           <div class="project-number" id="project-number"><span class="no-prefix">No.</span>1</div>
         </div>
@@ -407,17 +453,17 @@
       <!-- Project Info Section -->
       <section class="project-info-section" id="project-info-section">
         <div class="project-description-wrapper" id="project-description-wrapper">
-          <p id="project-description">High-energy video editing, relentless pacing, and kinetic storytelling designed for the infinite scroll. From punchy 9:16 vertical hooks to widescreen cinematic films, I turn raw footage into unforgettable visual experiences.</p>
+          <p id="project-description">High-velocity kinetic editing, syncopated micro-pacing, and visceral storytelling engineered for the modern feed. From razor-sharp 9:16 vertical hooks that capture attention on frame one, to widescreen cinematic journeys built with spatial sound design—every cut is calculated to be rewatched, dissected, and remembered.</p>
         </div>
         <div class="project-metadata" id="project-metadata">
           <div class="project-metadata-wide">
             <div class="metadata-item brand">
               <span class="metadata-label">(Category)</span>
-              <span class="metadata-value" id="project-brand">Instagram Reels</span>
+              <span class="metadata-value" id="project-brand">Reels &amp; Film Direction</span>
             </div>
             <div class="metadata-item role">
               <span class="metadata-label">(Role)</span>
-              <span class="metadata-value" id="project-role">Video Editing · Motion · Direction</span>
+              <span class="metadata-value" id="project-role">Video Editing · Sound Architecture · Rhythm Direction</span>
             </div>
           </div>
           <div class="project-metadata-right">
@@ -440,7 +486,7 @@
       <!-- Footer / Next Project Section -->
       <footer class="project-footer" id="project-footer">
         <div class="footer-header-wrapper" id="project-footer-header">
-          <h1 class="next-project-main-title" id="next-project-title">Visual Archive,<br>Poster Collection</h1>
+          <h1 class="next-project-main-title" id="next-project-title">Visual Artifacts,<br>Poster Archive</h1>
           <div class="next-project-number-wrapper" id="next-project-number-wrapper">
             <div class="next-project-number" id="next-project-number"><span class="next-prefix">Next.</span>2</div>
           </div>

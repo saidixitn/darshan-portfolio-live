@@ -77,11 +77,11 @@
     },
     {
       "source": "/contact",
-      "destination": "/contact.html"
+      "destination": "/"
     },
     {
       "source": "/reach-out",
-      "destination": "/contact.html"
+      "destination": "/"
     }
   ]
 }
