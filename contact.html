@@ -265,15 +265,11 @@
         opacity: 0.6;
       }
 
-      /* Monumental Hero Section matching Home & About */
+      /* Monumental Hero Section */
       .contact-hero {
         position: relative;
         width: 100vw;
-        min-height: 75vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        padding: 8rem 4% 4rem;
+        padding: max(7rem, calc(var(--safe-area-top) + 6rem)) 4% 3.5rem;
         border-bottom: 1px solid var(--border-line);
       }
 
@@ -281,7 +277,15 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 2.5rem;
+        margin-bottom: 2rem;
+      }
+
+      @media (max-width: 640px) {
+        .contact-hero-meta {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 1rem;
+        }
       }
 
       .contact-hero-tag {
@@ -324,9 +328,9 @@
 
       .contact-hero-heading {
         font-family: 'Satoshi', sans-serif;
-        font-size: clamp(3.2rem, 9vw, 8.5rem);
+        font-size: clamp(3rem, 7.5vw, 7.5rem);
         font-weight: 700;
-        line-height: 0.95;
+        line-height: 0.98;
         letter-spacing: -0.045em;
         text-transform: none;
         margin: 0;
@@ -342,58 +346,69 @@
         letter-spacing: -0.01em;
       }
 
-      /* Hero Visual Banner */
-      .contact-visual-banner {
-        width: 100vw;
-        height: clamp(320px, 46vh, 560px);
-        overflow: hidden;
-        position: relative;
-        background-color: #111;
-        border-bottom: 1px solid var(--border-line);
-      }
-
-      .contact-visual-banner img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center 30%;
-        filter: grayscale(15%) contrast(105%);
-        transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
-      }
-
-      .contact-visual-banner:hover img {
-        transform: scale(1.02);
-      }
-
-      /* Editorial Two-Column Section (Exact Replica of About Page aesthetic) */
+      /* Editorial Two-Column Section with Proper Image Framing */
       .contact-editorial-section {
         width: 100vw;
-        padding: 6.5rem 4%;
-        display: flex;
+        padding: 5rem 4%;
+        display: grid;
+        grid-template-columns: 42% 54%;
+        gap: 4%;
         border-bottom: 1px solid var(--border-line);
+        align-items: start;
       }
 
-      @media (max-width: 850px) {
+      @media (max-width: 900px) {
         .contact-editorial-section {
-          flex-direction: column;
-          padding: 4rem 1.5rem;
-          gap: 3.5rem;
+          grid-template-columns: 1fr;
+          padding: 3.5rem 1.5rem;
+          gap: 3rem;
         }
       }
 
       .editorial-col-left {
-        flex: 0 0 42%;
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
-        padding-right: 4%;
+        gap: 1.5rem;
+      }
+
+      .editorial-portrait-card {
+        width: 100%;
+        aspect-ratio: 4 / 5;
+        max-height: 620px;
+        border-radius: 2px;
+        overflow: hidden;
+        background-color: #181818;
+        border: 1px solid var(--border-line);
+        position: relative;
+      }
+
+      .editorial-portrait-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 20%;
+        filter: grayscale(12%) contrast(104%);
+        transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .editorial-portrait-card:hover img {
+        transform: scale(1.03);
+      }
+
+      .editorial-portrait-caption {
+        font-family: 'Satoshi', sans-serif;
+        font-size: 0.85rem;
+        color: var(--accent-muted);
+        letter-spacing: 0.02em;
+        display: flex;
+        justify-content: space-between;
       }
 
       .editorial-col-right {
-        flex: 0 0 58%;
         display: flex;
         flex-direction: column;
-        gap: 4.5rem;
+        gap: 3.5rem;
+        padding-top: 1rem;
       }
 
       .editorial-section-tag {
@@ -403,41 +418,42 @@
         text-transform: uppercase;
         letter-spacing: 0.08em;
         color: var(--accent-muted);
-        margin-bottom: 1rem;
+        margin-bottom: 0.75rem;
         display: block;
       }
 
       .editorial-lead-statement {
         font-family: 'Satoshi', sans-serif;
-        font-size: clamp(1.8rem, 3vw, 2.75rem);
+        font-size: clamp(1.8rem, 2.8vw, 2.6rem);
         font-weight: 600;
-        line-height: 1.1;
+        line-height: 1.15;
         letter-spacing: -0.04em;
         color: #ffffff;
         margin: 0;
       }
 
+      .editorial-block {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+
       .editorial-inline-label {
-        display: inline-block;
         font-family: 'Satoshi', sans-serif;
-        font-size: 14px;
-        font-weight: 500;
-        line-height: 1.05;
-        width: 120px;
-        margin-right: 0.5rem;
-        vertical-align: baseline;
-        letter-spacing: 0.02em;
+        font-size: 0.85rem;
+        font-weight: 600;
+        letter-spacing: 0.08em;
         color: var(--accent-muted);
         text-transform: uppercase;
       }
 
       .editorial-body-p {
         font-family: 'Satoshi', sans-serif;
-        font-size: clamp(1.35rem, 2vw, 1.95rem);
-        font-weight: 600;
-        line-height: 1.2;
-        letter-spacing: -0.035em;
-        color: rgba(255, 255, 255, 0.92);
+        font-size: clamp(1.2rem, 1.8vw, 1.65rem);
+        font-weight: 500;
+        line-height: 1.35;
+        letter-spacing: -0.025em;
+        color: rgba(255, 255, 255, 0.9);
         margin: 0;
       }
 
@@ -751,32 +767,36 @@
       </h1>
     </section>
 
-    <!-- Visual Banner matching About hero -->
-    <section class="contact-visual-banner">
-      <img src="/outro-about/about-hero_img.webp" alt="Darshan Naidu Portrait" />
-    </section>
-
-    <!-- Two-Column Editorial Statement matching About page -->
+    <!-- Editorial & Visual Statement Section -->
     <section class="contact-editorial-section">
       <div class="editorial-col-left">
-        <span class="editorial-section-tag">Direct Line</span>
-        <p class="editorial-lead-statement">
-          No agency layers.<br />
-          No middle managers.<br />
-          You talk directly with the editor cutting your film.
-        </p>
+        <div class="editorial-portrait-card">
+          <img src="/outro-about/about-hero_img.webp" alt="Darshan Naidu Portrait" />
+        </div>
+        <div class="editorial-portrait-caption">
+          <span>Darshan Naidu</span>
+          <span>Bengaluru, India ↗ Worldwide</span>
+        </div>
       </div>
       <div class="editorial-col-right">
         <div>
-          <p class="editorial-body-p">
-            <span class="editorial-inline-label">Inquiries.</span>
-            Whether you need a 30-second vertical cut with surgical pacing, a high-production brand film, or a complete social presence that demands real taste—send a brief or drop a line to <a href="mailto:darshan@darshannaidu.com" style="color: #fff; text-decoration: underline; text-underline-offset: 4px;">darshan@darshannaidu.com ↗</a>.
+          <span class="editorial-section-tag">Direct Line</span>
+          <p class="editorial-lead-statement">
+            No agency layers.<br />
+            No account managers.<br />
+            You talk directly with the editor cutting your film.
           </p>
         </div>
-        <div>
+        <div class="editorial-block">
+          <span class="editorial-inline-label">Inquiries &amp; Film Briefs</span>
           <p class="editorial-body-p">
-            <span class="editorial-inline-label">Studio Base.</span>
-            Based in Bengaluru, India. Operating across global timezones with creators, founders, and modern brands in New York, London, Dubai, and beyond.
+            Whether you need a high-retention 30-second vertical cut, a cinematic brand film, or full creative direction for your social presence—send a brief or drop a line to <a href="mailto:darshan@darshannaidu.com" style="color: #fff; text-decoration: underline; text-underline-offset: 4px;">darshan@darshannaidu.com ↗</a>.
+          </p>
+        </div>
+        <div class="editorial-block">
+          <span class="editorial-inline-label">Global Delivery</span>
+          <p class="editorial-body-p">
+            Based in India. Operating seamlessly across US, UK, and APAC timezones with creators, founders, and modern brands in New York, London, Dubai, and beyond.
           </p>
         </div>
       </div>
