@@ -48,16 +48,24 @@
       "destination": "/about.html"
     },
     {
-      "source": "/instagram-reels",
-      "destination": "/instagram-reels.html"
-    },
-    {
-      "source": "/reels",
-      "destination": "/instagram-reels.html"
+      "source": "/video-archive",
+      "destination": "/video-archive.html"
     },
     {
       "source": "/poster-archive",
       "destination": "/poster-archive.html"
+    },
+    {
+      "source": "/instagram-reels",
+      "destination": "/video-archive.html"
+    },
+    {
+      "source": "/reels",
+      "destination": "/video-archive.html"
+    },
+    {
+      "source": "/triadlight",
+      "destination": "/video-archive.html"
     },
     {
       "source": "/posters",
@@ -66,10 +74,6 @@
     {
       "source": "/travel-posters",
       "destination": "/poster-archive.html"
-    },
-    {
-      "source": "/triadlight",
-      "destination": "/instagram-reels.html"
     },
     {
       "source": "/itmatters",

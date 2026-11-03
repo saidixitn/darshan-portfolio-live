@@ -1,147 +1,307 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <title>Visual Artifacts · Darshan Naidu</title>
+<!-- saved from url=(0039)http://localhost:8088/test-posters.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
-    <!-- SEO & Metadata -->
-    <meta name="description" content="Explore the creative work of Darshan Naidu across video editing, visual design and social media. A collection of projects, ideas and experiments." />
-    <meta name="keywords" content="Darshan Naidu, video editing, visual design, social media, creative portfolio, reels, graphic design, motion design" />
-    <meta name="author" content="Darshan Naidu" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Poster Archive · Darshan Naidu</title>
     
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://darshannaidu.vercel.app/" />
-    <meta property="og:title" content="Darshan Naidu · Creative Portfolio" />
-    <meta property="og:description" content="Explore the creative work of Darshan Naidu across video editing, visual design and social media. A collection of projects, ideas and experiments." />
-    <meta property="og:image" content="https://darshannaidu.vercel.app/work-section/slider_img_1.webp" />
+    <!-- Fonts & Shared Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" crossorigin="" href="/assets/index-ZSMau8ex.css">
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://darshannaidu.vercel.app/" />
-    <meta property="twitter:title" content="Darshan Naidu · Creative Portfolio" />
-    <meta property="twitter:description" content="Explore the creative work of Darshan Naidu across video editing, visual design and social media. A collection of projects, ideas and experiments." />
-    <meta property="twitter:image" content="https://darshannaidu.vercel.app/work-section/slider_img_1.webp" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="apple-touch-icon" href="/apple-icon.png" sizes="180x180">
 
-    <!-- Favicon & Touch Icons -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
-    <link rel="apple-touch-icon" href="/apple-icon.png" sizes="180x180" />
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
     <style>
-      .footer-name, .footer-socials, .footer-copyright, .footer-label {
-        font-family: 'FKGrotesk', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif !important;
-      }
-      .preloader-raw-number {
-        position: absolute !important;
-        opacity: 0 !important;
-        pointer-events: none !important;
-        width: 1px !important;
-        height: 1px !important;
-        overflow: hidden !important;
-        clip: rect(0, 0, 0, 0) !important;
-        white-space: nowrap !important;
-      }
-      .preloader-kinetic-container {
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        width: 100vw !important;
-        max-width: 100vw !important;
-        height: clamp(140px, 20vw, 240px) !important;
-        pointer-events: none !important;
-      }
-      .preloader-kinetic-inner {
+      /* Ensure base styling matches portfolio */
+      html, body {
+        position: static !important;
         width: 100% !important;
-        max-width: 900px !important;
-        height: 100% !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
+        height: auto !important;
+        min-height: 100% !important;
+        overflow-x: hidden !important;
+        overflow-y: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        background-color: #0f0f0f !important;
+        color: #ededed;
+        margin: 0 !important;
+        padding: 0 !important;
+        font-family: 'Satoshi', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
       }
-      .preloader-kinetic-iframe {
+
+      /* Make sure project page is fully visible directly on test page */
+      #project-page {
+        display: block !important;
+        opacity: 1 !important;
+      }
+
+      nav {
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+      }
+
+      #hero-title, #project-number, #project-info-section, #project-images, #project-footer {
+        opacity: 1 !important;
+        visibility: visible !important;
+      }
+
+      #project-hero-image img {
         width: 100% !important;
-        height: 100% !important;
-        border: 0 !important;
-        background: transparent !important;
-        pointer-events: none !important;
+        height: auto !important;
+        display: block !important;
+        border-radius: 12px;
+      }
+
+      /* ========================================================
+         REFINED POSTER GRID LAYOUT (Zero Gaps, Perfectly Aligned)
+         ======================================================== */
+      .pinterest-gallery {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+        width: 100%;
+        max-width: 1400px;
+        margin: 40px auto 80px auto;
+        padding: 0 30px;
+        box-sizing: border-box;
+      }
+
+      @media (max-width: 1200px) {
+        .pinterest-gallery {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 20px;
+          padding: 0 24px;
+        }
+      }
+
+      @media (max-width: 850px) {
+        .pinterest-gallery {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 16px;
+          padding: 0 16px;
+        }
+      }
+
+      @media (max-width: 520px) {
+        .pinterest-gallery {
+          grid-template-columns: 1fr;
+          gap: 16px;
+          padding: 0 14px;
+        }
+      }
+
+      /* Premium Poster Card with GSAP 3D Tilt Support */
+      .pinterest-card {
+        border-radius: 14px;
+        overflow: hidden;
+        background-color: #141414;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        transform-style: preserve-3d;
+        perspective: 1000px;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+        transition: border-color 0.4s ease, box-shadow 0.4s ease;
+        will-change: transform;
+      }
+
+      .pinterest-card:hover {
+        border-color: rgba(255, 255, 255, 0.28);
+        box-shadow: 0 24px 48px rgba(0, 0, 0, 0.85);
+        z-index: 5;
+      }
+
+      /* Uniform Poster Frame - Balanced 3 / 4.3 ratio for editorial prints */
+      .poster-img-frame {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 3 / 4.3;
+        overflow: hidden;
+        background: #0d0d0d;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .poster-img-frame img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+        display: block;
+        transform-origin: center center;
+        will-change: transform;
+      }
+
+      /* Subtle hover zoom badge */
+      .poster-zoom-hint {
+        position: absolute;
+        top: 14px;
+        right: 14px;
+        padding: 5px 10px;
+        background: rgba(10, 10, 10, 0.75);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 100px;
+        font-family: 'Satoshi', sans-serif;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: #fff;
+        opacity: 0;
+        transform: translateY(-4px) scale(0.92);
+        transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        pointer-events: none;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      .pinterest-card:hover .poster-zoom-hint {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+
+      /* Card Metadata Bar - Aligned across all cards */
+      .pinterest-card-meta {
+        padding: 13px 16px 14px 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #111111;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        gap: 8px;
+        min-height: 50px;
+        box-sizing: border-box;
+      }
+
+      .pinterest-card-title {
+        font-family: 'Satoshi', sans-serif;
+        font-size: 13.5px;
+        font-weight: 600;
+        color: #ededed;
+        letter-spacing: -0.01em;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .pinterest-card-category {
+        font-family: 'Satoshi', sans-serif;
+        font-size: 10.5px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.5);
+        background: rgba(255, 255, 255, 0.06);
+        padding: 4px 8px;
+        border-radius: 4px;
+        white-space: nowrap;
+        flex-shrink: 0;
+      }
+
+      /* ========================================================
+         GSAP CLICK TO ZOOM (FULL RESOLUTION EXPANSION)
+         ======================================================== */
+      .zoom-backdrop {
+        position: fixed;
+        inset: 0;
+        background-color: rgba(6, 6, 6, 0.9);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        opacity: 0;
+        pointer-events: none;
+        z-index: 99990;
+        cursor: zoom-out;
+        transition: opacity 0.35s ease;
+      }
+
+      .zoom-backdrop.is-active {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .zoom-active-clone {
+        position: fixed;
+        z-index: 99995;
+        overflow: hidden;
+        border-radius: 14px;
+        box-shadow: 0 32px 72px rgba(0, 0, 0, 0.95), 0 0 0 1px rgba(255, 255, 255, 0.15);
+        cursor: zoom-out;
+        display: flex;
+        flex-direction: column;
+        background-color: #121212;
+        will-change: transform, top, left, width, height;
+      }
+
+      .zoom-active-clone img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+        display: block;
+      }
+
+      .zoom-caption-pill {
+        position: fixed;
+        bottom: 28px;
+        left: 50%;
+        transform: translateX(-50%) translateY(20px);
+        padding: 9px 18px;
+        background: rgba(18, 18, 18, 0.88);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 100px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #fff;
+        font-family: 'Satoshi', sans-serif;
+        font-size: 13px;
+        font-weight: 500;
+        z-index: 99999;
+        pointer-events: none;
+        opacity: 0;
+        box-shadow: 0 16px 36px rgba(0, 0, 0, 0.8);
+        transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .zoom-caption-pill.is-active {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+        pointer-events: auto;
+        cursor: pointer;
+      }
+
+      .zoom-caption-category {
+        font-size: 10.5px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.5);
+        background: rgba(255, 255, 255, 0.08);
+        padding: 3px 8px;
+        border-radius: 100px;
       }
     </style>
-    <script type="module" crossorigin src="/assets/index-CnbWzhzO.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-ZSMau8ex.css">
-  <style id="hero-desktop-fix">
-  .hero-bg img {
-    object-position: 50% 38% !important;
-  }
-  @media (min-width: 900px) {
-    .hero-bg img {
-      object-position: 50% 38% !important;
-    }
-  }
-  @media (max-width: 899px) {
-    .hero-bg img {
-      object-position: center 25% !important;
-    }
-  }
-</style>
-</head>
+  <script src="chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/js/recordConsoleEvents.js"></script></head>
   <body>
-    <!-- Anti-flash script for direct route reloads -->
-    <script>
-      if (history.scrollRestoration) history.scrollRestoration = "manual";
-      window.scrollTo(0, 0);
-      (function () {
-        var path = (window.location.pathname || "/").replace(/\/$/, "") || "/";
-        var h = window.location.hash;
-        var segs = path.split("/").filter(Boolean);
-        var last = segs[segs.length - 1] || "";
-        var isAbout = path.indexOf("/about") !== -1 || last === "about" || h === "#about";
-        var isWorks =
-          path.indexOf("/works") !== -1 ||
-          path.indexOf("/work-selection") !== -1 ||
-          last === "works" ||
-          last === "work-selection" ||
-          h === "#work-selection";
-        var isHome = path === "/" || path === "/index" || path === "/test" || path === "/test/" || path === "/test/index" || path === "/test/home";
-        var reserved = { about: 1, works: 1, "work-selection": 1, test: 1, index: 1, home: 1, hub: 1 };
-        var isProject = false;
-        if (!isAbout && !isWorks && !isHome) {
-          if (h && h.length > 1 && h !== "#about" && h !== "#work-selection") isProject = true;
-          else if (last && !reserved[last]) isProject = true;
-        }
-        if (h && h.length > 1) {
-          if (h === "#work-selection") isWorks = true;
-          if (h === "#about") isAbout = true;
-        }
-        if (!h || h.length <= 1) {
-          if (!isAbout && !isWorks && !isProject) {
-            document.documentElement.style.backgroundColor = "#0f0f0f";
-          }
-        }
-        if (isAbout) {
-          document.write(
-            '<style id="anti-flash-css">#slider-page { display: none !important; } #about-section { display: block !important; opacity: 1; } #about-preloader { display: flex !important; } .preloader-counter-about, .preloader-progress-bar-about, .preloader-progress-about { visibility: visible !important; opacity: 1 !important; } nav { opacity: 0 !important; visibility: hidden !important; pointer-events: none !important; } .about-content-wrapper { opacity: 0 !important; visibility: hidden !important; }</style>'
-          );
-        } else if (isWorks) {
-          document.documentElement.style.backgroundColor = "#0f0f0f";
-          document.write(
-            '<style id="anti-flash-css">html, body { background-color: #0f0f0f !important; } #slider-page { display: none !important; } #about-section { display: none !important; } #project-page { display: none !important; } #work-selection-page { display: block !important; opacity: 1; } #work-selection-preloader { display: flex !important; } .preloader-counter-work-selection, .preloader-progress-bar-work-selection, .preloader-progress-work-selection { visibility: visible !important; opacity: 1 !important; } nav { opacity: 0 !important; visibility: hidden !important; pointer-events: none !important; } #slider-title-ws, #slider-indices-ws, #slider-number-ws, #slider-indices-wrapper-ws { opacity: 0 !important; visibility: hidden !important; }</style>'
-          );
-        } else if (isProject) {
-          document.documentElement.style.backgroundColor = "#0f0f0f";
-          document.write(
-            '<style id="anti-flash-css">body { background-color: #0f0f0f !important; } #slider-page { display: none !important; } #project-page { display: block !important; opacity: 1; } #project-preloader { display: flex !important; } .preloader-counter-projects, .preloader-progress-bar-projects, .preloader-progress-projects { visibility: visible !important; opacity: 1 !important; } nav { opacity: 0 !important; visibility: hidden !important; pointer-events: none !important; } #hero-title, #project-number, #project-info-section, #project-images, #project-footer { opacity: 0 !important; visibility: hidden !important; }</style>'
-          );
-        }
-      })();
-    </script>
-    
-    <!-- Nav bar -->
+
+    <!-- Nav bar (Exact Portfolio Nav) -->
     <nav>
       <span class="nav-logo"><a href="/" data-nav="home">Darshan Naidu</a></span>
       <div class="nav-links">
@@ -159,15 +319,9 @@
         <div class="menu-close"><p>Close</p></div>
       </div>
       <div class="menu-links">
-        <div class="menu-link">
-          <a href="/works" data-nav="works">Works</a>
-        </div>
-        <div class="menu-link">
-          <a href="/about" data-nav="about">About</a>
-        </div>
-        <div class="menu-link">
-          <a href="mailto:darshan@darshannaidu.com">Reach out</a>
-        </div>
+        <div class="menu-link"><a href="/works" data-nav="works">Works</a></div>
+        <div class="menu-link"><a href="/about" data-nav="about">About</a></div>
+        <div class="menu-link"><a href="mailto:darshan@darshannaidu.com">Reach out</a></div>
       </div>
       <div class="menu-footer">
         <div class="socials">
@@ -179,302 +333,43 @@
       </div>
     </div>
 
-    <div id="smooth-wrapper">
-    <div id="slider-page">
-      <!-- Scroll Down -->
-      <p class="scroll-down" id="scroll-down">Scroll Down</p>
-
-      <!-- Hero Preloader with Kinetic Wordmark Animation -->
-      <div class="preloader-counter preloader-kinetic-container">
-        <h1 class="preloader-raw-number" aria-hidden="true">0</h1>
-        <div class="preloader-kinetic-inner">
-          <iframe src="/darshan/?theme=dark" class="preloader-kinetic-iframe" title="Darshan Naidu" scrolling="no"></iframe>
-        </div>
-      </div>
-
-      <!-- Hero Section -->
-      <section class="hero">
-        <div class="hero-bg">
-          <img src="/hero/hero.webp" alt="" />
-        </div>
-        <div class="hero-overlay"></div>
-        <div class="card-reveal-bg"></div>
-        <div class="card">
-          <div class="card-top-left">
-            <p class="label">Video Editing · Visual Design · Social Media</p>
-            <h1 class="make-it-last">
-              <span class="make-it">Hello, I'm</span><br>
-              <span class="last">Darshan.</span>
-            </h1>
-          </div>
-          <div class="card-bottom-right">
-            <p class="label">Based in</p>
-            <h1>Vizag</h1>
-          </div>
-        </div>
-        <div class="progress-bar">
-          <div class="progress"></div>
-        </div>
-      </section>
-
-      <!-- Manifesto Section -->
-      <div class="next-section manifesto" id="manifesto-section">
-        <div class="manifesto__previews">
-          <div class="manifesto__preview manifesto__preview--1" data-preview="1">
-            <img src="/manifesto/img-1.webp" alt="" />
-          </div>
-          <div class="manifesto__preview manifesto__preview--2" data-preview="2">
-            <img src="/manifesto/img-2.webp" alt="" />
-          </div>
-          <div class="manifesto__preview manifesto__preview--3" data-preview="3">
-            <img src="/manifesto/img-3.webp" alt="" />
-          </div>
-        </div>
-        <section class="manifesto__slide manifesto__slide--1" data-slide="1">
-          <div class="manifesto__copy">
-            <p class="manifesto__text manifesto__text--left">Different interests.<br />One creative space.</p>
-          </div>
-        </section>
-        <div class="manifesto__spacer" data-spacer="1"></div>
-        <section class="manifesto__slide manifesto__slide--2" data-slide="2">
-          <div class="manifesto__copy">
-            <p class="manifesto__text manifesto__text--center">Video editing, visual design and digital content.</p>
-          </div>
-        </section>
-        <div class="manifesto__spacer" data-spacer="2"></div>
-        <section class="manifesto__slide manifesto__slide--3" data-slide="3">
-          <div class="manifesto__copy">
-            <p class="manifesto__text manifesto__text--left">A collection of ideas, visuals,<br />and things I've enjoyed creating.</p>
-          </div>
-        </section>
-        <div class="manifesto__spacer" data-spacer="3"></div>
-        <section class="manifesto__slide manifesto__slide--4 manifesto__slide--last" data-slide="4">
-          <div class="manifesto__copy">
-            <p class="manifesto__text manifesto__text--center">Paying attention to the details that make a piece feel complete.</p>
-          </div>
-        </section>
-      </div>
-
-      <!-- Slider Section -->
-      <section class="slider" id="slider-section">
-        <div class="slider-images" id="slider-images">
-          <video src="/assets/videos/x-entiall.mp4" autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover; display: block;"></video>
-        </div>
-
-        <div class="slider-title" id="slider-title">
-          <h1>
-            Rhythm &amp; Motion
-          </h1>
-        </div>
-
-        <div class="slider-indicator" id="slider-indicator">
-          <div class="slider-indices-wrapper" id="slider-indices-wrapper">
-            <div class="slider-progress-bar" id="slider-progress-bar-container">
-              <div class="slider-progress" id="slider-progress-bar"></div>
-            </div>
-            <div class="slider-indices" id="slider-indices"></div>
-          </div>
-
-          <div class="slider-number" id="slider-number">
-            <span class="current-number" id="current-number">01</span>
-          </div>
-        </div>
-      </section>
-
-      <section class="outro-unified" id="outro-section" data-nav-theme="light">
-        <!-- Outro Progress Bar -->
-        <div class="outro-progress-bar" id="outro-progress-bar-container">
-          <div class="outro-progress" id="outro-progress-bar"></div>
-        </div>
-
-        <!-- Part 1: Transition Text -->
-        <div class="outro-transition-wrapper" id="outro-transition-wrapper">
-          <h1 class="outro-transition-text" id="outro-transition-text">Behind the work.</h1>
-        </div>
-      </section>
-    </div>
-
-    <div class="outro-content-wrapper" id="outro-content-wrapper" style="opacity: 0; pointer-events: none;">
-      <h1 class="outro-text" id="outro-carve">A collection of</h1>
-      <div class="outro-img-container" id="outro-img-block">
-        <img src="/outro-about/about-hero_img.webp" alt="Creative" />
-      </div>
-      <h2 class="outro-text into" id="outro-into">Visuals</h2>
-      <h1 class="outro-text" id="outro-memory">&amp; Ideas</h1>
-    </div>
-
-    <div id="about-section" style="display: none;" data-nav-theme="light">
-      <!-- Collapse Text Wrapper -->
-      <div class="about-collapse-text-wrapper" id="about-collapse-text-wrapper">
-        <div class="about-collapse-text"><p>A little about</p></div>
-        <div class="about-collapse-text"><p>Darshan.</p></div>
-      </div>
-
-      <!-- About Preloader -->
-      <div id="about-preloader" style="display: none;">
-        <div class="preloader-counter-about preloader-kinetic-container">
-          <h1 class="preloader-raw-number" aria-hidden="true">0</h1>
-          <div class="preloader-kinetic-inner">
-            <iframe src="/darshan/?theme=light" class="preloader-kinetic-iframe" title="Darshan Naidu" scrolling="no"></iframe>
-          </div>
-        </div>
-        <div class="preloader-progress-bar-about">
-          <div class="preloader-progress-about"></div>
-        </div>
-      </div>
-
-      <div class="about-img-container" id="about-hero-img-block" style="opacity: 0;">
-        <img src="/outro-about/about-hero_img.webp" alt="About Hero" />
-      </div>
-
-      <div id="about-text-container" style="position: absolute; top: 0; left: 0; width: 100%; height: 100vh; display: flex; align-items: center; justify-content: center; z-index: 10; pointer-events: none;">
-      </div>
-
-      <div class="about-content-wrapper">
-        <div class="about-additional-content">
-          <div class="about-col left">
-          </div>
-          
-          <div class="about-col right">
-            <div class="about-info-block who-am-i">
-              <p class="about-description">
-                <span class="about-label-who-am-i">About me.</span>
-                Hello, I'm Darshan. I'm a creative working across video editing, visual design and social media based in India. I've always been drawn to how things are made. Video editing lets me play with timing, structure and storytelling. Design gives me a way to explore typography, colour and visual balance. Social media brings ideas, content and consistency together. I enjoy moving between these areas, trying new approaches and paying attention to the details that bring a piece together.
-              </p>
-            </div>
-
-            <div class="about-info-block design-bridge">
-              <p class="about-description">
-                <span class="about-label-about">How I approach things.</span>
-                Keep it clear · understand the idea before adding more to it. Pay attention to the details · small decisions help bring the whole piece together. Stay open to ideas · sometimes a different approach leads to a better result. And keep learning · creative work is always changing, and there is always something new to explore.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Spotlight Section -->
-    <section class="spotlight" id="spotlight-section" style="display: none;">
-      <div class="spotlight-titles-container">
-        <div class="spotlight-titles" id="spotlight-titles"></div>
-      </div>
-      <div class="spotlight-images" id="spotlight-images"></div>
-    </section>
-
-    <!-- Core Values Section -->
-    <section class="core-values" id="core-values-section" style="display: none;">
-      <div class="core-values-pinned">
-        <div class="core-values-label">How I approach things:</div>
-        <span class="core-title-main" id="core-title-main">Clear.</span>
-      </div>
-      <div class="core-values-list-container">
-        <p class="core-values-list" id="core-values-list">
-          <span class="core-value-item" data-main="Clear.">Keep it clear. Understand the idea before adding more to it.</span>
-          <span class="core-value-item" data-main="Details.">Pay attention to the details. Small decisions help bring the whole piece together.</span>
-          <span class="core-value-item" data-main="Curiosity.">Stay open to ideas. Sometimes a different approach leads to a better result.</span>
-          <span class="core-value-item" data-main="Learning.">Keep learning. Creative work is always changing, and there's always something new to explore.</span>
-        </p>
-      </div>
-    </section>
-
-    <!-- Footer Section -->
-    <section class="footer-section" id="footer-section">
-      <div class="footer-img-wrapper" id="footer-img-wrapper">
-        <img src="/outro-about/about3.webp" alt="Footer Image" />
-      </div>
-      <div class="footer-content" id="footer-content">
-        <div class="footer-text footer-left" id="footer-left">
-          <span class="footer-label">Have something in mind?</span>
-          <h1 class="footer-name" id="footer-name">Say Hello</h1>
-        </div>
-        <div class="footer-card-spacer" id="footer-card-spacer"></div>
-        <div class="footer-text footer-right" id="footer-right">
-          <span class="footer-label">Socials</span>
-          <h1 class="footer-socials" id="footer-socials">
-            <a href="https://www.instagram.com/fxdarshan/" target="_blank" rel="noopener noreferrer" class="social-link footer-social-link" style="color: inherit; text-decoration: none;">Ig</a>
-          </h1>
-        </div>
-      </div>
-      <div class="footer-copyright" id="footer-copyright">&copy;2026 Darshan Naidu. All rights reserved.</div>
-    </section>
-
-    <div id="work-selection-page" style="display: none;">
-      <!-- Work Selection Preloader -->
-      <div id="work-selection-preloader" style="display: none;">
-        <div class="preloader-counter-work-selection preloader-kinetic-container">
-          <h1 class="preloader-raw-number" aria-hidden="true">0</h1>
-          <div class="preloader-kinetic-inner">
-            <iframe src="/darshan/?theme=dark" class="preloader-kinetic-iframe" title="Darshan Naidu" scrolling="no"></iframe>
-          </div>
-        </div>
-        <div class="preloader-progress-bar-work-selection">
-          <div class="preloader-progress-work-selection"></div>
-        </div>
-      </div>
-      <section class="slider slider--work-selection" id="work-selection-slider">
-        <div class="slider-images" id="slider-images-ws">
-          <img src="/work-section/slider_img_1.webp" alt="Slide 1" />
-        </div>
-        <div class="slider-title" id="slider-title-ws">
-          <h1>Rhythm &amp; Motion</h1>
-        </div>
-        <div class="slider-indicator" id="slider-indicator-ws">
-          <div class="slider-indices-wrapper" id="slider-indices-wrapper-ws">
-            <div class="slider-progress-bar" id="slider-progress-bar-container-ws">
-              <div class="slider-progress" id="slider-progress-bar-ws"></div>
-            </div>
-            <div class="slider-indices" id="slider-indices-ws"></div>
-          </div>
-          <div class="slider-number" id="slider-number-ws">
-            <span class="current-number" id="current-number-ws">01</span>
-          </div>
-        </div>
-      </section>
-    </div>
-
-    <div id="project-page" style="display: none;">
-      <!-- Project Preloader -->
-      <div id="project-preloader" style="display: none;">
-        <div class="preloader-counter-projects preloader-kinetic-container">
-          <h1 class="preloader-raw-number" aria-hidden="true">0</h1>
-          <div class="preloader-kinetic-inner">
-            <iframe src="/darshan/?theme=dark" class="preloader-kinetic-iframe" title="Darshan Naidu" scrolling="no"></iframe>
-          </div>
-        </div>
-        <div class="preloader-progress-bar-projects">
-          <div class="preloader-progress-projects"></div>
-        </div>
-      </div>
+    <!-- Main Project Page (Posters / Visual Artifacts) -->
+    <div id="project-page">
 
       <!-- Main Title Section -->
       <section class="project-title-section" id="project-title-section">
-        <h1 class="project-main-title" id="hero-title">Rhythm &amp; Motion,<br>Selected Reels</h1>
+        <h1 class="project-main-title" id="hero-title">Poster Archive,<br>Volume 01</h1>
         <div class="project-number-wrapper" id="project-number-wrapper">
-          <div class="project-number" id="project-number"><span class="no-prefix">No.</span>1</div>
+          <div class="project-number" id="project-number"><span class="no-prefix">No.</span>2</div>
         </div>
       </section>
 
       <!-- Hero Image -->
       <section class="project-hero-image" id="project-hero-image-container">
         <div class="hero-image-inner" id="project-hero-image">
+          <img src="/work-section/slider_img_2.webp" alt="Visual Artifacts - Hero" width="1920" height="1080">
         </div>
       </section>
 
       <!-- Project Info Section -->
       <section class="project-info-section" id="project-info-section">
         <div class="project-description-wrapper" id="project-description-wrapper">
-          <p id="project-description">A selection of video edits exploring timing, transitions, sound and visual flow. Different styles and formats, brought together by an interest in how a good edit comes together through rhythm and structure.</p>
+          <p id="project-description">An ongoing collection of visual explorations, from typography and layouts to colour, composition and graphic design. Some follow a specific brief, while others are creative ideas I wanted to try.</p>
         </div>
         <div class="project-metadata" id="project-metadata">
           <div class="project-metadata-wide">
             <div class="metadata-item brand">
               <span class="metadata-label">(Category)</span>
-              <span class="metadata-value" id="project-brand">Video Editing · Short-form Content</span>
+              <span class="metadata-value" id="project-brand">Visual Design · Graphic Design</span>
             </div>
             <div class="metadata-item role">
               <span class="metadata-label">(Role)</span>
-              <span class="metadata-value" id="project-role">Video Editing · Sound Design · Pacing</span>
+              <span class="metadata-value" id="project-role">
+                <span class="role-line">1 - Graphic Design &amp; Posters</span>
+                <span class="role-line">2 - Typography &amp; Layout</span>
+                <span class="role-line">3 - Colour &amp; Composition</span>
+                <span class="role-line">4 - Visual Explorations</span>
+              </span>
             </div>
           </div>
           <div class="project-metadata-right">
@@ -490,26 +385,439 @@
         </div>
       </section>
 
-      <!-- Project Images Grid -->
+      <!-- Project Images Grid with Fixed Frames & GSAP Micro-Interactions -->
       <section class="project-images-grid" id="project-images">
+        <div class="pinterest-gallery" id="poster-gallery">
+          <!-- 15 New Editorial Poster Artworks from today edited -->
+          <div class="pinterest-card" data-title="Freedom · Wild Falcon" data-category="Nature / Film" style="translate: none; rotate: none; scale: none; transform: perspective(900px);">
+            <div class="poster-img-frame">
+              <img src="/projects/poster-archive/freedom.webp" alt="Freedom · Wild Falcon" loading="eager" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">
+              <div class="poster-zoom-hint">Zoom ↗</div>
+            </div>
+            <div class="pinterest-card-meta">
+              <span class="pinterest-card-title">Freedom · Wild Falcon</span>
+              <span class="pinterest-card-category">Nature / Film</span>
+            </div>
+          </div>
+
+          <div class="pinterest-card" data-title="The Athlete · Rise" data-category="Sports / Editorial" style="translate: none; rotate: none; scale: none; transform: perspective(900px);">
+            <div class="poster-img-frame">
+              <img src="/projects/poster-archive/athlete-rise.webp" alt="The Athlete · Rise" loading="eager" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">
+              <div class="poster-zoom-hint">Zoom ↗</div>
+            </div>
+            <div class="pinterest-card-meta">
+              <span class="pinterest-card-title">The Athlete · Rise</span>
+              <span class="pinterest-card-category">Sports / Editorial</span>
+            </div>
+          </div>
+
+          <div class="pinterest-card" data-title="Play · Digital Typography" data-category="Sports / Minimalist" style="translate: none; rotate: none; scale: none; transform: perspective(900px);">
+            <div class="poster-img-frame">
+              <img src="/projects/poster-archive/play-basketball.webp" alt="Play · Digital Typography" loading="eager" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">
+              <div class="poster-zoom-hint">Zoom ↗</div>
+            </div>
+            <div class="pinterest-card-meta">
+              <span class="pinterest-card-title">Play · Digital Typography</span>
+              <span class="pinterest-card-category">Sports / Minimalist</span>
+            </div>
+          </div>
+
+          <div class="pinterest-card" data-title="Air Time · Golden Hour" data-category="Footwear / Editorial" style="translate: none; rotate: none; scale: none; transform: perspective(900px);">
+            <div class="poster-img-frame">
+              <img src="/projects/poster-archive/air-time.webp" alt="Air Time · Golden Hour" loading="eager" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+              <div class="poster-zoom-hint">Zoom ↗</div>
+            </div>
+            <div class="pinterest-card-meta">
+              <span class="pinterest-card-title">Air Time · Golden Hour</span>
+              <span class="pinterest-card-category">Footwear / Editorial</span>
+            </div>
+          </div>
+
+          <div class="pinterest-card" data-title="No Gravity · Flight Series" data-category="Sports / Kinetic" style="translate: none; rotate: none; scale: none; transform: perspective(900px);">
+            <div class="poster-img-frame">
+              <img src="/projects/poster-archive/no-gravity.webp" alt="No Gravity · Flight Series" loading="eager" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">
+              <div class="poster-zoom-hint">Zoom ↗</div>
+            </div>
+            <div class="pinterest-card-meta">
+              <span class="pinterest-card-title">No Gravity · Flight Series</span>
+              <span class="pinterest-card-category">Sports / Kinetic</span>
+            </div>
+          </div>
+
+          <div class="pinterest-card" data-title="Sacred · Architectural Silence" data-category="Architecture / Heritage" style="translate: none; rotate: none; scale: none; transform: perspective(900px);">
+            <div class="poster-img-frame">
+              <img src="/projects/poster-archive/sacred-heritage.webp" alt="Sacred · Architectural Silence" loading="eager" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+              <div class="poster-zoom-hint">Zoom ↗</div>
+            </div>
+            <div class="pinterest-card-meta">
+              <span class="pinterest-card-title">Sacred · Architectural Silence</span>
+              <span class="pinterest-card-category">Architecture / Heritage</span>
+            </div>
+          </div>
+
+          <div class="pinterest-card" data-title="Tehran Views · Sky Archive" data-category="Travel / Architecture" style="translate: none; rotate: none; scale: none; transform: perspective(900px);">
+            <div class="poster-img-frame">
+              <img src="/projects/poster-archive/tehran-views.webp" alt="Tehran Views · Sky Archive" loading="eager" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">
+              <div class="poster-zoom-hint">Zoom ↗</div>
+            </div>
+            <div class="pinterest-card-meta">
+              <span class="pinterest-card-title">Tehran Views · Sky Archive</span>
+              <span class="pinterest-card-category">Travel / Architecture</span>
+            </div>
+          </div>
+
+          <div class="pinterest-card" data-title="Nike Air · Iconic Culture" data-category="Product / Footwear" style="">
+            <div class="poster-img-frame">
+              <img src="/projects/poster-archive/nike-air-classic.webp" alt="Nike Air · Iconic Culture" loading="eager">
+              <div class="poster-zoom-hint">Zoom ↗</div>
+            </div>
+            <div class="pinterest-card-meta">
+              <span class="pinterest-card-title">Nike Air · Iconic Culture</span>
+              <span class="pinterest-card-category">Product / Footwear</span>
+            </div>
+          </div>
+
+          <div class="pinterest-card" data-title="Nike Air · Kinetic Red" data-category="Product / Kinetic" style="translate: none; rotate: none; scale: none; transform: perspective(900px);">
+            <div class="poster-img-frame">
+              <img src="/projects/poster-archive/nike-air-red.webp" alt="Nike Air · Kinetic Red" loading="eager" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">
+              <div class="poster-zoom-hint">Zoom ↗</div>
+            </div>
+            <div class="pinterest-card-meta">
+              <span class="pinterest-card-title">Nike Air · Kinetic Red</span>
+              <span class="pinterest-card-category">Product / Kinetic</span>
+            </div>
+          </div>
+
+          <div class="pinterest-card" data-title="North · Made For Everyday" data-category="Branding / Minimalist" style="translate: none; rotate: none; scale: none; transform: perspective(900px);">
+            <div class="poster-img-frame">
+              <img src="/projects/poster-archive/north-brutalist.webp" alt="North · Made For Everyday" loading="eager" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+              <div class="poster-zoom-hint">Zoom ↗</div>
+            </div>
+            <div class="pinterest-card-meta">
+              <span class="pinterest-card-title">North · Made For Everyday</span>
+              <span class="pinterest-card-category">Branding / Minimalist</span>
+            </div>
+          </div>
+
+          <div class="pinterest-card" data-title="Kyoto 2026 · Vermillion Pagoda" data-category="Architecture / Editorial" style="translate: none; rotate: none; scale: none; transform: perspective(900px);">
+            <div class="poster-img-frame">
+              <img src="/projects/poster-archive/kyoto-pagoda.webp" alt="Kyoto 2026 · Vermillion Pagoda" loading="eager" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+              <div class="poster-zoom-hint">Zoom ↗</div>
+            </div>
+            <div class="pinterest-card-meta">
+              <span class="pinterest-card-title">Kyoto 2026 · Vermillion Pagoda</span>
+              <span class="pinterest-card-category">Architecture / Editorial</span>
+            </div>
+          </div>
+
+          <div class="pinterest-card" data-title="Victoria Memorial · Twilight Hour" data-category="City Archive / Heritage" style="">
+            <div class="poster-img-frame">
+              <img src="/projects/poster-archive/victoria-memorial.webp" alt="Victoria Memorial · Twilight Hour" loading="eager">
+              <div class="poster-zoom-hint">Zoom ↗</div>
+            </div>
+            <div class="pinterest-card-meta">
+              <span class="pinterest-card-title">Victoria Memorial · Twilight Hour</span>
+              <span class="pinterest-card-category">City Archive / Heritage</span>
+            </div>
+          </div>
+
+          <div class="pinterest-card" data-title="Old Town · Urban Geometry" data-category="Urban / Architecture" style="translate: none; rotate: none; scale: none; transform: perspective(900px);">
+            <div class="poster-img-frame">
+              <img src="/projects/poster-archive/old-town.webp" alt="Old Town · Urban Geometry" loading="eager" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+              <div class="poster-zoom-hint">Zoom ↗</div>
+            </div>
+            <div class="pinterest-card-meta">
+              <span class="pinterest-card-title">Old Town · Urban Geometry</span>
+              <span class="pinterest-card-category">Urban / Architecture</span>
+            </div>
+          </div>
+
+          <div class="pinterest-card" data-title="Wander Slowly · Nature Sanctuary" data-category="Nature / Editorial" style="translate: none; rotate: none; scale: none; transform: perspective(900px);">
+            <div class="poster-img-frame">
+              <img src="/projects/poster-archive/wander-slowly.webp" alt="Wander Slowly · Nature Sanctuary" loading="eager" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+              <div class="poster-zoom-hint">Zoom ↗</div>
+            </div>
+            <div class="pinterest-card-meta">
+              <span class="pinterest-card-title">Wander Slowly · Nature Sanctuary</span>
+              <span class="pinterest-card-category">Nature / Editorial</span>
+            </div>
+          </div>
+
+          <div class="pinterest-card" data-title="Control Your Thoughts · Daily Mindset" data-category="Editorial / Typography" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">
+            <div class="poster-img-frame">
+              <img src="/projects/poster-archive/control-thoughts.webp" alt="Control Your Thoughts · Daily Mindset" loading="eager" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+              <div class="poster-zoom-hint">Zoom ↗</div>
+            </div>
+            <div class="pinterest-card-meta">
+              <span class="pinterest-card-title">Control Your Thoughts · Daily Mindset</span>
+              <span class="pinterest-card-category">Editorial / Typography</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Instagram connect banner -->
+        <div class="project-ig-banner">
+          <a href="https://www.instagram.com/fxdarshan/" target="_blank" rel="noopener noreferrer" class="project-ig-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path>
+            </svg>
+            <span>Connect on Instagram @fxdarshan</span>
+            <span class="ig-arrow">↗</span>
+          </a>
+        </div>
       </section>
 
       <!-- Footer / Next Project Section -->
-      <footer class="project-footer" id="project-footer">
+      <footer class="project-footer" id="project-footer" style="cursor: pointer;" onclick="window.location.href='/video-archive';">
         <div class="footer-header-wrapper" id="project-footer-header">
-          <h1 class="next-project-main-title" id="next-project-title">Visual Artifacts,<br>Graphic Design</h1>
+          <h1 class="next-project-main-title" id="next-project-title">Video Archive</h1>
           <div class="next-project-number-wrapper" id="next-project-number-wrapper">
-            <div class="next-project-number" id="next-project-number"><span class="next-prefix">Next.</span>2</div>
+            <div class="next-project-number" id="next-project-number"><span class="next-prefix">Next.</span>1</div>
           </div>
-        </div>
-        
-        <div class="next-project-progress" id="next-project-progress-container">
-          <div class="next-project-progress-bar" id="next-progress-bar"></div>
         </div>
       </footer>
     </div>
 
-    </div><!-- #smooth-wrapper -->
+    <!-- Zoom Overlay Elements -->
+    <div class="zoom-backdrop" id="zoom-backdrop"></div>
+    <div class="zoom-caption-pill" id="zoom-caption">
+      <span id="zoom-caption-title">Sacred · Architectural Silence</span>
+      <span class="zoom-caption-category" id="zoom-caption-category">Architecture / Heritage</span>
+    </div>
 
-  </body>
-</html>
+    <!-- GSAP Smooth 3D Tilt + Click to Zoom Scripts -->
+    <script>
+      (function() {
+        const backdrop = document.getElementById('zoom-backdrop');
+        const caption = document.getElementById('zoom-caption');
+        const captionTitle = document.getElementById('zoom-caption-title');
+        const captionCategory = document.getElementById('zoom-caption-category');
+        const cards = document.querySelectorAll('.pinterest-card');
+
+        // Smooth GSAP entrance stagger
+        gsap.from(cards, {
+          opacity: 0,
+          y: 35,
+          scale: 0.98,
+          duration: 0.85,
+          stagger: 0.04,
+          ease: 'power3.out',
+          clearProps: 'transform,opacity'
+        });
+
+        let activeClone = null;
+        let activeOriginalImg = null;
+        let isZooming = false;
+
+        // ========================================================
+        // 1. GSAP SMOOTH 3D TILT & PARALLAX ON HOVER
+        // ========================================================
+        cards.forEach(card => {
+          const img = card.querySelector('img');
+
+          card.addEventListener('mousemove', (e) => {
+            if (activeClone) return;
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+
+            // Calculate subtle tilt angle (-6 to +6 deg)
+            const rotateX = ((y - centerY) / centerY) * -6;
+            const rotateY = ((x - centerX) / centerX) * 6;
+            const moveImgX = ((x - centerX) / centerX) * -8;
+            const moveImgY = ((y - centerY) / centerY) * -8;
+
+            gsap.to(card, {
+              rotateX: rotateX,
+              rotateY: rotateY,
+              y: -6,
+              scale: 1.015,
+              duration: 0.35,
+              ease: 'power2.out',
+              transformPerspective: 900
+            });
+
+            if (img) {
+              gsap.to(img, {
+                x: moveImgX,
+                y: moveImgY,
+                scale: 1.04,
+                duration: 0.35,
+                ease: 'power2.out'
+              });
+            }
+          });
+
+          card.addEventListener('mouseleave', () => {
+            if (activeClone) return;
+            gsap.to(card, {
+              rotateX: 0,
+              rotateY: 0,
+              y: 0,
+              scale: 1,
+              duration: 0.65,
+              ease: 'power3.out'
+            });
+
+            if (img) {
+              gsap.to(img, {
+                x: 0,
+                y: 0,
+                scale: 1,
+                duration: 0.65,
+                ease: 'power3.out'
+              });
+            }
+          });
+        });
+
+        // ========================================================
+        // 2. GSAP CLICK TO ZOOM (FULL RESOLUTION UNEXPANDED VIEW)
+        // ========================================================
+        function openZoom(card) {
+          if (isZooming || activeClone) return;
+          isZooming = true;
+
+          const img = card.querySelector('img');
+          if (!img) return;
+          activeOriginalImg = img;
+
+          const title = card.dataset.title || '';
+          const category = card.dataset.category || '';
+          captionTitle.textContent = title;
+          captionCategory.textContent = category;
+
+          // Reset hover transform before measuring
+          gsap.set(card, { rotateX: 0, rotateY: 0, y: 0, scale: 1 });
+          gsap.set(img, { x: 0, y: 0, scale: 1 });
+
+          // 1. Get initial rect of image in viewport
+          const rect = img.getBoundingClientRect();
+
+          // 2. Create smooth clone positioned over thumbnail
+          const clone = document.createElement('div');
+          clone.className = 'zoom-active-clone';
+          clone.style.top = rect.top + 'px';
+          clone.style.left = rect.left + 'px';
+          clone.style.width = rect.width + 'px';
+          clone.style.height = rect.height + 'px';
+
+          const cloneImg = document.createElement('img');
+          cloneImg.src = img.src;
+          cloneImg.alt = img.alt || '';
+          clone.appendChild(cloneImg);
+          document.body.appendChild(clone);
+          activeClone = clone;
+
+          // Hide original thumbnail during zoom
+          gsap.set(img, { opacity: 0 });
+
+          // 3. Compute target centered size inside viewport (86vh max, 86vw max)
+          const vw = window.innerWidth;
+          const vh = window.innerHeight;
+          const naturalRatio = (img.naturalWidth && img.naturalHeight)
+            ? (img.naturalWidth / img.naturalHeight)
+            : (rect.width / rect.height);
+
+          let targetH = Math.min(vh * 0.84, 880);
+          let targetW = targetH * naturalRatio;
+
+          if (targetW > vw * 0.88) {
+            targetW = vw * 0.88;
+            targetH = targetW / naturalRatio;
+          }
+
+          const targetTop = (vh - targetH) / 2;
+          const targetLeft = (vw - targetW) / 2;
+
+          // 4. Smooth GSAP expansion transition matching Osmo reference
+          backdrop.classList.add('is-active');
+
+          gsap.to(clone, {
+            top: targetTop,
+            left: targetLeft,
+            width: targetW,
+            height: targetH,
+            borderRadius: 16,
+            duration: 0.55,
+            ease: 'power3.out',
+            onComplete: () => {
+              isZooming = false;
+              caption.classList.add('is-active');
+            }
+          });
+
+          clone.addEventListener('click', closeZoom);
+        }
+
+        function closeZoom() {
+          if (!activeClone || isZooming) return;
+          isZooming = true;
+
+          caption.classList.remove('is-active');
+          backdrop.classList.remove('is-active');
+
+          // Get fresh rect of original image
+          const rect = activeOriginalImg.getBoundingClientRect();
+
+          gsap.to(activeClone, {
+            top: rect.top,
+            left: rect.left,
+            width: rect.width,
+            height: rect.height,
+            borderRadius: 14,
+            duration: 0.45,
+            ease: 'power3.inOut',
+            onComplete: () => {
+              if (activeOriginalImg) {
+                gsap.set(activeOriginalImg, { opacity: 1 });
+              }
+              if (activeClone) {
+                activeClone.remove();
+                activeClone = null;
+              }
+              activeOriginalImg = null;
+              isZooming = false;
+            }
+          });
+        }
+
+        // Attach Click to Zoom to cards
+        cards.forEach(card => {
+          card.addEventListener('click', () => openZoom(card));
+        });
+
+        backdrop.addEventListener('click', closeZoom);
+        caption.addEventListener('click', closeZoom);
+
+        // Escape key closes zoom
+        window.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && activeClone) {
+            closeZoom();
+          }
+        });
+
+        // Close zoom on scroll
+        window.addEventListener('scroll', () => {
+          if (activeClone && !isZooming) {
+            closeZoom();
+          }
+        }, { passive: true });
+
+        // Menu open/close interactions
+        const menuOpen = document.querySelector('.menu-open');
+        const menuClose = document.querySelector('.menu-close');
+        const menu = document.querySelector('.menu');
+        if (menuOpen && menu) {
+          menuOpen.addEventListener('click', () => menu.classList.add('active'));
+        }
+        if (menuClose && menu) {
+          menuClose.addEventListener('click', () => menu.classList.remove('active'));
+        }
+      })();
+    </script>
+  
+
+</body></html>

@@ -2,12 +2,13 @@
 /works /works.html 200
 /work-selection /works.html 200
 /about /about.html 200
-/instagram-reels /instagram-reels.html 200
-/reels /instagram-reels.html 200
+/video-archive /video-archive.html 200
 /poster-archive /poster-archive.html 200
+/reels /video-archive.html 200
+/instagram-reels /video-archive.html 200
+/triadlight /video-archive.html 200
 /posters /poster-archive.html 200
 /travel-posters /poster-archive.html 200
-/triadlight /instagram-reels.html 200
 /itmatters /poster-archive.html 200
 /contact / 302
 /reach-out / 302
