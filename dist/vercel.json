@@ -32,6 +32,14 @@
   ],
   "rewrites": [
     {
+      "source": "/darshan",
+      "destination": "/darshan/index.html"
+    },
+    {
+      "source": "/darshan/(.*)",
+      "destination": "/darshan/index.html"
+    },
+    {
       "source": "/assets/videos/(.*)",
       "destination": "https://pub-516aaebe3c6046399fecdd80706924bb.r2.dev/assets/videos/$1"
     },
