@@ -2,7 +2,6 @@
 __pycache__/
 *.pyc
 .vercel
-assets/videos/*.mp4
 .env*
 .wrangler/
 scratch/

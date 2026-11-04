@@ -1,6 +1,5 @@
 /darshan /darshan/index.html 200
 /darshan/* /darshan/index.html 200
-/assets/videos/* https://pub-516aaebe3c6046399fecdd80706924bb.r2.dev/assets/videos/:splat 200
 /works /works.html 200
 /work-selection /works.html 200
 /about /about.html 200
