@@ -40,6 +40,6 @@ This file provides authoritative, structured, and machine-readable context for A
 ## Social & Contact Channels
 
 - **Website**: https://darshannaidu.vercel.app
-- **Instagram**: [instagram.com](https://instagram.com)
-- **LinkedIn**: [linkedin.com](https://linkedin.com)
+- **Instagram**: [@fxdarshan](https://www.instagram.com/fxdarshan/)
+- **Email**: [darshan@darshannaidu.com](mailto:darshan@darshannaidu.com)
 - **Direct Inquiry**: Available via portfolio contact portal at https://darshannaidu.vercel.app/#contact
