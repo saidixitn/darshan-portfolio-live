@@ -54,7 +54,7 @@
   function prewarmVideos() {
     const isVideoArchive = window.location.pathname.includes('video-archive');
     const targetVideos = isVideoArchive
-      ? ['/assets/videos/reels-1.mp4', '/assets/videos/reels-2.mp4', '/assets/videos/reels-3.mp4']
+      ? ['/assets/videos/reels-2.mp4', '/assets/videos/reels-3.mp4', '/assets/videos/reels-4.mp4']
       : ['/assets/videos/x-entiall.mp4', '/assets/videos/reels-1.mp4'];
 
     targetVideos.forEach(function(videoUrl, idx) {
