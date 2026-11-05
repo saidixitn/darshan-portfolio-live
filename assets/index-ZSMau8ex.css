@@ -458,3 +458,279 @@
     object-position: center 25% !important;
   }
 }
+
+/* ========================================================
+   DARSHAN NAIDU - MOBILE VIEWPORT RESPONSIVENESS & FRAMING FIXES
+   (Resolves all out-of-frame thumbnails, videos, texts & controls)
+   ======================================================== */
+
+/* 1. HERO THUMBNAIL / BANNER (Video Archive & Poster Archive) */
+@media (max-width: 900px) {
+  .project-hero-image {
+    padding: 0 16px !important;
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .project-hero-image .hero-image-inner {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    aspect-ratio: 16 / 9 !important;
+    border-radius: 14px !important;
+    overflow: hidden !important;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.7) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    transform: none !important;
+  }
+  .project-hero-image .hero-image-inner video,
+  #project-page .hero-image-inner img,
+  .hero-image-inner video {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    display: block !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
+
+/* 2. PROJECT TITLES & HEADER SECTION */
+@media (max-width: 900px) {
+  .project-title-section {
+    padding: 0 16px !important;
+    margin-top: 14vh !important;
+    margin-bottom: 1.5rem !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: flex-end !important;
+    gap: 12px !important;
+  }
+  #project-page .project-main-title,
+  .project-main-title {
+    font-size: clamp(2rem, 7.5vw, 3.2rem) !important;
+    line-height: 1.05 !important;
+    letter-spacing: -0.04em !important;
+    max-width: 72% !important;
+    word-break: break-word !important;
+  }
+  #project-page .project-number-wrapper,
+  .project-number-wrapper {
+    font-size: clamp(2rem, 7.5vw, 3.2rem) !important;
+    line-height: 1 !important;
+    flex-shrink: 0 !important;
+  }
+  #project-page .project-number-wrapper .no-prefix {
+    font-size: 0.45em !important;
+  }
+}
+
+/* 3. PROJECT INFO & METADATA SECTION */
+@media (max-width: 900px) {
+  .project-info-section {
+    padding: 0 16px !important;
+    gap: 2rem !important;
+    margin-top: 1.5rem !important;
+    margin-bottom: 2.5rem !important;
+  }
+  #project-page #project-description {
+    font-size: clamp(16px, 4.2vw, 20px) !important;
+    line-height: 1.4 !important;
+    letter-spacing: -0.02em !important;
+    font-weight: 500 !important;
+    color: #e0e0e0 !important;
+  }
+  /* Modern clean 2x2 grid for mobile metadata */
+  .project-metadata {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    column-gap: 16px !important;
+    row-gap: 16px !important;
+    width: 100% !important;
+  }
+  .project-metadata-wide,
+  .project-metadata-right {
+    display: contents !important;
+  }
+  .metadata-item.brand {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    text-align: left !important;
+  }
+  .metadata-item.year {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    text-align: right !important;
+    align-items: flex-end !important;
+    justify-self: end !important;
+  }
+  .metadata-item.role {
+    display: flex !important;
+    grid-column: 1 !important;
+    grid-row: 2 !important;
+    text-align: left !important;
+  }
+  .metadata-item.location {
+    grid-column: 2 !important;
+    grid-row: 2 !important;
+    text-align: right !important;
+    align-items: flex-end !important;
+    justify-self: end !important;
+  }
+  .metadata-item {
+    min-width: 0 !important;
+  }
+  .metadata-label {
+    font-size: 12px !important;
+    color: #888 !important;
+    margin-bottom: 4px !important;
+  }
+  .metadata-value {
+    font-size: 13.5px !important;
+    line-height: 1.3 !important;
+    color: #fff !important;
+    word-break: break-word !important;
+  }
+}
+
+/* 4. VIDEO REELS GALLERY ON TABLETS & MOBILE */
+@media (max-width: 1024px) {
+  .reels-gallery {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
+    padding: 0 20px !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .reel-card.is-featured-16-9,
+  .reel-card.is-widescreen-16-9 {
+    grid-column: span 2 !important;
+    aspect-ratio: 16 / 9 !important;
+  }
+  .reel-card.is-vertical-9-16 {
+    grid-column: span 1 !important;
+    aspect-ratio: 9 / 16 !important;
+    max-width: 100% !important;
+  }
+  .reel-card.is-vertical-centered {
+    grid-column: span 2 !important;
+    max-width: 380px !important;
+    margin: 0 auto !important;
+    width: 100% !important;
+    aspect-ratio: 9 / 16 !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .reels-gallery {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 24px !important;
+    padding: 0 16px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .reel-card {
+    width: 100% !important;
+    border-radius: 16px !important;
+  }
+  .reel-card.is-featured-16-9,
+  .reel-card.is-widescreen-16-9 {
+    aspect-ratio: 16 / 9 !important;
+    max-width: 100% !important;
+  }
+  .reel-card.is-vertical-9-16 {
+    aspect-ratio: 9 / 16 !important;
+    max-width: 360px !important;
+    margin: 0 auto !important;
+    width: 100% !important;
+  }
+  .reel-minimal-controls {
+    top: 12px !important;
+    right: 12px !important;
+    gap: 8px !important;
+  }
+  .reel-ctrl-btn {
+    width: 36px !important;
+    height: 36px !important;
+  }
+  .reel-ctrl-btn svg {
+    width: 15px !important;
+    height: 15px !important;
+  }
+  .project-ig-banner {
+    padding: 0 16px !important;
+    margin: 32px auto 60px auto !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .project-ig-btn {
+    width: 100% !important;
+    max-width: 360px !important;
+    justify-content: center !important;
+    padding: 14px 20px !important;
+    font-size: 14px !important;
+    box-sizing: border-box !important;
+  }
+}
+
+/* 5. FOOTER / NEXT PROJECT SECTION */
+@media (max-width: 900px) {
+  .project-footer {
+    padding: 0 16px 2rem 16px !important;
+  }
+  .footer-header-wrapper {
+    padding: 0 0 1rem 0 !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: flex-end !important;
+    gap: 12px !important;
+  }
+  .next-project-main-title {
+    font-size: clamp(2rem, 7.5vw, 3.2rem) !important;
+    line-height: 1.05 !important;
+    letter-spacing: -0.04em !important;
+    max-width: 72% !important;
+    word-break: break-word !important;
+  }
+  .next-project-number-wrapper {
+    font-size: clamp(2rem, 7.5vw, 3.2rem) !important;
+    line-height: 1 !important;
+    flex-shrink: 0 !important;
+  }
+}
+
+/* 6. SLIDER & WORKS PAGE TITLES */
+@media (max-width: 600px) {
+  #slider-title,
+  #slider-title-ws {
+    left: 16px !important;
+    right: 16px !important;
+    width: calc(100% - 32px) !important;
+    bottom: 2rem !important;
+  }
+  #slider-title h1,
+  #slider-title-ws h1 {
+    font-size: clamp(2.2rem, 9vw, 3.2rem) !important;
+    letter-spacing: -0.03em !important;
+    line-height: 1.05 !important;
+  }
+  .slider-indicator,
+  #slider-indicator-ws {
+    right: 16px !important;
+    bottom: 2rem !important;
+  }
+}
+
+/* 7. ABOUT PAGE TEXT FRAMING */
+@media (max-width: 600px) {
+  .about-description {
+    font-size: clamp(1.25rem, 5vw, 1.6rem) !important;
+    line-height: 1.35 !important;
+    letter-spacing: -0.02em !important;
+  }
+}
+
