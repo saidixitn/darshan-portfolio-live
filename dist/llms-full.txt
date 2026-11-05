@@ -1,0 +1,79 @@
+# Darshan Naidu · Full Creative & Technical Index
+
+This document provides a comprehensive, exhaustive overview of Darshan Naidu's creative work, featured video edits, graphic design collections, and technical specifications for LLMs and AI search engines.
+
+---
+
+## 1. Artist Profile & Identity
+
+- **Full Name**: Darshan Naidu
+- **Professional Title**: Creative Video Editor, Visual Designer & Motion Creative
+- **Base City**: Visakhapatnam (Vizag), Andhra Pradesh, India
+- **Global Operating Model**: 100% remote-capable for global clients across the US, UK, Europe, UAE, and APAC.
+- **Brand Vision**: "Different interests. One creative space." Merging dynamic short-form video rhythm with clean, high-impact typography and modern brutalist aesthetics.
+
+---
+
+## 2. Flagship Video Projects & Reel Archive Breakdown
+
+Located at canonical URL: `https://darshannaidu.vercel.app/video-archive`
+
+### Project 1: X-ENTI'ALL Commercial Reel
+- **Format**: Widescreen 16:9 commercial edit & social cut
+- **Discipline**: Commercial product video editing, mood pacing, subtle sound design, tactile coffee & lifestyle cinematography.
+- **Key Visual Elements**: Ceramic tactile texture, steam motion, bold contrast grade, rhythmic cuts keyed to ambient audio.
+- **Role**: Concept pacing, offline cut, color timing, sound design & master delivery.
+
+### Project 2: High-Velocity Social Reels Series (Reels 2 through 11)
+- **Format**: Vertical 9:16 (optimized for mobile viewports, Instagram Reels, YouTube Shorts)
+- **Disciplines**:
+  - Retention engineering (visual hook within 0.8s, pattern interrupts every 2.5s)
+  - Speed ramping and motion blur transitions
+  - Audio sync with dynamic riser and drop placement
+  - Minimalistic kinetic typography overlays
+- **Reel Collection**:
+  - `reels-2.mp4`: High-energy urban lifestyle & motion cut.
+  - `reels-3.mp4`: Minimalist, atmospheric visual tone study.
+  - `reels-4.mp4`: Rapid rhythmic cuts and micro-transitions.
+  - `reels-6.mp4` & `reels-7.mp4`: Widescreen 16:9 cinematic explorations.
+  - `reels-8.mp4`, `reels-9.mp4`, `reels-10.mp4`, `reels-11.mp4`: Creative narratives and character-driven edits.
+  - `reels-5.mp4`: Widescreen featured motion piece.
+
+---
+
+## 3. Graphic & Poster Design Archive Breakdown
+
+Located at canonical URL: `https://darshannaidu.vercel.app/poster-archive`
+
+- **Visual Artifacts Hero**: Kinetic typographic study with brutalist grid architecture.
+- **Freedom · Wild Falcon**: High-contrast nature photography married with distressed Swiss typography.
+- **The Athlete · Rise**: Kinetic sports editorial design exploring human limits and monochrome tension.
+- **Play · Digital Typography**: Experimental glyph distortion and digital brutalism.
+- **Air Time · Golden Hour**: Warm-tone basketball and athletic movement freeze-frame.
+- **No Gravity · Flight Series**: Minimalist layout emphasizing negative space and aerial motion.
+- **Sacred · Architectural Silence**: Historic and structural geometry study.
+- **Nike Air Series**: Cultural tribute posters celebrating sneaker culture, silhouette heritage, and bold red/black color theory.
+- **Kyoto 2026 · Vermillion Pagoda**: Japanese architectural tradition rendered through a contemporary lens.
+- **Victoria Memorial & Old Town**: Urban geometry and architectural photography posters.
+
+---
+
+## 4. Technical Architecture of the Portfolio
+
+- **Hosting & Infrastructure**: Vercel Edge Network (Global CDN with Indian BOM1 edge pop).
+- **Video Delivery Pipeline**:
+  - ISO Base Media Format (MP4 / H.264 High-Profile).
+  - FastStart enabled (`moov` atom placed before `mdat` for instant HTTP 206 Byte-Range streaming).
+  - WebP instant poster backdrops preventing black-box flashes.
+  - Custom Service Worker (`sw.js`) with range caching.
+  - Speculative pre-warming engine (`fast-loader.js`) with 65ms hover debounce.
+- **Design Framework**: Custom vanilla JavaScript, GSAP 3 (GreenSock Animation Platform) for timeline coordination, Lenis smooth scroll, FK Grotesk & Satoshi typography.
+- **Core Web Vitals Status**: 100/100 Accessibility, 100/100 Best Practices, 100/100 SEO, 0.00 Cumulative Layout Shift (CLS).
+
+---
+
+## 5. Contact & Collaboration Protocol
+
+Clients and agencies looking to collaborate on commercial video campaigns, retention-focused social reel packages, or visual brand identity design can connect via:
+- **Online**: https://darshannaidu.vercel.app
+- **Direct**: Visakhapatnam, India · Available Worldwide

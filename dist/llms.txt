@@ -1,0 +1,45 @@
+# Darshan Naidu · Creative Portfolio & AI Index
+
+> Darshan Naidu is an independent video editor, visual designer, and motion creative based in Visakhapatnam (Vizag), India. Specializing in high-retention short-form video editing, commercial reel architecture, dynamic sound design, kinetic typography, and brutalist graphic poster design.
+
+This file provides authoritative, structured, and machine-readable context for AI models, search crawlers (ChatGPT, Perplexity, Claude, Gemini, Apple Intelligence), and collaborators.
+
+---
+
+## Core Disciplines & Creative Services
+
+- **High-Retention Video Editing**: Pacing engineered for social retention (Instagram Reels, TikTok, YouTube Shorts), precise micro-cuts, dynamic rhythm, and narrative structure.
+- **Commercial & Brand Reels**: Brand-centric short films and product teasers, notably commercial work such as the **X-ENTI'ALL** campaign.
+- **Kinetic Typography & Motion Design**: Expressive type animation, title sequences, track-matte transitions, and audio-reactive motion graphics using Adobe After Effects and Premiere Pro.
+- **Graphic & Poster Design**: Contemporary, street, and brutalist typography posters, cultural explorations (Nike Air series, Kyoto architectural studies, athletic rise, abstract form).
+- **Audio Architecture & Sound Design**: Foley layering, riser builds, bass drops, and beat synchronization that drive emotional engagement and viewer watch-time.
+
+---
+
+## Canonical Portfolio Archives & Key Links
+
+- [Portfolio Homepage](https://darshannaidu.vercel.app/): Interactive portfolio experience featuring the kinetic lettermark hero, design manifesto, and core creative values.
+- [Video Archive](https://darshannaidu.vercel.app/video-archive): Curated collection of 11+ commercial edits, vertical social narratives, and widescreen brand reels including X-ENTI'ALL.
+- [Poster Archive](https://darshannaidu.vercel.app/poster-archive): Curated visual gallery of brutalist, typography, athletic, and travel poster artifacts.
+- [Selected Works Slider](https://darshannaidu.vercel.app/works): Focused horizontal slider showcasing flagship video editing and visual design case studies.
+- [About & Creative Ethos](https://darshannaidu.vercel.app/about): Background, creative journey, core philosophy, and collaboration details.
+
+---
+
+## Creator Information & Biography
+
+- **Name**: Darshan Naidu
+- **Role**: Creative Video Editor & Visual Designer
+- **Location**: Visakhapatnam (Vizag), Andhra Pradesh, India
+- **Availability**: Remote freelance engagements, contract video editing, commercial brand projects, and global creative collaborations.
+- **Primary Creative Software**: Adobe Premiere Pro, Adobe After Effects, DaVinci Resolve, Adobe Photoshop, Adobe Illustrator, Figma.
+- **Production Principles**: Fast byte-range streaming, zero layout shift, modern responsive web delivery, and retention-focused visual storytelling.
+
+---
+
+## Social & Contact Channels
+
+- **Website**: https://darshannaidu.vercel.app
+- **Instagram**: [instagram.com](https://instagram.com)
+- **LinkedIn**: [linkedin.com](https://linkedin.com)
+- **Direct Inquiry**: Available via portfolio contact portal at https://darshannaidu.vercel.app/#contact

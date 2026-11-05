@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://darshannaidu.vercel.app/</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://darshannaidu.vercel.app/hero/hero.webp</image:loc>
+      <image:title>Darshan Naidu · Creative Video Editor &amp; Visual Designer</image:title>
+      <image:caption>Portfolio hero introducing creative disciplines in video editing, motion design, and visual art.</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Video Archive -->
+  <url>
+    <loc>https://darshannaidu.vercel.app/video-archive</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <video:video>
+      <video:thumbnail_loc>https://darshannaidu.vercel.app/assets/videos/reels-1-poster.webp</video:thumbnail_loc>
+      <video:title>X-ENTI'ALL · Commercial Video Edit &amp; Pacing Showcase</video:title>
+      <video:description>A curated commercial video edit exploring timing, tactile sound design, transitions, and narrative rhythm by Darshan Naidu.</video:description>
+      <video:content_loc>https://darshannaidu.vercel.app/assets/videos/x-entiall.mp4</video:content_loc>
+      <video:duration>30</video:duration>
+      <video:publication_date>2026-11-01</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+
+  <!-- Poster Archive -->
+  <url>
+    <loc>https://darshannaidu.vercel.app/poster-archive</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <image:image>
+      <image:loc>https://darshannaidu.vercel.app/projects/poster-archive/freedom.webp</image:loc>
+      <image:title>Freedom · Wild Falcon Typographic Poster</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://darshannaidu.vercel.app/projects/poster-archive/athlete-rise.webp</image:loc>
+      <image:title>The Athlete · Rise Brutalist Poster</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://darshannaidu.vercel.app/projects/poster-archive/nike-air-classic.webp</image:loc>
+      <image:title>Nike Air · Iconic Culture Poster Design</image:title>
+    </image:image>
+  </url>
+
+  <!-- Selected Works -->
+  <url>
+    <loc>https://darshannaidu.vercel.app/works</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- About -->
+  <url>
+    <loc>https://darshannaidu.vercel.app/about</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+</urlset>
