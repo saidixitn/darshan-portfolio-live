@@ -46,9 +46,11 @@ On `/video-archive` (`video-archive.html`):
    - Card 6: `reels-8.mp4` (vertical 9:16)
    - Card 7: `reels-9.mp4` (vertical 9:16)
    - Card 8: `reels-10.mp4` (vertical 9:16)
-   - Card 9: `reels-11.mp4` (vertical 9:16 centered)
-   - Card 10: `reels-5.mp4` (featured 16:9)
-   - Card 11: `x-entiall.mp4` (featured 16:9)
+   - Card 9: `reels-11.mp4` (vertical 9:16)
+   - Card 10: `reels-12.mp4` (vertical 9:16)
+   - Card 11: `reels-13.mp4` (vertical 9:16)
+   - Card 12: `reels-5.mp4` (featured 16:9)
+   - Card 13: `x-entiall.mp4` (featured 16:9)
 
 ---
 
