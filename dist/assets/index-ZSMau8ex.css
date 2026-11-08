@@ -745,3 +745,117 @@
 
 
 
+
+/* ==========================================================================
+   MOBILE AUTO-ADJUST THUMBNAILS & CLEAN TEXT WRAPPING
+   ========================================================================== */
+@media (max-width: 900px) {
+  /* 1. Prevent mid-word splitting in titles (e.g. "Motion" -> "Motio / n") */
+  #project-page .project-main-title,
+  .project-main-title,
+  #hero-title,
+  .next-project-main-title {
+    font-size: clamp(1.75rem, 6.2vw, 2.75rem) !important;
+    line-height: 1.1 !important;
+    letter-spacing: -0.04em !important;
+    max-width: 82% !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    hyphens: none !important;
+    white-space: normal !important;
+  }
+
+  /* 2. Auto-adjust video and image thumbnails on mobile without harsh cropping */
+  #work-selection-page .slider,
+  #slider-page .slider,
+  .slider--work-selection {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    overflow: hidden !important;
+  }
+
+  #work-selection-page .slider-images,
+  #slider-images-ws,
+  .slider--work-selection .slider-images {
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    max-height: 60svh !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 16px !important;
+    box-sizing: border-box !important;
+  }
+
+  #work-selection-page .slider-images img,
+  #work-selection-page .slider-images video,
+  #slider-images-ws img,
+  #slider-images-ws video,
+  .slider--work-selection .slider-images img,
+  .slider--work-selection .slider-images video {
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    max-height: 56svh !important;
+    object-fit: contain !important;
+    border-radius: 14px !important;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.7) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    display: block !important;
+    margin: 0 auto !important;
+  }
+
+  /* 3. Slider title & indicator positioned cleanly below thumbnail */
+  #work-selection-page .slider-title,
+  #slider-title-ws,
+  .slider--work-selection .slider-title {
+    position: absolute !important;
+    bottom: max(1.8rem, env(safe-area-inset-bottom, 1.8rem)) !important;
+    left: 1.25rem !important;
+    top: auto !important;
+    transform: none !important;
+    width: auto !important;
+    max-width: 65% !important;
+    z-index: 20 !important;
+    pointer-events: none !important;
+  }
+
+  #work-selection-page .slider-title h1,
+  #slider-title-ws h1,
+  .slider--work-selection .slider-title h1 {
+    font-size: clamp(1.8rem, 6.5vw, 2.5rem) !important;
+    line-height: 1.05 !important;
+    letter-spacing: -0.04em !important;
+    white-space: nowrap !important;
+    margin: 0 !important;
+  }
+
+  #work-selection-page .slider-indicator,
+  #slider-indicator-ws,
+  .slider--work-selection .slider-indicator {
+    position: absolute !important;
+    bottom: max(1.8rem, env(safe-area-inset-bottom, 1.8rem)) !important;
+    right: 1.25rem !important;
+    top: auto !important;
+    transform: none !important;
+    z-index: 20 !important;
+  }
+
+  /* 4. Project hero video auto-fit */
+  .project-hero-image .hero-image-inner {
+    aspect-ratio: 16 / 9 !important;
+    border-radius: 14px !important;
+    overflow: hidden !important;
+  }
+
+  .project-hero-image .hero-image-inner video,
+  .project-hero-image .hero-image-inner img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    border-radius: 14px !important;
+  }
+}
