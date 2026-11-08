@@ -1,6 +1,6 @@
 # Darshan Naidu · Creative Portfolio & AI Index
 
-> Darshan Naidu is an independent video editor, visual designer, and motion creative based in Visakhapatnam (Vizag), India. Specializing in high-retention short-form video editing, commercial reel architecture, dynamic sound design, kinetic typography, and brutalist graphic poster design.
+> Darshan Naidu is a video editor and designer from Vizag, India, who helps creators and YouTubers turn raw footage into videos people finish watching. Specializing in smooth cuts, strong pacing, clean sound, motion & titles, thumbnails & design, and social media content for creators worldwide.
 
 This file provides authoritative, structured, and machine-readable context for AI models, search crawlers (ChatGPT, Perplexity, Claude, Gemini, Apple Intelligence), and collaborators.
 
@@ -19,7 +19,7 @@ This file provides authoritative, structured, and machine-readable context for A
 ## Canonical Portfolio Archives & Key Links
 
 - [Portfolio Homepage](https://darshannaidu.vercel.app/): Interactive portfolio experience featuring the kinetic lettermark hero, design manifesto, and core creative values.
-- [Video Archive](https://darshannaidu.vercel.app/video-archive): Curated collection of 11+ commercial edits, vertical social narratives, and widescreen brand reels including X-ENTI'ALL.
+- [Video Archive](https://darshannaidu.vercel.app/video-archive): Curated collection of 13+ commercial edits, vertical social narratives, and widescreen brand reels including X-ENTI'ALL.
 - [Poster Archive](https://darshannaidu.vercel.app/poster-archive): Curated visual gallery of brutalist, typography, athletic, and travel poster artifacts.
 - [Selected Works Slider](https://darshannaidu.vercel.app/works): Focused horizontal slider showcasing flagship video editing and visual design case studies.
 - [About & Creative Ethos](https://darshannaidu.vercel.app/about): Background, creative journey, core philosophy, and collaboration details.
