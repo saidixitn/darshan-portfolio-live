@@ -759,8 +759,8 @@
         var isUnlocked = false;
         var idleTimer = null;
         var currentSpeed = 0;
-        var targetSpeed = 3.6; // Fast, fluid velocity (~215px/sec)
-        var accel = 0.08;
+        var targetSpeed = 6.8; // High-velocity smooth scroll (~410px/sec)
+        var accel = 0.2;
         var lastTime = performance.now();
         var reachedEnd = false;
 
@@ -813,7 +813,7 @@
           idleTimer = setTimeout(function() {
             isInteracting = false;
             updatePill();
-          }, 2000);
+          }, 1500);
         }
 
         window.addEventListener('wheel', onUserScroll, { passive: true });
