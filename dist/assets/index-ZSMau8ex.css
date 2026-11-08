@@ -1095,3 +1095,15 @@ nav > * {
 #about-section .about-content-wrapper {
   padding-top: calc(env(safe-area-inset-top, 0px) + 5.5rem) !important;
 }
+
+/* Next Project Footer Title: Strict single-line, no mid-word wrap */
+#next-project-title,
+.next-project-main-title,
+.project-footer .next-project-main-title {
+  font-size: clamp(1.4rem, 5.2vw, 2.4rem) !important;
+  line-height: 1.15 !important;
+  letter-spacing: -0.03em !important;
+  white-space: nowrap !important;
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+}
