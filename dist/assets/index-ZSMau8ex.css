@@ -967,3 +967,131 @@
     right: 1.25rem !important;
   }
 }
+
+
+/* === AUTO-LAYOUT, READABLE SCROLL TYPOGRAPHY & WORD GROUP PROTECTION === */
+.word-group {
+  display: inline-block !important;
+  white-space: nowrap !important;
+  vertical-align: baseline !important;
+}
+
+/* Fixed Navbar Scrim: prevents scrolled text clipping underneath */
+nav {
+  background: linear-gradient(to bottom, rgba(11, 11, 12, 0.95) 0%, rgba(11, 11, 12, 0.72) 60%, rgba(11, 11, 12, 0) 100%) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  backdrop-filter: blur(12px) !important;
+  pointer-events: none !important;
+}
+nav > * {
+  pointer-events: auto !important;
+}
+
+/* Manifesto & Scroll Narrative: Comfortable, highly legible editorial sizing */
+.manifesto .manifesto__text,
+.manifesto p.manifesto__text,
+.manifesto__text--center,
+.manifesto__text {
+  font-size: clamp(1.35rem, 3.2vw, 2.35rem) !important;
+  line-height: 1.4 !important;
+  letter-spacing: -0.025em !important;
+  max-width: min(88vw, 760px) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  word-break: normal !important;
+  overflow-wrap: break-word !important;
+}
+
+@media (max-width: 850px) {
+  .manifesto .manifesto__text,
+  .manifesto p.manifesto__text,
+  .manifesto__text--center,
+  .manifesto__text {
+    font-size: clamp(1.15rem, 4.6vw, 1.6rem) !important;
+    line-height: 1.38 !important;
+    letter-spacing: -0.02em !important;
+    max-width: min(90vw, 440px) !important;
+    padding: 0 0.5rem !important;
+  }
+  .manifesto__slide {
+    padding: 1.25rem !important;
+  }
+}
+
+/* Works Slider Auto Layout: Never breaks mid-word, never overlaps media */
+#slider-title h1,
+#slider-title-ws h1 {
+  white-space: nowrap !important;
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+}
+
+@media (max-width: 850px) {
+  #slider-title,
+  #slider-title-ws,
+  #work-selection-page .slider-title {
+    position: absolute !important;
+    bottom: max(1.5rem, calc(env(safe-area-inset-bottom, 0px) + 1.25rem)) !important;
+    left: 1.25rem !important;
+    right: 5.5rem !important;
+    width: auto !important;
+    top: auto !important;
+    transform: none !important;
+    pointer-events: none !important;
+    z-index: 100 !important;
+  }
+
+  #slider-title h1,
+  #slider-title-ws h1,
+  #work-selection-page .slider-title h1 {
+    font-size: clamp(1.25rem, 5vw, 1.8rem) !important;
+    line-height: 1.1 !important;
+    letter-spacing: -0.03em !important;
+    white-space: nowrap !important;
+    margin: 0 !important;
+  }
+
+  .slide-wrapper {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding-top: max(4.2rem, calc(env(safe-area-inset-top, 0px) + 3.8rem)) !important;
+    padding-bottom: max(4.5rem, calc(env(safe-area-inset-bottom, 0px) + 4rem)) !important;
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+    box-sizing: border-box !important;
+  }
+
+  .slide-inner {
+    width: 100% !important;
+    height: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .slide-inner img,
+  .slide-inner video {
+    max-width: 90% !important;
+    max-height: 52svh !important;
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain !important;
+    border-radius: 16px !important;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.65) !important;
+    margin: auto !important;
+  }
+}
+
+/* Outro Transition Text */
+.outro-transition-text {
+  font-size: clamp(1.6rem, 5.5vw, 3.2rem) !important;
+  line-height: 1.15 !important;
+  letter-spacing: -0.035em !important;
+}
+
+/* About Section Top Padding */
+.about-content-wrapper,
+#about-section .about-content-wrapper {
+  padding-top: calc(env(safe-area-inset-top, 0px) + 5.5rem) !important;
+}
