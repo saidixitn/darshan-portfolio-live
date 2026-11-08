@@ -35,6 +35,57 @@ class DarshanPortfolioHandler(http.server.SimpleHTTPRequestHandler):
         self.send_header("Cache-Control", "no-cache, no-store, must-revalidate")
         super().end_headers()
 
+    def send_head(self):
+        path = self.translate_path(self.path)
+        if os.path.isdir(path) or not os.path.isfile(path):
+            return super().send_head()
+
+        range_header = self.headers.get("Range")
+        if not range_header:
+            return super().send_head()
+
+        try:
+            total_size = os.path.getsize(path)
+            range_val = range_header.strip().lower()
+            if not range_val.startswith("bytes="):
+                return super().send_head()
+
+            parts = range_val[6:].split("-")
+            start = int(parts[0]) if parts[0] else 0
+            end = int(parts[1]) if len(parts) > 1 and parts[1] else total_size - 1
+            if end >= total_size:
+                end = total_size - 1
+            length = end - start + 1
+
+            ctype = self.guess_type(path)
+            f = open(path, "rb")
+            f.seek(start)
+
+            self.send_response(206, "Partial Content")
+            self.send_header("Content-Type", ctype)
+            self.send_header("Content-Range", f"bytes {start}-{end}/{total_size}")
+            self.send_header("Content-Length", str(length))
+            self.end_headers()
+
+            class RangeFile:
+                def __init__(self, fp, remaining):
+                    self.fp = fp
+                    self.remaining = remaining
+                def read(self, size=-1):
+                    if self.remaining <= 0:
+                        return b""
+                    if size < 0 or size > self.remaining:
+                        size = self.remaining
+                    data = self.fp.read(size)
+                    self.remaining -= len(data)
+                    return data
+                def close(self):
+                    self.fp.close()
+
+            return RangeFile(f, length)
+        except Exception:
+            return super().send_head()
+
     def translate_path(self, path):
         clean_path = path.split('?', 1)[0].split('#', 1)[0]
         # Strip /test if present so all paths resolve locally
