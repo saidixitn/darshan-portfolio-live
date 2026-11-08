@@ -1,4 +1,4 @@
-const CACHE_NAME = 'darshan-portfolio-v3';
+const CACHE_NAME = 'darshan-portfolio-v4';
 const PRECACHE_ASSETS = [
   '/',
   '/video-archive',
