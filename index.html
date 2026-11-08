@@ -99,6 +99,76 @@
       .footer-name, .footer-socials, .footer-copyright, .footer-label {
         font-family: 'FKGrotesk', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif !important;
       }
+      body[data-nav-page="about"] #outro-content-wrapper,
+      body[data-nav-page="works"] #outro-content-wrapper,
+      #unified-phrase-wrapper {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: auto !important;
+        max-width: 90vw !important;
+        pointer-events: none !important;
+        will-change: transform, opacity !important;
+        gap: 0 !important;
+        left: 50% !important;
+        top: 50% !important;
+        transform: translate(-50%, -50%) !important;
+      }
+      body[data-nav-page="about"] #outro-content-wrapper .outro-text,
+      body[data-nav-page="works"] #outro-content-wrapper .outro-text,
+      #unified-phrase-wrapper .outro-text {
+        flex: none !important;
+        transform: none !important;
+        margin: 0 !important;
+        white-space: nowrap !important;
+      }
+      body[data-nav-page="about"] #outro-content-wrapper #outro-carve,
+      #unified-phrase-wrapper #outro-carve {
+        margin-right: clamp(14px, 1.35vw, 22px) !important;
+        transform: none !important;
+        position: static !important;
+      }
+      body[data-nav-page="about"] #outro-content-wrapper #outro-into,
+      body[data-nav-page="about"] #outro-content-wrapper .outro-text.into,
+      #unified-phrase-wrapper #outro-into,
+      #unified-phrase-wrapper .outro-text.into {
+        position: static !important;
+        top: auto !important;
+        left: auto !important;
+        transform: none !important;
+        margin: 0 !important;
+        margin-right: clamp(14px, 1.35vw, 22px) !important;
+      }
+      body[data-nav-page="about"] #outro-content-wrapper #outro-memory,
+      #unified-phrase-wrapper #outro-memory {
+        transform: none !important;
+        position: static !important;
+        margin: 0 !important;
+      }
+      body[data-nav-page="about"] #outro-content-wrapper #outro-img-block,
+      body[data-nav-page="works"] #outro-content-wrapper #outro-img-block,
+      #unified-phrase-wrapper #outro-img-block-spacer {
+        display: none !important;
+        width: 0 !important;
+        height: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+      @media (max-width: 850px) {
+        body[data-nav-page="about"] #outro-content-wrapper,
+        body[data-nav-page="works"] #outro-content-wrapper,
+        #unified-phrase-wrapper {
+          flex-direction: column !important;
+          gap: 0.4rem !important;
+        }
+        body[data-nav-page="about"] #outro-content-wrapper #outro-carve,
+        body[data-nav-page="about"] #outro-content-wrapper #outro-into,
+        #unified-phrase-wrapper #outro-carve,
+        #unified-phrase-wrapper #outro-into {
+          margin-right: 0 !important;
+        }
+      }
       .preloader-raw-number {
         position: absolute !important;
         opacity: 0 !important;
@@ -598,5 +668,204 @@
 
     </div><!-- #smooth-wrapper -->
 
+    <!-- ========================================================
+         SMOOTH AUTO-SCROLL ENGINE (HOMEPAGE)
+         Silky Lenis-interpolated auto-scroll with pause-on-touch
+         ======================================================== -->
+    <button id="auto-scroll-pill" aria-label="Toggle Auto Scroll" class="auto-scroll-pill">
+      <span class="as-dot"></span>
+      <span class="as-label">Auto Scroll · ON</span>
+    </button>
+    <style>
+      #auto-scroll-pill {
+        position: fixed;
+        bottom: max(1.2rem, env(safe-area-inset-bottom, 1.2rem));
+        left: 1.2rem;
+        z-index: 99999;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 7px 15px;
+        background: rgba(15, 15, 17, 0.75);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        border-radius: 999px;
+        color: #fff;
+        font-family: "FKGrotesk", "Plus Jakarta Sans", Satoshi, -apple-system, BlinkMacSystemFont, sans-serif;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        cursor: pointer;
+        opacity: 0;
+        transform: translateY(8px);
+        transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), background 0.25s ease, border-color 0.25s ease;
+        pointer-events: none;
+        user-select: none;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+      }
+      #auto-scroll-pill.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+      }
+      #auto-scroll-pill:hover {
+        background: rgba(28, 28, 32, 0.9);
+        border-color: rgba(255, 255, 255, 0.3);
+      }
+      #auto-scroll-pill .as-dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #4ade80;
+        box-shadow: 0 0 8px rgba(74, 222, 128, 0.6);
+        transition: background 0.3s ease, box-shadow 0.3s ease;
+      }
+      #auto-scroll-pill.is-paused .as-dot {
+        background: #fbbf24;
+        box-shadow: 0 0 8px rgba(251, 191, 36, 0.5);
+      }
+      #auto-scroll-pill.is-off .as-dot {
+        background: #71717a;
+        box-shadow: none;
+      }
+      @media (max-width: 600px) {
+        #auto-scroll-pill {
+          bottom: max(0.85rem, env(safe-area-inset-bottom, 0.85rem));
+          left: 0.85rem;
+          padding: 6px 12px;
+          font-size: 10px;
+        }
+      }
+    </style>
+    <script>
+      (function() {
+        if (typeof window === 'undefined') return;
+
+        function isHome() {
+          if (typeof window.getAppRoute === 'function') {
+            try { return window.getAppRoute().name === 'home'; } catch(e) {}
+          }
+          var p = window.location.pathname || '/';
+          return p === '/' || p === '/index.html' || p === '/index';
+        }
+
+        var pill = document.getElementById('auto-scroll-pill');
+        if (!pill) return;
+
+        var isEnabled = true;
+        var isInteracting = false;
+        var isUnlocked = false;
+        var idleTimer = null;
+        var currentSpeed = 0;
+        var targetSpeed = 3.6; // Fast, fluid velocity (~215px/sec)
+        var accel = 0.08;
+        var lastTime = performance.now();
+        var reachedEnd = false;
+
+        function updatePill() {
+          if (!pill) return;
+          var label = pill.querySelector('.as-label');
+          pill.classList.remove('is-paused', 'is-off');
+          if (!isEnabled) {
+            pill.classList.add('is-off');
+            if (label) label.textContent = 'Auto Scroll · OFF';
+          } else if (reachedEnd) {
+            pill.classList.add('is-off');
+            if (label) label.textContent = 'Restart Scroll';
+          } else if (isInteracting) {
+            pill.classList.add('is-paused');
+            if (label) label.textContent = 'Auto Scroll · PAUSED';
+          } else {
+            if (label) label.textContent = 'Auto Scroll · ON';
+          }
+        }
+
+        pill.addEventListener('click', function(e) {
+          e.stopPropagation();
+          if (reachedEnd) {
+            reachedEnd = false;
+            isEnabled = true;
+            if (window.appLenis) {
+              window.appLenis.scrollTo(0, { immediate: false, duration: 1.2 });
+            }
+            setTimeout(function() {
+              currentSpeed = 0;
+              updatePill();
+            }, 1300);
+            return;
+          }
+          isEnabled = !isEnabled;
+          if (isEnabled) {
+            currentSpeed = 0;
+            isInteracting = false;
+          }
+          updatePill();
+        });
+
+        function onUserScroll() {
+          if (!isEnabled || !isUnlocked || reachedEnd) return;
+          isInteracting = true;
+          currentSpeed = 0;
+          updatePill();
+          clearTimeout(idleTimer);
+          idleTimer = setTimeout(function() {
+            isInteracting = false;
+            updatePill();
+          }, 2000);
+        }
+
+        window.addEventListener('wheel', onUserScroll, { passive: true });
+        window.addEventListener('touchstart', onUserScroll, { passive: true });
+        window.addEventListener('touchmove', onUserScroll, { passive: true });
+        window.addEventListener('pointerdown', function(e) {
+          if (e.target !== pill && !pill.contains(e.target)) {
+            onUserScroll();
+          }
+        }, { passive: true });
+        window.addEventListener('keydown', function(e) {
+          var keys = ['ArrowDown', 'ArrowUp', 'Space', 'PageDown', 'PageUp', 'Home', 'End'];
+          if (keys.indexOf(e.code) !== -1 || keys.indexOf(e.key) !== -1) {
+            onUserScroll();
+          }
+        }, { passive: true });
+
+        function loop(now) {
+          var dt = Math.min(3, Math.max(0.2, (now - lastTime) / 16.67));
+          lastTime = now;
+
+          if (!isUnlocked) {
+            if (window.appLenis && !window.appLenis.isStopped) {
+              isUnlocked = true;
+              setTimeout(function() {
+                pill.classList.add('is-visible');
+              }, 1200);
+            }
+          }
+
+          if (isUnlocked && isEnabled && !isInteracting && !reachedEnd && !document.hidden && isHome()) {
+            if (window.appLenis && !window.appLenis.isStopped) {
+              currentSpeed = Math.min(targetSpeed, currentSpeed + (accel * dt));
+              var limit = window.appLenis.limit || (document.documentElement.scrollHeight - window.innerHeight);
+              var cur = window.appLenis.scroll || 0;
+
+              if (cur >= limit - 3) {
+                reachedEnd = true;
+                currentSpeed = 0;
+                updatePill();
+              } else {
+                var next = Math.min(limit, cur + (currentSpeed * dt));
+                window.appLenis.scrollTo(next, { immediate: true });
+              }
+            }
+          }
+
+          requestAnimationFrame(loop);
+        }
+
+        requestAnimationFrame(loop);
+      })();
+    </script>
   </body>
 </html>

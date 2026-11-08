@@ -64,6 +64,76 @@
       .footer-name, .footer-socials, .footer-copyright, .footer-label {
         font-family: 'FKGrotesk', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif !important;
       }
+      body[data-nav-page="about"] #outro-content-wrapper,
+      body[data-nav-page="works"] #outro-content-wrapper,
+      #unified-phrase-wrapper {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: auto !important;
+        max-width: 90vw !important;
+        pointer-events: none !important;
+        will-change: transform, opacity !important;
+        gap: 0 !important;
+        left: 50% !important;
+        top: 50% !important;
+        transform: translate(-50%, -50%) !important;
+      }
+      body[data-nav-page="about"] #outro-content-wrapper .outro-text,
+      body[data-nav-page="works"] #outro-content-wrapper .outro-text,
+      #unified-phrase-wrapper .outro-text {
+        flex: none !important;
+        transform: none !important;
+        margin: 0 !important;
+        white-space: nowrap !important;
+      }
+      body[data-nav-page="about"] #outro-content-wrapper #outro-carve,
+      #unified-phrase-wrapper #outro-carve {
+        margin-right: clamp(14px, 1.35vw, 22px) !important;
+        transform: none !important;
+        position: static !important;
+      }
+      body[data-nav-page="about"] #outro-content-wrapper #outro-into,
+      body[data-nav-page="about"] #outro-content-wrapper .outro-text.into,
+      #unified-phrase-wrapper #outro-into,
+      #unified-phrase-wrapper .outro-text.into {
+        position: static !important;
+        top: auto !important;
+        left: auto !important;
+        transform: none !important;
+        margin: 0 !important;
+        margin-right: clamp(14px, 1.35vw, 22px) !important;
+      }
+      body[data-nav-page="about"] #outro-content-wrapper #outro-memory,
+      #unified-phrase-wrapper #outro-memory {
+        transform: none !important;
+        position: static !important;
+        margin: 0 !important;
+      }
+      body[data-nav-page="about"] #outro-content-wrapper #outro-img-block,
+      body[data-nav-page="works"] #outro-content-wrapper #outro-img-block,
+      #unified-phrase-wrapper #outro-img-block-spacer {
+        display: none !important;
+        width: 0 !important;
+        height: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+      @media (max-width: 850px) {
+        body[data-nav-page="about"] #outro-content-wrapper,
+        body[data-nav-page="works"] #outro-content-wrapper,
+        #unified-phrase-wrapper {
+          flex-direction: column !important;
+          gap: 0.4rem !important;
+        }
+        body[data-nav-page="about"] #outro-content-wrapper #outro-carve,
+        body[data-nav-page="about"] #outro-content-wrapper #outro-into,
+        #unified-phrase-wrapper #outro-carve,
+        #unified-phrase-wrapper #outro-into {
+          margin-right: 0 !important;
+        }
+      }
       .preloader-raw-number {
         position: absolute !important;
         opacity: 0 !important;
