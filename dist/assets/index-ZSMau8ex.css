@@ -987,11 +987,12 @@ nav > * {
   pointer-events: auto !important;
 }
 
-/* Manifesto & Scroll Narrative: Comfortable, highly legible editorial sizing */
+/* Manifesto & Scroll Narrative: Restored to original Satoshi brand typography */
 .manifesto .manifesto__text,
 .manifesto p.manifesto__text,
 .manifesto__text--center,
 .manifesto__text {
+  font-family: Satoshi, sans-serif !important;
   font-size: clamp(1.35rem, 3.2vw, 2.35rem) !important;
   line-height: 1.4 !important;
   letter-spacing: -0.025em !important;
@@ -1007,6 +1008,7 @@ nav > * {
   .manifesto p.manifesto__text,
   .manifesto__text--center,
   .manifesto__text {
+    font-family: Satoshi, sans-serif !important;
     font-size: clamp(1.15rem, 4.6vw, 1.6rem) !important;
     line-height: 1.38 !important;
     letter-spacing: -0.02em !important;
@@ -1106,4 +1108,281 @@ nav > * {
   white-space: nowrap !important;
   word-break: normal !important;
   overflow-wrap: normal !important;
+}
+
+/* ========================================================
+   DARSHAN NAIDU - MASTER SPEED, FONT & AUTOLAYOUT ENGINE
+   ======================================================== */
+
+/* Master Font Override - Restored to Original Satoshi Brand Font */
+body,
+html,
+h1, h2, h3, h4, p,
+.manifesto,
+.manifesto .manifesto__text,
+.manifesto p.manifesto__text,
+.manifesto__text--center,
+.manifesto__text,
+.core-title-main,
+.core-value-item,
+.project-main-title,
+#hero-title,
+.next-project-main-title,
+#next-project-title,
+.slider-title h1,
+#slider-title-ws h1 {
+  font-family: Satoshi, sans-serif !important;
+}
+
+/* 1. Frosted Glass Luxury Nav Bar */
+nav {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  padding: 1rem 1.25rem !important;
+  padding-top: max(1rem, calc(env(safe-area-inset-top, 0px) + 0.6rem)) !important;
+  background: rgba(11, 11, 12, 0.88) !important;
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  z-index: 1000 !important;
+  box-sizing: border-box !important;
+}
+
+/* 2. Project Top Clearance on Mobile (No Header Clipping) */
+@media (max-width: 900px) {
+  .project-title-section,
+  #project-page .project-title-section {
+    margin-top: 0 !important;
+    padding-top: max(5.5rem, calc(env(safe-area-inset-top, 0px) + 4.5rem)) !important;
+    padding-bottom: 1.5rem !important;
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+    box-sizing: border-box !important;
+  }
+}
+
+/* 3. Works Mobile Autolayout - Exact Match to Web Widescreen Ratio */
+@media (max-width: 900px) {
+  #work-selection-page .slider,
+  #slider-page .slider,
+  .slider--work-selection {
+    position: relative !important;
+    width: 100vw !important;
+    height: 100svh !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 0 16px !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  #work-selection-page .slider-images,
+  #slider-images-ws,
+  #slider-images,
+  .slider--work-selection .slider-images {
+    position: relative !important;
+    width: 100% !important;
+    max-width: 520px !important;
+    aspect-ratio: 16 / 9 !important;
+    height: auto !important;
+    max-height: 48svh !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 18px !important;
+    overflow: hidden !important;
+    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.7) !important;
+    margin: auto 0 !important;
+  }
+
+  #work-selection-page .slider-images .slide-wrapper,
+  #slider-images-ws .slide-wrapper,
+  #slider-images .slide-wrapper,
+  .slide-wrapper {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 18px !important;
+    overflow: hidden !important;
+  }
+
+  #work-selection-page .slider-images .slide-inner,
+  #slider-images-ws .slide-inner,
+  #slider-images .slide-inner,
+  .slide-inner {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 18px !important;
+    overflow: hidden !important;
+  }
+
+  #work-selection-page .slider-images img,
+  #work-selection-page .slider-images video,
+  #slider-images-ws img,
+  #slider-images-ws video,
+  .slide-inner img,
+  .slide-inner video {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    border-radius: 18px !important;
+    display: block !important;
+    margin: 0 !important;
+  }
+
+  #work-selection-page .slider-title,
+  #slider-title-ws,
+  .slider--work-selection .slider-title,
+  .slider-title {
+    position: absolute !important;
+    bottom: max(2rem, calc(env(safe-area-inset-bottom, 0px) + 1.8rem)) !important;
+    left: 1.25rem !important;
+    right: auto !important;
+    width: auto !important;
+    margin: 0 !important;
+    z-index: 10 !important;
+  }
+
+  #work-selection-page .slider-title h1,
+  #slider-title-ws h1 {
+    font-size: clamp(1.8rem, 6.5vw, 2.8rem) !important;
+    line-height: 1 !important;
+    letter-spacing: -0.04em !important;
+    white-space: nowrap !important;
+    margin: 0 !important;
+  }
+
+  #work-selection-page .slider-indicator,
+  #slider-indicator-ws {
+    position: absolute !important;
+    bottom: max(2rem, calc(env(safe-area-inset-bottom, 0px) + 1.8rem)) !important;
+    right: 1.25rem !important;
+    left: auto !important;
+    margin: 0 !important;
+    z-index: 10 !important;
+  }
+}
+
+/* 4. Single-Line Next Project Footer (Never Break or Clip) */
+.project-footer,
+#project-page .project-footer {
+  position: relative !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: auto !important;
+  padding: 2.5rem 1.25rem calc(env(safe-area-inset-bottom, 0px) + 2.5rem) 1.25rem !important;
+  display: flex !important;
+  flex-direction: column !important;
+  background-color: #000 !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+}
+
+.footer-header-wrapper,
+#project-page .footer-header-wrapper {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  right: auto !important;
+  width: 100% !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: flex-end !important;
+  gap: 16px !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+}
+
+#next-project-title,
+.next-project-main-title,
+.project-footer .next-project-main-title,
+#project-page .next-project-main-title {
+  font-size: clamp(1.5rem, 5.8vw, 2.8rem) !important;
+  line-height: 1.15 !important;
+  letter-spacing: -0.03em !important;
+  white-space: nowrap !important;
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+  hyphens: none !important;
+  margin: 0 !important;
+  max-width: calc(100% - 100px) !important;
+  flex-shrink: 1 !important;
+}
+
+.next-project-number-wrapper,
+#next-project-number-wrapper,
+.project-footer .next-project-number-wrapper {
+  font-size: clamp(1.4rem, 5vw, 2.2rem) !important;
+  line-height: 1.15 !important;
+  letter-spacing: -0.03em !important;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+  margin: 0 !important;
+  text-align: right !important;
+}
+
+/* 5. Instagram Banner Compact Balance */
+.project-ig-banner {
+  margin: 28px auto 36px auto !important;
+  padding: 0 1.25rem !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* ========================================================
+   INSTAGRAM & X (TWITTER) SKELETON SHIMMER LOADING SYSTEM (VIDEO REELS ONLY)
+   ======================================================== */
+
+@keyframes skeleton-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Skeleton shimmer ONLY on reels video card placeholders */
+.skeleton-shimmer,
+.reels-card:not(.is-loaded) {
+  background-color: #121214 !important;
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.02) 0%,
+    rgba(255, 255, 255, 0.07) 50%,
+    rgba(255, 255, 255, 0.02) 100%
+  ) !important;
+  background-size: 200% 100% !important;
+  animation: skeleton-shimmer 1.5s cubic-bezier(0.4, 0, 0.2, 1) infinite !important;
+}
+
+.reels-card.is-loaded {
+  animation: none !important;
+  background: #141416 !important;
+}
+
+/* ALL Poster Images & Gallery Images: 100% opacity, fully visible, never blocked */
+.pinterest-card img,
+.poster-img-frame img,
+.poster-img-frame,
+.pinterest-card,
+.project-images img,
+#project-images img,
+.hero-image-inner img,
+.slide-inner img,
+#slider-images-ws img {
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block !important;
+  animation: none !important;
 }
