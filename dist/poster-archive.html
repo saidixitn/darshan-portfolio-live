@@ -101,11 +101,25 @@
         visibility: visible !important;
       }
 
-      #project-hero-image img {
+      #project-hero-image,
+      .project-hero-image .hero-image-inner,
+      .hero-image-inner {
+        transform: none !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+      }
+
+      #project-hero-image img,
+      .project-hero-image .hero-image-inner img,
+      .hero-image-inner img {
         width: 100% !important;
-        height: auto !important;
+        height: 100% !important;
+        object-fit: cover !important;
         display: block !important;
-        border-radius: 12px;
+        opacity: 1 !important;
+        transform: none !important;
+        visibility: visible !important;
+        border-radius: 14px !important;
       }
 
       /* ========================================================
@@ -390,10 +404,10 @@
         </div>
       </section>
 
-      <!-- Hero Image -->
+      <!-- Hero Image / Thumbnail -->
       <section class="project-hero-image" id="project-hero-image-container">
-        <div class="hero-image-inner" id="project-hero-image">
-          <img src="/work-section/slider_img_2.webp" alt="Visual Artifacts - Hero" width="1920" height="1080">
+        <div class="hero-image-inner" id="project-hero-image" style="opacity: 1 !important; transform: none !important; visibility: visible !important;">
+          <img src="/work-section/slider_img_2.webp" alt="Poster Archive · Hero Thumbnail" width="1920" height="1080" style="opacity: 1 !important; transform: none !important; visibility: visible !important; display: block !important; width: 100% !important; height: 100% !important; object-fit: cover !important; border-radius: 14px !important;">
         </div>
       </section>
 

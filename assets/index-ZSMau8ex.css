@@ -996,11 +996,12 @@ nav > * {
   font-size: clamp(1.35rem, 3.2vw, 2.35rem) !important;
   line-height: 1.4 !important;
   letter-spacing: -0.025em !important;
-  max-width: min(88vw, 760px) !important;
+  max-width: min(92vw, 1040px) !important;
   margin-left: auto !important;
   margin-right: auto !important;
   word-break: normal !important;
   overflow-wrap: break-word !important;
+  text-wrap: balance !important;
 }
 
 @media (max-width: 850px) {
@@ -1012,8 +1013,9 @@ nav > * {
     font-size: clamp(1.15rem, 4.6vw, 1.6rem) !important;
     line-height: 1.38 !important;
     letter-spacing: -0.02em !important;
-    max-width: min(90vw, 440px) !important;
+    max-width: min(92vw, 680px) !important;
     padding: 0 0.5rem !important;
+    text-wrap: balance !important;
   }
   .manifesto__slide {
     padding: 1.25rem !important;
@@ -1385,4 +1387,470 @@ nav {
   visibility: visible !important;
   display: block !important;
   animation: none !important;
+}
+
+/* ========================================================
+   DARSHAN NAIDU - MASTER MOBILE REFINEMENT & THUMBNAIL ENGINE
+   ======================================================== */
+
+/* 1. Global Hero Thumbnail & Slide Image Visibility */
+#project-hero-image,
+.hero-image-inner,
+.project-hero-image .hero-image-inner,
+#project-hero-image-container .hero-image-inner {
+  transform: none !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+#project-hero-image img,
+.hero-image-inner img,
+.project-hero-image .hero-image-inner img,
+#project-hero-image-container .hero-image-inner img,
+.slide-inner img,
+#slider-images img,
+#slider-images-ws img {
+  transform: none !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block !important;
+  animation: none !important;
+}
+
+/* 2. Mobile Home Page Polish (Screen width <= 768px) */
+@media (max-width: 768px) {
+  /* Prevent horizontal drift */
+  html, body {
+    overflow-x: hidden !important;
+  }
+
+  /* Refined Hero Card */
+  .hero .card {
+    --card-width: min(348px, 91vw) !important;
+    width: var(--card-width) !important;
+    max-width: 348px !important;
+    max-height: none !important;
+    aspect-ratio: auto !important;
+    padding: 1.6rem 1.4rem !important;
+    border-radius: 24px !important;
+    background: rgba(12, 12, 14, 0.94) !important;
+    backdrop-filter: blur(24px) !important;
+    -webkit-backdrop-filter: blur(24px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.85) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    box-sizing: border-box !important;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    overflow: hidden !important;
+  }
+
+  .card-top-left {
+    width: 100% !important;
+    margin-top: 0 !important;
+  }
+
+  /* Make It Last ("Hey, I'm Darshan.") */
+  .card .make-it-last,
+  .card h1.make-it-last {
+    font-size: clamp(2rem, 7.8vw, 2.6rem) !important;
+    line-height: 1.04 !important;
+    letter-spacing: -0.04em !important;
+    margin-bottom: 0.65rem !important;
+    font-weight: 700 !important;
+    color: #fff !important;
+  }
+
+  /* Full sentence wrapping - NEVER clip "videos people finish watching." */
+  .card .label,
+  .card-top-left .label,
+  .card p {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+    line-height: 1.45 !important;
+    font-size: 0.92rem !important;
+    color: #d4d4d8 !important;
+    font-family: Satoshi, sans-serif !important;
+  }
+
+  .card .label .block-revealer {
+    display: inline !important;
+    white-space: normal !important;
+    background-color: transparent !important;
+    opacity: 1 !important;
+  }
+
+  .card .label .block-revealer > span {
+    display: inline !important;
+    opacity: 1 !important;
+  }
+
+  /* Kinetic letter box cleanup (clear grey boxes) */
+  .card .block-revealer {
+    background-color: transparent !important;
+    opacity: 1 !important;
+  }
+
+  .card .block-revealer > span {
+    opacity: 1 !important;
+  }
+
+  .card .hero-subtext {
+    margin-top: 0.75rem !important;
+    font-size: 0.8rem !important;
+    line-height: 1.45 !important;
+    color: #a1a1aa !important;
+  }
+
+  .card .hero-actions {
+    margin-top: 0.9rem !important;
+    display: flex !important;
+    gap: 1.1rem !important;
+    align-items: center !important;
+  }
+
+  .card .hero-actions a {
+    font-size: 0.82rem !important;
+  }
+
+  .card-bottom-right {
+    margin-top: 1.75rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-end !important;
+    width: 100% !important;
+  }
+
+  .card-bottom-right .label {
+    font-size: 0.72rem !important;
+    margin-bottom: 0.15rem !important;
+    color: #71717a !important;
+    text-align: right !important;
+  }
+
+  .card-bottom-right h1 {
+    font-size: clamp(1.8rem, 6.5vw, 2.3rem) !important;
+    line-height: 1 !important;
+    letter-spacing: -0.035em !important;
+    margin: 0 !important;
+    text-align: right !important;
+  }
+
+  /* Manifesto Section Mobile Enhancements */
+  .manifesto {
+    width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  .manifesto__slide {
+    padding: 1.25rem !important;
+    min-height: 80svh !important;
+  }
+
+  .manifesto .manifesto__text,
+  .manifesto p.manifesto__text,
+  .manifesto__text--center,
+  .manifesto__text {
+    font-size: clamp(1.25rem, 5.2vw, 1.75rem) !important;
+    line-height: 1.4 !important;
+    letter-spacing: -0.025em !important;
+    max-width: min(92vw, 540px) !important;
+    padding: 0 0.5rem !important;
+    text-wrap: balance !important;
+  }
+
+  /* Slider Section on Mobile: Title & Indicator Locked at Bottom */
+  #slider-section {
+    position: relative !important;
+    width: 100vw !important;
+    height: 100svh !important;
+    overflow: hidden !important;
+  }
+
+  #slider-title,
+  #slider-title-ws,
+  #work-selection-page .slider-title,
+  .slider-title {
+    position: absolute !important;
+    bottom: max(1.8rem, calc(env(safe-area-inset-bottom, 0px) + 1.25rem)) !important;
+    left: 1.25rem !important;
+    right: 5.5rem !important;
+    width: auto !important;
+    top: auto !important;
+    transform: none !important;
+    z-index: 100 !important;
+    pointer-events: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  #slider-title h1,
+  #slider-title-ws h1,
+  #work-selection-page .slider-title h1,
+  .slider-title h1 {
+    font-size: clamp(1.4rem, 5.5vw, 2rem) !important;
+    line-height: 1.05 !important;
+    letter-spacing: -0.03em !important;
+    white-space: nowrap !important;
+    margin: 0 !important;
+    color: #fff !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  #slider-indicator,
+  #slider-indicator-ws,
+  #work-selection-page .slider-indicator,
+  .slider-indicator {
+    position: absolute !important;
+    bottom: max(1.8rem, calc(env(safe-area-inset-bottom, 0px) + 1.25rem)) !important;
+    right: 1.25rem !important;
+    left: auto !important;
+    top: auto !important;
+    transform: none !important;
+    z-index: 100 !important;
+    pointer-events: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.6rem !important;
+  }
+
+  #current-number,
+  #current-number-ws,
+  .current-number {
+    font-size: 1.1rem !important;
+    font-weight: 700 !important;
+    color: #fff !important;
+    font-family: Satoshi, sans-serif !important;
+  }
+}
+
+/* 3. About Page Mobile Redesign (Full Scroll Flow & High Contrast) */
+@media (max-width: 850px) {
+  #smooth-wrapper {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    overflow: hidden !important;
+  }
+
+  #about-section {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    width: 100% !important;
+    min-height: 100svh !important;
+    height: auto !important;
+    background-color: #0b0b0c !important;
+    color: #f4f4f5 !important;
+    overflow: visible !important;
+    display: block !important;
+    z-index: 1 !important;
+    padding-bottom: 2rem !important;
+  }
+
+  /* Editorial Featured Hero Photo */
+  .about-img-container,
+  #about-hero-img-block {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    width: calc(100% - 2rem) !important;
+    max-width: 440px !important;
+    height: auto !important;
+    aspect-ratio: 4 / 4.6 !important;
+    margin: calc(env(safe-area-inset-top, 0px) + 5rem) auto 2rem auto !important;
+    border-radius: 20px !important;
+    overflow: hidden !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.8) !important;
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    clip-path: none !important;
+    z-index: 2 !important;
+  }
+
+  .about-img-container img,
+  #about-hero-img-block img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center 30% !important;
+    display: block !important;
+    transform: none !important;
+    scale: 1 !important;
+  }
+
+  /* Hide stray outro overlay texts that shouldn't float on mobile about */
+  #about-text-container,
+  #unified-phrase-wrapper,
+  .about-collapse-text-wrapper,
+  #outro-content-wrapper {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
+
+  /* Content Wrapper: Natural Vertical Flow */
+  .about-content-wrapper,
+  #about-section .about-content-wrapper {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: auto !important;
+    padding: 0 1.25rem 3.5rem 1.25rem !important;
+    box-sizing: border-box !important;
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    z-index: 3 !important;
+  }
+
+  .about-additional-content {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    width: 100% !important;
+    height: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.75rem !important;
+    padding: 0 !important;
+  }
+
+  .about-col.right {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.75rem !important;
+  }
+
+  /* Editorial Card Styling for Mobile */
+  .about-info-block {
+    position: relative !important;
+    width: 100% !important;
+    background: rgba(20, 20, 24, 0.8) !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 20px !important;
+    padding: 1.6rem 1.4rem !important;
+    box-sizing: border-box !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    margin: 0 !important;
+  }
+
+  .about-info-block span,
+  .about-label-who-am-i,
+  .about-label-about {
+    display: inline-block !important;
+    font-family: Satoshi, sans-serif !important;
+    font-size: 0.72rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.08em !important;
+    text-transform: uppercase !important;
+    color: #a1a1aa !important;
+    margin-bottom: 0.85rem !important;
+  }
+
+  .about-description {
+    font-family: Satoshi, sans-serif !important;
+    font-size: 1.02rem !important;
+    line-height: 1.65 !important;
+    color: #e4e4e7 !important;
+    margin: 0 !important;
+  }
+
+  .about-description strong {
+    color: #fff !important;
+  }
+
+  /* Core Values (What I do for you) Mobile Flow */
+  .core-values,
+  #core-values-section {
+    display: block !important;
+    position: relative !important;
+    width: 100% !important;
+    min-height: auto !important;
+    margin-top: 0 !important;
+    padding: 3rem 1.25rem 4rem 1.25rem !important;
+    box-sizing: border-box !important;
+    background-color: #000 !important;
+    z-index: 4 !important;
+  }
+
+  .core-values-pinned {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    margin-bottom: 1.5rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.35rem !important;
+  }
+
+  .core-values-label {
+    font-family: Satoshi, sans-serif !important;
+    font-size: 0.75rem !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.08em !important;
+    color: #71717a !important;
+  }
+
+  .core-title-main {
+    font-family: Satoshi, sans-serif !important;
+    font-size: 2rem !important;
+    font-weight: 700 !important;
+    color: #fff !important;
+    letter-spacing: -0.03em !important;
+  }
+
+  .core-values-list-container {
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  .core-values-list {
+    position: relative !important;
+    left: auto !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.25rem !important;
+  }
+
+  .core-value-item {
+    position: relative !important;
+    opacity: 1 !important;
+    display: block !important;
+    margin-bottom: 0 !important;
+    font-family: Satoshi, sans-serif !important;
+    font-size: 1.05rem !important;
+    line-height: 1.55 !important;
+    color: #d4d4d8 !important;
+    background: rgba(255, 255, 255, 0.04) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    padding: 1.25rem !important;
+    border-radius: 14px !important;
+  }
 }
