@@ -543,42 +543,31 @@
     font-weight: 500 !important;
     color: #e0e0e0 !important;
   }
-  /* Modern clean 2x2 grid for mobile metadata */
-  .project-metadata {
-    display: grid !important;
-    grid-template-columns: 1fr 1fr !important;
-    column-gap: 16px !important;
-    row-gap: 16px !important;
-    width: 100% !important;
+  /* Clean Works Metadata - Category, Year, Location removed */
+  .metadata-item.brand,
+  .metadata-item.year,
+  .metadata-item.location {
+    display: none !important;
   }
-  .project-metadata-wide,
   .project-metadata-right {
-    display: contents !important;
+    display: none !important;
   }
-  .metadata-item.brand {
-    grid-column: 1 !important;
-    grid-row: 1 !important;
-    text-align: left !important;
+  .project-metadata {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 8px !important;
   }
-  .metadata-item.year {
-    grid-column: 2 !important;
-    grid-row: 1 !important;
-    text-align: right !important;
-    align-items: flex-end !important;
-    justify-self: end !important;
+  .project-metadata-wide {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
   }
   .metadata-item.role {
     display: flex !important;
-    grid-column: 1 !important;
-    grid-row: 2 !important;
+    flex-direction: column !important;
     text-align: left !important;
-  }
-  .metadata-item.location {
-    grid-column: 2 !important;
-    grid-row: 2 !important;
-    text-align: right !important;
-    align-items: flex-end !important;
-    justify-self: end !important;
+    width: 100% !important;
   }
   .metadata-item {
     min-width: 0 !important;
@@ -590,7 +579,7 @@
   }
   .metadata-value {
     font-size: 13.5px !important;
-    line-height: 1.3 !important;
+    line-height: 1.35 !important;
     color: #fff !important;
     word-break: break-word !important;
   }
@@ -1632,5 +1621,133 @@ nav {
     font-family: Satoshi, sans-serif !important;
   }
 }
+
+/* ========================================================
+   DARSHAN NAIDU - MOBILE ABOUT & FULL-PAGE SCROLL ENGINE
+   ======================================================== */
+@media (max-width: 850px) {
+  #about-section {
+    position: relative !important;
+    min-height: 100svh !important;
+    height: auto !important;
+    background-color: #0b0b0c !important;
+    color: #fff !important;
+    overflow: visible !important;
+    z-index: 2 !important;
+  }
+
+  .about-img-container {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100% !important;
+    min-height: 100% !important;
+    z-index: 1 !important;
+    clip-path: none !important;
+    overflow: hidden !important;
+  }
+
+  .about-img-container img {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center top !important;
+    opacity: 0.35 !important;
+    transform: none !important;
+  }
+
+  .about-content-wrapper {
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 100svh !important;
+    overflow: visible !important;
+    padding-top: max(5.5rem, calc(env(safe-area-inset-top, 0px) + 4.5rem)) !important;
+    padding-bottom: 4rem !important;
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    z-index: 5 !important;
+  }
+
+  .about-additional-content {
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.75rem !important;
+    padding: 0 !important;
+  }
+
+  .about-col.right {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.75rem !important;
+    width: 100% !important;
+  }
+
+  .about-info-block {
+    position: relative !important;
+    width: 100% !important;
+    background: rgba(22, 22, 24, 0.85) !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    border-radius: 18px !important;
+    padding: 1.5rem !important;
+    box-sizing: border-box !important;
+    transform: none !important;
+    top: auto !important;
+    left: auto !important;
+  }
+
+  .about-description {
+    font-size: clamp(1rem, 4vw, 1.25rem) !important;
+    line-height: 1.5 !important;
+    color: rgba(255, 255, 255, 0.94) !important;
+    letter-spacing: -0.015em !important;
+  }
+
+  .about-label-who-am-i,
+  .about-label-about {
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.08em !important;
+    text-transform: uppercase !important;
+    color: rgba(255, 255, 255, 0.5) !important;
+    margin-bottom: 0.75rem !important;
+    display: block !important;
+  }
+
+  .core-values {
+    margin-top: 0 !important;
+    min-height: 100svh !important;
+    height: auto !important;
+    position: relative !important;
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+
+  .footer-section {
+    margin-top: 0 !important;
+    min-height: 100svh !important;
+    height: auto !important;
+    position: relative !important;
+  }
+
+  .footer-img-wrapper {
+    position: absolute !important;
+    height: 100% !important;
+    width: 100% !important;
+  }
+}
+
 
 

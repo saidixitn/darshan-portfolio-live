@@ -316,35 +316,10 @@
       }
 
       .zoom-caption-pill {
-        position: fixed;
-        bottom: 28px;
-        left: 50%;
-        transform: translateX(-50%) translateY(20px);
-        padding: 9px 18px;
-        background: rgba(18, 18, 18, 0.88);
-        backdrop-filter: blur(14px);
-        -webkit-backdrop-filter: blur(14px);
-        border: 1px solid rgba(255, 255, 255, 0.12);
-        border-radius: 100px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        color: #fff;
-        font-family: 'Satoshi', sans-serif;
-        font-size: 13px;
-        font-weight: 500;
-        z-index: 99999;
-        pointer-events: none;
-        opacity: 0;
-        box-shadow: 0 16px 36px rgba(0, 0, 0, 0.8);
-        transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-      }
-
-      .zoom-caption-pill.is-active {
-        opacity: 1;
-        transform: translateX(-50%) translateY(0);
-        pointer-events: auto;
-        cursor: pointer;
+        display: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
       }
 
       .zoom-caption-category {
@@ -398,7 +373,7 @@
 
       <!-- Main Title Section -->
       <section class="project-title-section" id="project-title-section">
-        <h1 class="project-main-title" id="hero-title">Poster Archive,<br>Volume 01</h1>
+        <h1 class="project-main-title" id="hero-title">Poster Archive</h1>
         <div class="project-number-wrapper" id="project-number-wrapper">
           <div class="project-number" id="project-number"><span class="no-prefix">No.</span>2</div>
         </div>
@@ -418,7 +393,7 @@
         </div>
         <div class="project-metadata" id="project-metadata">
           <div class="project-metadata-wide">
-            <div class="metadata-item brand">
+            <div class="metadata-item brand" style="display: none !important;">
               <span class="metadata-label">(Category)</span>
               <span class="metadata-value" id="project-brand">Visual Design · Graphic Design</span>
             </div>
@@ -432,12 +407,12 @@
               </span>
             </div>
           </div>
-          <div class="project-metadata-right">
-            <div class="metadata-item location">
+          <div class="project-metadata-right" style="display: none !important;">
+            <div class="metadata-item location" style="display: none !important;">
               <span class="metadata-label">(Location)</span>
               <span class="metadata-value" id="project-location">Vizag</span>
             </div>
-            <div class="metadata-item year">
+            <div class="metadata-item year" style="display: none !important;">
               <span class="metadata-label">(Year)</span>
               <span class="metadata-value" id="project-year">24-26</span>
             </div>
@@ -640,7 +615,7 @@
 
     <!-- Zoom Overlay Elements -->
     <div class="zoom-backdrop" id="zoom-backdrop"></div>
-    <div class="zoom-caption-pill" id="zoom-caption">
+    <div class="zoom-caption-pill" id="zoom-caption" style="display: none !important;">
       <span id="zoom-caption-title">Sacred · Architectural Silence</span>
       <span class="zoom-caption-category" id="zoom-caption-category">Architecture / Heritage</span>
     </div>
@@ -805,7 +780,6 @@
             ease: 'power3.out',
             onComplete: () => {
               isZooming = false;
-              caption.classList.add('is-active');
             }
           });
 
