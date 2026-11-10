@@ -197,36 +197,12 @@
   display: block;
 }
 
-.zoom-caption-pill {
-  position: fixed;
-  bottom: 28px;
-  left: 50%;
-  transform: translateX(-50%) translateY(20px);
-  padding: 9px 18px;
-  background: rgba(18, 18, 18, 0.88);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 100px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: #fff;
-  font-family: 'Satoshi', sans-serif;
-  font-size: 13px;
-  font-weight: 500;
-  z-index: 99999;
-  pointer-events: none;
-  opacity: 0;
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.8);
-  transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
+.zoom-caption-pill,
 .zoom-caption-pill.is-active {
-  opacity: 1;
-  transform: translateX(-50%) translateY(0);
-  pointer-events: auto;
-  cursor: pointer;
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
 }
 
 .zoom-caption-category {
@@ -965,11 +941,12 @@
   vertical-align: baseline !important;
 }
 
-/* Fixed Navbar Scrim: prevents scrolled text clipping underneath */
+/* Clean Navbar - No Blur */
 nav {
-  background: linear-gradient(to bottom, rgba(11, 11, 12, 0.95) 0%, rgba(11, 11, 12, 0.72) 60%, rgba(11, 11, 12, 0) 100%) !important;
-  -webkit-backdrop-filter: blur(12px) !important;
-  backdrop-filter: blur(12px) !important;
+  background: transparent !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  border-bottom: none !important;
   pointer-events: none !important;
 }
 nav > * {
@@ -1125,7 +1102,7 @@ h1, h2, h3, h4, p,
   font-family: Satoshi, sans-serif !important;
 }
 
-/* 1. Frosted Glass Luxury Nav Bar */
+/* 1. Clean Transparent Nav Bar (No Blur) */
 nav {
   position: fixed !important;
   top: 0 !important;
@@ -1133,12 +1110,16 @@ nav {
   width: 100% !important;
   padding: 1rem 1.25rem !important;
   padding-top: max(1rem, calc(env(safe-area-inset-top, 0px) + 0.6rem)) !important;
-  background: rgba(11, 11, 12, 0.88) !important;
-  backdrop-filter: blur(20px) saturate(180%) !important;
-  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
-  z-index: 1000 !important;
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border-bottom: none !important;
+  z-index: 1000000 !important;
   box-sizing: border-box !important;
+  pointer-events: none !important;
+}
+nav > * {
+  pointer-events: auto !important;
 }
 
 /* 2. Project Top Clearance on Mobile (No Header Clipping) */

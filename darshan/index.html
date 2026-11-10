@@ -417,50 +417,40 @@
             });
 
             // ----------------------------------------------------
-            // PHASE B: Card 1 blooms immediately (0.18s - 1.08s)
-            // Solo tile at i(9) in Naidu: "Darshan Na [photo] du"
+            // PHASE B: Card 1 blooms immediately (0.08s - 0.72s)
+            // Solo tile at a(1) right after initial 'D': Darshan Portrait
+            // "D [Portrait] rshan Naidu" -> blooms, swaps, folds back
             // ----------------------------------------------------
-            setSlotState(tl, 9, { active: true, image: IMAGES.shot1, duration: 0.38 }, 0.18);
-            swapSlotImage(tl, 9, IMAGES.shot2, 0.62, 0.26);
-            setSlotState(tl, 9, { active: false, duration: 0.36 }, 1.08);
+            setSlotState(tl, 1, { active: true, image: IMAGES.portrait, duration: 0.32 }, 0.08);
+            swapSlotImage(tl, 1, IMAGES.shot1, 0.38, 0.22);
+            setSlotState(tl, 1, { active: false, duration: 0.28 }, 0.72);
 
             // ----------------------------------------------------
-            // PHASE C: Card 2 blooms in first name (1.20s - 2.05s)
-            // Solo tile at r(2) in Darshan: "Da [photo] shan Naidu"
+            // PHASE C: Balanced Dual Bloom (0.80s - 1.44s)
+            // Exactly 1 tile in each word: r(2) in Darshan & i(9) in Naidu
+            // "Da [photo] shan Na [photo] du"
             // ----------------------------------------------------
-            setSlotState(tl, 2, { active: true, image: IMAGES.shot3, duration: 0.38 }, 1.20);
-            swapSlotImage(tl, 2, IMAGES.shot4, 1.58, 0.26);
-            setSlotState(tl, 2, { active: false, duration: 0.36 }, 2.05);
+            setSlotState(tl, 2, { active: true, image: IMAGES.shot3, duration: 0.30 }, 0.80);
+            setSlotState(tl, 9, { active: true, image: IMAGES.shot4, duration: 0.30 }, 0.84);
+            swapSlotImage(tl, 9, IMAGES.shot2, 1.10, 0.22);
+            setSlotState(tl, 2, { active: false, duration: 0.28 }, 1.40);
+            setSlotState(tl, 9, { active: false, duration: 0.28 }, 1.44);
 
             // ----------------------------------------------------
-            // PHASE D: Balanced Dual Bloom (2.18s - 3.12s)
-            // Exactly 1 tile in each word: h(4) in Darshan & d(10) in Naidu
+            // PHASE D: Second Dual Bloom (1.52s - 2.18s)
+            // h(4) in Darshan & d(10) in Naidu
             // "Dars [photo] an Nai [photo] u"
             // ----------------------------------------------------
-            setSlotState(tl, 4, { active: true, image: IMAGES.shot5, duration: 0.38 }, 2.18);
-            setSlotState(tl, 10, { active: true, image: IMAGES.shot6, duration: 0.38 }, 2.26);
-            swapSlotImage(tl, 10, IMAGES.shot7, 2.68, 0.26);
-            setSlotState(tl, 4, { active: false, duration: 0.36 }, 3.12);
-            setSlotState(tl, 10, { active: false, duration: 0.36 }, 3.16);
+            setSlotState(tl, 4, { active: true, image: IMAGES.shot5, duration: 0.30 }, 1.52);
+            setSlotState(tl, 10, { active: true, image: IMAGES.shot6, duration: 0.30 }, 1.56);
+            swapSlotImage(tl, 10, IMAGES.shot7, 1.84, 0.22);
+            setSlotState(tl, 4, { active: false, duration: 0.28 }, 2.14);
+            setSlotState(tl, 10, { active: false, duration: 0.28 }, 2.18);
 
             // ----------------------------------------------------
-            // PHASE E: Solo Hero Card (3.30s - 4.30s)
-            // Celebrations signature move: solo tile right after initial 'D'
-            // "D [Portrait] rshan Naidu"
+            // PHASE E: Clean Resting Hold before loop (2.18s - 2.80s)
             // ----------------------------------------------------
-            setSlotState(tl, 1, { active: true, image: IMAGES.portrait, duration: 0.42 }, 3.30);
-
-            // ----------------------------------------------------
-            // PHASE F: Final Reset (4.30s - 4.70s)
-            // Clean transition back to typography
-            // ----------------------------------------------------
-            setSlotState(tl, 1, { active: false, duration: 0.40 }, 4.30);
-
-            // ----------------------------------------------------
-            // PHASE G: Resting Hold (4.70s - 5.50s)
-            // Crisp, confident pause before next cycle
-            // ----------------------------------------------------
-            tl.to({}, { duration: 0.8 }, 4.70);
+            tl.to({}, { duration: 0.6 }, 2.18);
 
             masterTimeline = tl;
             return tl;
