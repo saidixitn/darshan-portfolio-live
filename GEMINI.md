@@ -36,7 +36,7 @@ On `/video-archive` (`video-archive.html`):
    - Must be **Reel 2** (`/assets/videos/reels-2.mp4` in vertical 9:16 format).
    - **RULE**: Never place X-ENTI'ALL as Card #1 right under the hero banner, to prevent duplicate appearance at the top.
 3. **End of Archive**:
-   - **X-ENTI'ALL** is positioned as the final featured card (Card #15) in widescreen 16:9 format (`is-featured-16-9`).
+   - **X-ENTI'ALL** is positioned as the final featured card (Card #16) in widescreen 16:9 format (`is-featured-16-9`).
 4. **Current Array Order**:
    - Card 1: `reels-2.mp4` (vertical 9:16)
    - Card 2: `reels-3.mp4` (vertical 9:16)
@@ -51,8 +51,9 @@ On `/video-archive` (`video-archive.html`):
    - Card 11: `reels-13.mp4` (vertical 9:16)
    - Card 12: `reels-14.mp4` (vertical 9:16)
    - Card 13: `reels-15.mp4` (vertical 9:16)
-   - Card 14: `reels-5.mp4` (featured 16:9)
-   - Card 15: `x-entiall.mp4` (featured 16:9)
+   - Card 14: `reels-16.mp4` (vertical 9:16)
+   - Card 15: `reels-5.mp4` (featured 16:9)
+   - Card 16: `x-entiall.mp4` (featured 16:9)
 
 ---
 
